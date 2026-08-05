@@ -22,11 +22,21 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://adirondackcoldwater.com/assets/brand/banners/ACW-Web-Banner-1200x628.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
   <style>
+    /* ---- Self-hosted fonts (no third-party requests) ----
+       To swap the display face later: drop the licensed woff2 into
+       assets/fonts/, update the Playfair @font-face src below, and point
+       --font-display at the new family. One place, one change. */
+    @font-face { font-family: "Playfair Display"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/playfair-display-latin-400-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Playfair Display"; font-style: normal; font-weight: 500; font-display: swap; src: url("assets/fonts/playfair-display-latin-500-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Playfair Display"; font-style: normal; font-weight: 700; font-display: swap; src: url("assets/fonts/playfair-display-latin-700-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Playfair Display"; font-style: normal; font-weight: 900; font-display: swap; src: url("assets/fonts/playfair-display-latin-900-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Playfair Display"; font-style: italic; font-weight: 400; font-display: swap; src: url("assets/fonts/playfair-display-latin-400-italic.woff2") format("woff2"); }
+    @font-face { font-family: "Playfair Display"; font-style: italic; font-weight: 500; font-display: swap; src: url("assets/fonts/playfair-display-latin-500-italic.woff2") format("woff2"); }
+    @font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("assets/fonts/inter-latin-500-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+
     :root {
       /* ---- Brand palette (brand-tokens.json) ---- */
       --navy: #0D1B2A;   /* Primary ink. Body, headings, First Water. */
@@ -38,8 +48,9 @@
 
       --navy-70: rgba(13, 27, 42, 0.70);
       --navy-55: rgba(13, 27, 42, 0.55);
-      --cream-70: rgba(246, 240, 226, 0.72);
-      --cream-45: rgba(246, 240, 226, 0.48);
+      /* Light-on-navy text: kraft-based, so there is no separate cream tone. */
+      --kraft-70: rgba(230, 214, 179, 0.74);
+      --kraft-45: rgba(230, 214, 179, 0.48);
 
       /* ---- Type roles. Display/secondary are placeholders for the
              licensed face; swap --font-display in one place. ---- */
@@ -125,18 +136,18 @@
       padding: 24px; text-align: center;
     }
     #age-gate .gate-inner { width: min(460px, 100%); }
-    #age-gate .gate-mark { width: 88px; margin: 0 auto 26px; }
+    #age-gate .gate-mark { width: 104px; margin: 0 auto 24px; }
     #age-gate h1 {
       font-family: var(--font-display); font-weight: 900;
       font-size: clamp(1.9rem, 6vw, 2.7rem); letter-spacing: 0.01em; margin-bottom: 6px;
     }
-    #age-gate p { color: var(--cream-70); font-size: 1rem; margin: 14px auto 26px; max-width: 34ch; }
+    #age-gate p { color: var(--kraft-70); font-size: 1rem; margin: 14px auto 26px; max-width: 34ch; }
     .gate-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
     #age-gate .btn { border-color: var(--kraft); background: var(--kraft); color: var(--navy); }
     #age-gate .btn:hover { background: transparent; color: var(--kraft); }
     #age-gate .btn.ghost { background: transparent; color: var(--kraft); }
     #age-gate .btn.ghost:hover { background: var(--kraft); color: var(--navy); }
-    #age-gate .gate-note { margin-top: 24px; font-size: 0.74rem; letter-spacing: 0.03em; color: var(--cream-45); font-family: var(--font-ui); }
+    #age-gate .gate-note { margin-top: 24px; font-size: 0.74rem; letter-spacing: 0.03em; color: var(--kraft-45); font-family: var(--font-ui); }
     body.locked { overflow: hidden; }
 
     /* ---------- Header ---------- */
@@ -167,7 +178,7 @@
 
     /* ---------- Hero ---------- */
     .hero { text-align: center; padding: clamp(48px, 7vw, 84px) 0 clamp(52px, 8vw, 92px); }
-    .hero .hero-logo { width: clamp(220px, 40vw, 330px); margin: 0 auto clamp(22px, 4vw, 34px); }
+    .hero .hero-logo { width: clamp(300px, 58vw, 500px); margin: 0 auto clamp(22px, 4vw, 34px); }
     .hero .lede {
       font-family: var(--font-body); font-style: italic;
       font-size: clamp(1.15rem, 2.6vw, 1.5rem); color: var(--navy-70);
@@ -193,8 +204,8 @@
 
     /* Navy band */
     .band { background: var(--navy); color: var(--kraft); }
-    .band .eyebrow { color: var(--cream-70); }
-    .band .section-head p { color: var(--cream-70); }
+    .band .eyebrow { color: var(--kraft-70); }
+    .band .section-head p { color: var(--kraft-70); }
 
     /* Story */
     .story { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(30px, 6vw, 68px); align-items: center; }
@@ -215,7 +226,7 @@
     .pillar:first-child { border-left: 0; }
     .pillar .rule { margin-left: 0; }
     .pillar h3 { font-size: 1.7rem; letter-spacing: 0.02em; margin-bottom: 10px; }
-    .pillar p { color: var(--cream-70); font-size: 1.02rem; margin: 0; }
+    .pillar p { color: var(--kraft-70); font-size: 1.02rem; margin: 0; }
 
     /* Process */
     .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: step; }
@@ -227,38 +238,39 @@
     .step h3 { font-size: 1.5rem; margin: 6px 0 10px; }
     .step p { color: var(--navy-70); font-size: 1rem; margin: 0; }
 
-    /* Collections teaser */
-    .collections { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
-    .collection { overflow: hidden; }
-    .collection .head-img { width: 100%; height: auto; display: block; }
-    .collection .body { padding: 26px 28px 30px; }
-    .collection .label { font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.72rem; font-weight: 600; color: var(--navy-70); }
-    .collection h3 { font-size: 1.7rem; margin: 6px 0 12px; }
-    .collection.firstwater h3 { color: var(--navy); }
-    .collection.basecamp h3 { color: var(--green); }
-    .collection p { color: var(--navy-70); font-size: 1.04rem; margin: 0; }
-    .collections-note { text-align: center; margin-top: 34px; color: var(--navy-70); font-family: var(--font-ui); font-size: 0.9rem; letter-spacing: 0.04em; }
+    /* Collections — each header runs full width as its own band, with the
+       name + description as live text below it (images never cropped/scaled). */
+    .collection-band { margin-bottom: clamp(44px, 6vw, 72px); }
+    .collection-band:last-of-type { margin-bottom: 0; }
+    .collection-band .band-img { width: 100%; height: auto; display: block; }
+    .collection-copy { text-align: center; padding-top: clamp(22px, 3vw, 30px); }
+    .collection-copy .label { font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; font-weight: 600; color: var(--navy-70); }
+    .collection-copy h3 { font-size: clamp(1.7rem, 4vw, 2.5rem); margin: 8px 0 12px; }
+    .collection-copy.firstwater h3 { color: var(--navy); }
+    .collection-copy.basecamp h3 { color: var(--green); }
+    .collection-copy p { color: var(--navy-70); font-size: 1.1rem; max-width: 48ch; margin: 0 auto; }
+    .collections-note { text-align: center; margin-top: clamp(40px, 6vw, 64px); color: var(--navy-70); font-family: var(--font-ui); font-size: 0.9rem; letter-spacing: 0.04em; }
 
     /* Contact */
     .contact-inner { text-align: center; max-width: 640px; margin: 0 auto; }
     .contact-inner h2 { font-size: clamp(2rem, 5vw, 3.1rem); }
-    .contact-inner p { color: var(--cream-70); font-size: 1.14rem; margin: 14px 0 30px; }
-    .contact-meta { margin-top: 26px; font-family: var(--font-ui); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream-70); }
+    .contact-inner p { color: var(--kraft-70); font-size: 1.14rem; margin: 14px 0 30px; }
+    .contact-meta { margin-top: 26px; font-family: var(--font-ui); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--kraft-70); }
     .contact-meta a { color: var(--kraft); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
 
-    /* Footer */
-    footer { background: var(--black); color: var(--cream-70); font-family: var(--font-ui); font-size: 0.86rem; }
+    /* Footer (same navy as the bands; a hairline separates it from Contact) */
+    footer { background: var(--navy); color: var(--kraft-70); font-family: var(--font-ui); font-size: 0.86rem; border-top: 1px solid rgba(230,214,179,0.16); }
     footer .foot { display: flex; justify-content: space-between; gap: 28px; flex-wrap: wrap; align-items: flex-start; padding: 48px 0 26px; }
     footer .foot-logo img { width: 172px; }
     footer .foot-links { display: flex; gap: 26px; flex-wrap: wrap; }
     footer .foot-links a { text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.76rem; font-weight: 500; }
     footer .foot-links a:hover { color: var(--kraft); }
     .legal {
-      border-top: 1px solid rgba(246,240,226,0.14);
-      padding: 22px 0 44px; font-size: 0.78rem; line-height: 1.7; color: var(--cream-45);
+      border-top: 1px solid rgba(230,214,179,0.14);
+      padding: 22px 0 44px; font-size: 0.78rem; line-height: 1.7; color: var(--kraft-45);
       text-align: center;
     }
-    .legal strong { color: var(--cream-70); font-weight: 600; }
+    .legal strong { color: var(--kraft-70); font-weight: 600; }
 
     /* ---------- Responsive ---------- */
     @media (max-width: 860px) {
@@ -279,7 +291,6 @@
       .pillar:first-child { border-top: 0; }
       .steps { grid-template-columns: 1fr; gap: 6px; }
       .step { padding: 22px 0; border-bottom: 1px solid rgba(13,27,42,0.12); }
-      .collections { grid-template-columns: 1fr; }
     }
     @media (min-width: 861px) and (max-width: 1040px) {
       .steps { grid-template-columns: repeat(2, 1fr); }
@@ -328,7 +339,7 @@
     <!-- ===== Hero ===== -->
     <section class="hero">
       <div class="wrap">
-        <img class="hero-logo" src="assets/brand/logos/ACW-Logo-Primary-Navy.svg" alt="Adirondack Cold Water &mdash; Live Rosin. Strong. Clean. Solventless." />
+        <img class="hero-logo" src="assets/brand/logos/ACW-Logo-Horizontal-Navy.svg" alt="Adirondack Cold Water &mdash; Live Rosin" />
         <p class="lede">Solventless live rosin, grown, washed and pressed in the Adirondacks.</p>
         <div class="hero-cta">
           <a class="btn" href="#collections">Explore Collections</a>
@@ -414,31 +425,38 @@
     </section>
 
     <!-- ===== Collections (teaser; full cut pages in Phase 2) ===== -->
-    <section id="collections" style="background-color: rgba(13,27,42,0.04);">
+    <section id="collections">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">The Menu</span>
           <h2 class="cond">Two Collections</h2>
           <p>Every jar belongs to one of two lines. Explore the cuts within each.</p>
         </div>
-        <div class="collections">
-          <article class="collection firstwater paper">
-            <img class="head-img" src="assets/brand/collections/ACW-Collection-FirstWater-1600x600.jpg" alt="First Water &mdash; Single Source Rosin" />
-            <div class="body">
-              <span class="label">First Water</span>
-              <h3 class="cond">Single Source</h3>
-              <p>One cultivar per jar, grown, washed and pressed on our own farm.</p>
-            </div>
-          </article>
-          <article class="collection basecamp paper">
-            <img class="head-img" src="assets/brand/collections/ACW-Collection-BaseCamp-1600x600.jpg" alt="Base Camp &mdash; Blended Rosin" />
-            <div class="body">
-              <span class="label">Base Camp</span>
-              <h3 class="cond">Blends</h3>
-              <p>Blends built for consistency. Everyday quality, every adventure.</p>
-            </div>
-          </article>
+      </div>
+
+      <article class="collection-band">
+        <img class="band-img" src="assets/brand/collections/ACW-Collection-FirstWater-1600x600.jpg" alt="First Water &mdash; Single Source Rosin" />
+        <div class="wrap">
+          <div class="collection-copy firstwater">
+            <span class="label">First Water</span>
+            <h3 class="cond">Single Source</h3>
+            <p>One cultivar per jar, grown, washed and pressed on our own farm.</p>
+          </div>
         </div>
+      </article>
+
+      <article class="collection-band">
+        <img class="band-img" src="assets/brand/collections/ACW-Collection-BaseCamp-1600x600.jpg" alt="Base Camp &mdash; Blended Rosin" />
+        <div class="wrap">
+          <div class="collection-copy basecamp">
+            <span class="label">Base Camp</span>
+            <h3 class="cond">Blends</h3>
+            <p>Blends built for consistency. Everyday quality, every adventure.</p>
+          </div>
+        </div>
+      </article>
+
+      <div class="wrap">
         <p class="collections-note">Individual cut profiles &mdash; nose, palate and finish &mdash; are coming soon.</p>
       </div>
     </section>

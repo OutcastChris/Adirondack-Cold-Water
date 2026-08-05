@@ -1,9 +1,9 @@
 # Adirondack Cold Water - Web Asset Manifest
 
-All paths are relative to `public/`. Every file is production ready. Do not
+All paths are relative to the repo root (assets live under `assets/brand/`). Every file is production ready. Do not
 regenerate, recolor, restyle or filter any of these images.
 
-## Logos - `public/brand/logos/`
+## Logos - `assets/brand/logos/`
 
 | File | Use |
 | --- | --- |
@@ -17,7 +17,7 @@ regenerate, recolor, restyle or filter any of these images.
 
 Prefer the SVG anywhere it will scale. All type in the SVGs is outlined.
 
-## Textures - `public/brand/textures/`
+## Textures - `assets/brand/textures/`
 
 | File | Use |
 | --- | --- |
@@ -28,7 +28,7 @@ Prefer the SVG anywhere it will scale. All type in the SVGs is outlined.
 The kraft texture is the site background. Flat `#E6D6B3` with no texture is
 wrong and reads cheap. Layer content over the texture.
 
-## Banners - `public/brand/banners/`
+## Banners - `assets/brand/banners/`
 
 | File | Dimensions | Use |
 | --- | --- | --- |
@@ -38,25 +38,25 @@ wrong and reads cheap. Layer content over the texture.
 | ACW-Square-1080x1080.jpg | 1080x1080 | Square brand panel |
 | ACW-MenuTile-600x600.jpg | 600x600 | Badge tile |
 
-## Collections - `public/brand/collections/`
+## Collections - `assets/brand/collections/`
 
 | File | Use |
 | --- | --- |
 | ACW-Collection-FirstWater-1600x600.jpg | First Water section header. Navy. |
 | ACW-Collection-BaseCamp-1600x600.jpg | Base Camp section header. Green. |
 
-## Cuts - `public/brand/cuts/`
+## Cuts - `assets/brand/cuts/`
 
 Eight 1080x1350 profile cards, one per cut. File name carries the cut name.
 Boreas, Colden, GuidesBlend, Marcy, Raquette, Schroon, Skylight, Tupper.
 Each card already contains the cut name, collection and the three sensory
 lines. Do not overlay text on these.
 
-## Products - `public/brand/products/`
+## Products - `assets/brand/products/`
 
 Three 1080x1350 product cards. These carry a tier badge and are tied to a
 specific offering, unlike the cut cards. Use only where the tier is accurate.
 
-## Social - `public/brand/social/`
+## Social - `assets/brand/social/`
 
 Available Now, New Drop, Story. Optional, for a social or news section.
