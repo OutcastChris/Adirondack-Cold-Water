@@ -168,12 +168,8 @@ function buildCut(cut, i) {
 ${gate('../')}
 ${header('../')}
   <main id="top">
-    <div class="wrap">
-      <div class="cut-head ${c.cls}">
-        <a class="collection-label" href="index.html#${c.anchor}">${c.label}</a>
-        <h1 class="cond">${cut.name}</h1>
-        <hr class="rule" />
-      </div>
+    <div class="wrap cut-wrap">
+      <h1 class="sr-only">${cut.name}, ${c.label} live rosin</h1>
       <div class="cut-body">
         <img class="cut-card-img" src="../assets/brand/cuts/${cut.img}" alt="${cut.name}, ${c.label} live rosin. Nose: ${cut.nose}. Palate: ${cut.palate}. Finish: ${cut.finish}." />
         <div class="notes">

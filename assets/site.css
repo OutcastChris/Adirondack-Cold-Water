@@ -60,6 +60,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 900; line
 .cond { display: inline-block; transform: scaleX(0.92); transform-origin: center; }
 
 .eyebrow { font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; font-weight: 600; color: var(--navy-70); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .rule { width: 56px; height: 2px; background: var(--gold); border: 0; margin: 18px auto; }
 .rule.left { margin-left: 0; }
 
@@ -125,13 +126,10 @@ section { padding: clamp(58px, 8vw, 100px) 0; }
 .cut-tile .cut-name { display: block; text-align: center; margin-top: 14px; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--navy); }
 .cut-tile:hover .cut-name { color: var(--gold); }
 
-/* ---- Single cut page ---- */
-.cut-head { text-align: center; padding-top: clamp(40px, 6vw, 72px); }
-.cut-head .collection-label { font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.78rem; font-weight: 600; }
-.cut-head.firstwater .collection-label { color: var(--navy); }
-.cut-head.basecamp .collection-label { color: var(--green); }
-.cut-head h1 { font-size: clamp(2.6rem, 8vw, 5rem); letter-spacing: 0.01em; margin-top: 10px; }
-.cut-body { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 6vw, 68px); align-items: center; padding-top: clamp(30px, 5vw, 52px); }
+/* ---- Single cut page. The card art carries the cut name and collection,
+   so the page has no visible headline; an sr-only h1 keeps the semantics. ---- */
+.cut-wrap { padding-top: clamp(44px, 7vw, 84px); }
+.cut-body { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 6vw, 68px); align-items: center; }
 .cut-card-img { width: 100%; max-width: 460px; margin: 0 auto; border: 1px solid rgba(13,27,42,0.14); border-radius: 4px; }
 .notes .note { padding: 16px 0; border-bottom: 1px solid rgba(13,27,42,0.14); }
 .notes .note:first-child { border-top: 1px solid rgba(13,27,42,0.14); }
@@ -169,4 +167,10 @@ footer .foot-links a:hover { color: var(--kraft); }
 }
 @media (min-width: 861px) and (max-width: 1040px) {
   .cut-grid { grid-template-columns: repeat(3, 1fr); }
+}
+/* Keep the prev / next row from crowding at narrow widths: All Cuts on its
+   own centered line, prev and next split beneath it. */
+@media (max-width: 560px) {
+  .cut-nav { flex-wrap: wrap; gap: 14px 16px; }
+  .cut-nav .all { order: -1; flex-basis: 100%; text-align: center; }
 }
