@@ -1,0 +1,46 @@
+{
+  "name": "Adirondack Cold Water",
+  "parent": "Outcast Acres Farm LLC",
+  "location": "Granville, New York",
+  "license": "OCM-PROC-25-000317",
+  "contact": "hello@adirondackcoldwater.com",
+  "instagram": "@adirondackcoldwater",
+  "tagline": "Strong. Clean. Solventless.",
+  "color": {
+    "navy": "#0D1B2A",
+    "green": "#1F4D2E",
+    "kraft": "#E6D6B3",
+    "black": "#111111",
+    "white": "#FFFFFF",
+    "gold": "#B08D4F"
+  },
+  "colorRules": {
+    "navy": "Primary ink. Body text, headings, First Water collection.",
+    "green": "Base Camp collection only. Never used for body text or navigation.",
+    "kraft": "Page background, always with the paper texture over it.",
+    "gold": "Hairline rules and small dividers only. Never type, never fills."
+  },
+  "type": {
+    "display": { "family": "Playfair Display", "weight": 900, "case": "uppercase", "letterSpacing": "0.014em", "transform": "scaleX(0.90)" },
+    "secondary": { "family": "Playfair Display", "weight": 500, "case": "uppercase", "letterSpacing": "0.14em" },
+    "body": { "family": "Playfair Display", "weight": 400, "case": "sentence" },
+    "supporting": { "family": "Inter", "weight": 500, "case": "uppercase", "letterSpacing": "0.18em" },
+    "note": "These are placeholder faces. The licensed brand face replaces the display and secondary roles later. Keep font-family in one CSS variable so the swap is a one line change."
+  },
+  "collections": {
+    "firstWater": { "label": "First Water", "color": "#0D1B2A", "description": "Single source. One cultivar per jar, grown, washed and pressed on our own farm." },
+    "baseCamp": { "label": "Base Camp", "color": "#1F4D2E", "description": "Blends built for consistency. Everyday quality, every adventure." }
+  },
+  "cuts": [
+    { "name": "Boreas", "collection": "firstWater", "nose": "Loud guava, sweet chem edge", "palate": "Tropical fruit over fuel", "finish": "Clean, sweet, lingering" },
+    { "name": "Schroon", "collection": "firstWater", "nose": "Dark cherry, sweet berry", "palate": "Cherry candy over fuel", "finish": "Sweet, rich, faintly tart" },
+    { "name": "Colden", "collection": "firstWater", "nose": "Sour diesel, pine, earth", "palate": "Chocolate coffee, sharp fuel", "finish": "Heavy, earthy, long" },
+    { "name": "Marcy", "collection": "firstWater", "nose": "Garlic, savory funk", "palate": "Roasted coffee, onion skin", "finish": "Savory, chem, persistent" },
+    { "name": "Tupper", "collection": "firstWater", "nose": "Bright lime, sweet citrus", "palate": "Citrus candy, soft floral", "finish": "Crisp, clean, tart" },
+    { "name": "Raquette", "collection": "firstWater", "nose": "Sweet anise, spiced orange", "palate": "Licorice over kush gas", "finish": "Spiced, dry, resinous" },
+    { "name": "Skylight", "collection": "firstWater", "nose": "Ripe strawberry, guava", "palate": "Sweet cream over tropical", "finish": "Soft, sweet, rounded" },
+    { "name": "Guide's Blend", "collection": "baseCamp", "nose": "Strawberry with a savory edge", "palate": "Sweet cream, garlic funk", "finish": "Balanced, sweet, grounded" }
+  ],
+  "tiers": ["Full Melt", "Private Reserve", "Tier 1", "Tier 2", "Blend"],
+  "tierNote": "Tier is assigned per batch by grading. Never bind a tier to a cut in site content."
+}
