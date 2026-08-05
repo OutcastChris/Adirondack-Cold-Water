@@ -126,6 +126,9 @@
     .btn:hover { background: transparent; color: var(--navy); }
     .btn.ghost { background: transparent; color: var(--navy); }
     .btn.ghost:hover { background: var(--navy); color: var(--kraft); }
+    /* On a navy band, a solid navy button would vanish — use a kraft outline. */
+    .band .btn { background: transparent; border-color: var(--kraft); color: var(--kraft); }
+    .band .btn:hover { background: var(--kraft); color: var(--navy); }
 
     /* ---------- Age Gate ---------- */
     #age-gate {
@@ -213,9 +216,10 @@
     .story .prose h2 { font-size: clamp(1.9rem, 4.4vw, 2.8rem); margin-bottom: 10px; }
     .story .prose p { font-size: 1.14rem; color: var(--navy); margin: 0 0 16px; }
     .story .prose p.sub { color: var(--navy-70); }
-    .story-card { padding: 34px; }
-    .story-card .badge { width: 74px; margin-bottom: 20px; }
-    .spec { display: flex; justify-content: space-between; align-items: baseline; padding: 13px 0; border-bottom: 1px solid rgba(13,27,42,0.12); }
+    .story-card { padding: 0; }
+    .story-card .badge { width: 58px; margin-bottom: 16px; }
+    .spec { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid rgba(13,27,42,0.14); }
+    .spec:first-child { border-top: 1px solid rgba(13,27,42,0.14); }
     .spec:last-child { border-bottom: 0; }
     .spec .k { font-family: var(--font-ui); color: var(--navy-70); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.7rem; font-weight: 600; }
     .spec .v { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; }
@@ -358,7 +362,7 @@
           <p>Solventless live rosin, made the honest way. Fresh-frozen flower, ice, heat, pressure. Nothing else.</p>
           <p class="sub">Small batches, hand-pressed in the Adirondacks. Built to preserve the living plant &mdash; strong, clean, every time.</p>
         </div>
-        <aside class="story-card paper">
+        <aside class="story-card">
           <img class="badge" src="assets/brand/logos/ACW-Logo-Icon.svg" alt="" />
           <div class="spec"><span class="k">Method</span><span class="v">Solventless</span></div>
           <div class="spec"><span class="k">Starting Material</span><span class="v">Fresh Frozen</span></div>
@@ -470,12 +474,9 @@
         <p>Wholesale, dispensary partnerships, and drop announcements. Reach out.</p>
         <div class="hero-cta" style="justify-content:center;">
           <a class="btn" href="mailto:hello@adirondackcoldwater.com">Get in Touch</a>
-          <a class="btn ghost" href="https://instagram.com/adirondackcoldwater" rel="noopener">Instagram</a>
         </div>
         <div class="contact-meta">
           <a href="mailto:hello@adirondackcoldwater.com">hello@adirondackcoldwater.com</a>
-          &nbsp;&middot;&nbsp;
-          <a href="https://instagram.com/adirondackcoldwater" rel="noopener">@adirondackcoldwater</a>
         </div>
       </div>
     </section>
@@ -494,6 +495,7 @@
         <a href="#process">Process</a>
         <a href="#collections">Collections</a>
         <a href="#contact">Contact</a>
+        <a href="https://instagram.com/adirondackcoldwater" rel="noopener">Instagram</a>
       </nav>
     </div>
     <div class="wrap legal">
