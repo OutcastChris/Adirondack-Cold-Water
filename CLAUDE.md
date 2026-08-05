@@ -85,7 +85,7 @@ properties in one place in `index.html`):
 This is a regulated adult-use cannabis brand. When editing copy:
 
 - Keep the **21+ age gate** (`#age-gate`) functional. It gates entry via
-  `localStorage` key `acw-age-verified`.
+  `sessionStorage` key `acw-age-verified` (re-verifies each new browser session).
 - Keep the **footer legal line** exactly: "For adults 21 and over. Keep out of
   reach of children. Licensed by the New York State Office of Cannabis
   Management, OCM-PROC-25-000317."
