@@ -14,19 +14,31 @@ browser and it runs.
 
 ```
 .
-├── index.html          # Home page: markup + inline CSS + inline JS
+├── index.html            # Home page (inline CSS + inline JS)
+├── cuts/
+│   ├── index.html         # Cuts index, grouped by collection
+│   └── <cut>.html         # One page per cut (generated from brand-tokens.json)
 ├── assets/
-│   └── brand/           # Supplied brand assets. See ASSET-MANIFEST.md
+│   ├── site.css           # Shared design system for the cuts pages
+│   ├── site.js            # Shared age gate + nav for the cuts pages
+│   ├── fonts/             # Self-hosted Playfair Display + Inter (woff2)
+│   └── brand/             # Supplied brand assets. See ASSET-MANIFEST.md
 │       ├── logos/  textures/  banners/
 │       ├── collections/  cuts/  products/  social/
-├── brand-tokens.json    # Source of truth: colors, type, collections, cuts
-├── ASSET-MANIFEST.md    # What every supplied image is for
-├── CLAUDE.md            # This file
-└── README.md            # Human-facing overview + how to run/deploy
+├── tools/
+│   └── generate-cuts.mjs  # Regenerates cuts/ from brand-tokens.json
+├── brand-tokens.json      # Source of truth: colors, type, collections, cuts
+├── ASSET-MANIFEST.md      # What every supplied image is for
+├── CLAUDE.md              # This file
+└── README.md              # Human-facing overview + how to run/deploy
 ```
 
 The site is a no-build static site (plain HTML/CSS/JS) hosted on GitHub Pages.
-Per-cut pages under `cuts/` are planned (Phase 2) as separate static HTML files.
+The home page keeps its CSS/JS inline; the `cuts/` pages share `assets/site.css`
+and `assets/site.js`. **Cut pages are generated** from `brand-tokens.json` by
+`tools/generate-cuts.mjs` and committed as static HTML, so after editing cut data
+run `node tools/generate-cuts.mjs` and commit the result. Never bind a tier to a
+cut (see below); the generator does not, and hand-edits must not either.
 
 **Assets are production-ready. Do not regenerate, recolor, restyle, filter,
 stretch, rotate, or overlay text on any supplied image.** Prefer the SVG logo
