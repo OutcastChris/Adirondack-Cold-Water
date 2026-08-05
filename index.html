@@ -507,21 +507,20 @@
   <script>
     (function () {
       var KEY = "acw-age-verified";
-      var MAX_AGE = 30 * 24 * 60 * 60 * 1000; // re-verify after 30 days
       var gate = document.getElementById("age-gate");
       var body = document.body;
 
-      // Skip the gate if verified within the last 30 days (stored as a timestamp)
+      // Verified only for the current browser session. Closing the browser
+      // ends the session, so the gate reappears on the next visit.
       try {
-        var ts = parseInt(localStorage.getItem(KEY), 10);
-        if (ts && (Date.now() - ts) < MAX_AGE) {
+        if (sessionStorage.getItem(KEY) === "1") {
           gate.style.display = "none";
           body.classList.remove("locked");
         }
       } catch (e) {}
 
       document.getElementById("gate-yes").addEventListener("click", function () {
-        try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
+        try { sessionStorage.setItem(KEY, "1"); } catch (e) {}
         gate.style.opacity = "0";
         gate.style.transition = "opacity .35s ease";
         body.classList.remove("locked");
