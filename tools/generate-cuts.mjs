@@ -46,6 +46,7 @@ const header = (P) => `
         <a href="${P}index.html#values">Values</a>
         <a href="${P}index.html#process">Process</a>
         <a href="index.html">Cuts</a>
+        <a href="${P}find/index.html">Find Us</a>
         <a href="${P}index.html#contact">Contact</a>
       </nav>
     </div>
@@ -61,6 +62,7 @@ const footer = (P) => `
         <a href="${P}index.html#story">Story</a>
         <a href="${P}index.html#process">Process</a>
         <a href="index.html">Cuts</a>
+        <a href="${P}find/index.html">Find Us</a>
         <a href="${P}index.html#contact">Contact</a>
         <a href="https://instagram.com/adirondackcoldwater" rel="noopener">Instagram</a>
       </nav>

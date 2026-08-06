@@ -143,6 +143,33 @@ section { padding: clamp(58px, 8vw, 100px) 0; }
 .cut-nav a:hover { color: var(--navy); }
 .cut-nav .all { border-bottom: 1px solid var(--gold); padding-bottom: 2px; color: var(--navy); }
 
+/* ---- Where to Buy (find/) ---- */
+.find-intro { text-align: center; }
+.find-intro h1 { font-size: clamp(2rem, 5vw, 3.1rem); letter-spacing: 0.01em; }
+.find-intro p { color: var(--navy-70); font-size: 1.12rem; margin-top: 10px; }
+.stockists { padding-top: clamp(30px, 4vw, 44px); }
+.region { margin-bottom: clamp(34px, 5vw, 52px); }
+.region:last-child { margin-bottom: 0; }
+.region-name { display: inline-block; font-size: clamp(1.5rem, 3.4vw, 2.1rem); color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 6px; }
+.shop-list { list-style: none; margin: 20px 0 0; padding: 0; }
+.shop { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(13,27,42,0.14); }
+.shop:first-child { border-top: 1px solid rgba(13,27,42,0.14); }
+.shop-name { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; }
+.shop-town { font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem; color: var(--navy-70); margin-left: 12px; }
+.shop-links { display: flex; gap: 22px; flex-shrink: 0; }
+.shop-links a { font-family: var(--font-ui); text-decoration: none; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy-70); border-bottom: 1px solid transparent; padding-bottom: 2px; white-space: nowrap; }
+.shop-links a:hover { color: var(--navy); border-bottom-color: var(--gold); }
+.shop-links a.menu { color: var(--navy); border-bottom-color: var(--gold); }
+.find-cta { margin-top: clamp(34px, 5vw, 56px); }
+
+/* Contact / CTA blocks (shared: home contact + find CTA) */
+.contact-inner { text-align: center; max-width: 640px; margin: 0 auto; }
+.contact-inner h2 { font-size: clamp(2rem, 5vw, 3.1rem); }
+.contact-inner p { color: var(--kraft-70); font-size: 1.14rem; margin: 14px 0 30px; }
+.hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.contact-meta { margin-top: 22px; font-family: var(--font-ui); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--kraft-70); }
+.contact-meta a { color: var(--kraft); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+
 /* ---- Footer ---- */
 footer { background: var(--navy); color: var(--kraft-70); font-family: var(--font-ui); font-size: 0.86rem; border-top: 1px solid rgba(230,214,179,0.16); }
 footer .foot { display: flex; justify-content: space-between; gap: 28px; flex-wrap: wrap; align-items: flex-start; padding: 48px 0 26px; }
@@ -173,4 +200,9 @@ footer .foot-links a:hover { color: var(--kraft); }
 @media (max-width: 560px) {
   .cut-nav { flex-wrap: wrap; gap: 14px 16px; }
   .cut-nav .all { order: -1; flex-basis: 100%; text-align: center; }
+}
+/* Stockist rows stack on narrow screens so name and links never collide. */
+@media (max-width: 640px) {
+  .shop { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .shop-town { margin-left: 0; display: block; margin-top: 4px; }
 }

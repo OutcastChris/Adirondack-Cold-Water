@@ -18,15 +18,20 @@ browser and it runs.
 ├── cuts/
 │   ├── index.html         # Cuts index, grouped by collection
 │   └── <cut>.html         # One page per cut (generated from brand-tokens.json)
+├── find/
+│   └── index.html         # Where to Buy (generated from _data/stockists.json)
+├── _data/
+│   └── stockists.json     # Stockist master (NOT served by Pages; see below)
 ├── assets/
-│   ├── site.css           # Shared design system for the cuts pages
-│   ├── site.js            # Shared age gate + nav for the cuts pages
+│   ├── site.css           # Shared design system for the cuts + find pages
+│   ├── site.js            # Shared age gate + nav for the cuts + find pages
 │   ├── fonts/             # Self-hosted Playfair Display + Inter (woff2)
 │   └── brand/             # Supplied brand assets. See ASSET-MANIFEST.md
 │       ├── logos/  textures/  banners/
 │       ├── collections/  cuts/  products/  social/
 ├── tools/
-│   └── generate-cuts.mjs  # Regenerates cuts/ from brand-tokens.json
+│   ├── generate-cuts.mjs      # Regenerates cuts/ from brand-tokens.json
+│   └── generate-stockists.mjs # Regenerates find/ from _data/stockists.json
 ├── brand-tokens.json      # Source of truth: colors, type, collections, cuts
 ├── ASSET-MANIFEST.md      # What every supplied image is for
 ├── CLAUDE.md              # This file
@@ -80,6 +85,27 @@ properties in one place in `index.html`):
 - **Tier** (Full Melt, Private Reserve, Tier 1/2, Blend) is assigned **per batch
   by grading. Never bind a tier to a cut in site copy**. A cut page saying
   "Private Reserve" becomes wrong on the next run.
+
+## Where to Buy (stockists)
+
+`find/index.html` is generated from `_data/stockists.json` by
+`tools/generate-stockists.mjs`. Rules baked into the generator:
+
+- **Only `published: true` entries render**, and only their public fields
+  (name, town, address, menu_url). Staged accounts and internal fields
+  (`last_solventless`, `acw_since`) never reach the output.
+- **Privacy:** the master lives in `_data/`, which GitHub Pages (Jekyll)
+  does not publish, so the raw file with staged shops is never downloadable.
+  **Do not add a `.nojekyll` file** or the master would become public.
+- Regions render in file order; a region with no published shops does not
+  render. The empty/near-empty state is intentional (list and map omitted).
+- **Never show a stockist count.** No prices, inventory, or in-stock claims.
+- Menu links (when present) open in a new tab and are the shop's own menu.
+- Map is currently omitted (too few pins). Add it only when there are enough
+  published shops, and only if it is responsive and does not hijack touch scroll.
+
+To add a shop: set `published: true` (and `acw_since`) in `_data/stockists.json`,
+run `node tools/generate-stockists.mjs`, and commit the regenerated `find/`.
 
 ## Conventions
 

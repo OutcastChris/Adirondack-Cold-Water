@@ -1,0 +1,948 @@
+{
+  "updated": "2026-08-06",
+  "how_to_use": "Only entries with published set to true are rendered on the site. Everything else stays in this file as a staged record. Flip published to true once that account has received Adirondack Cold Water branded product, and set acw_since to the delivery date. Set published back to false if an account stops carrying us.",
+  "fields": {
+    "published": "true renders on the site, false is staged and hidden",
+    "acw_since": "date the account first received ACW branded product, blank until then",
+    "last_solventless": "last delivery of solventless product under any brand, internal reference only",
+    "menu_url": "optional link to the shop live menu, blank is fine"
+  },
+  "regions": [
+    {
+      "region": "North Country",
+      "stockists": [
+        {
+          "published": false,
+          "name": "High roller cannabis",
+          "town": "Glens Falls North",
+          "address": "909 US-9, Glens Falls North, NY 12804, US",
+          "acw_since": "",
+          "last_solventless": "2026-06-25",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "High peaks",
+          "town": "Saratoga Springs",
+          "address": "137 Maple Ave, Saratoga Springs, NY 12866, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Brownies",
+          "town": "Schuylerville",
+          "address": "1164 NY-29, Schuylerville, NY 12871, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "3rd Rock cannabis",
+          "town": "South Glens Falls",
+          "address": "131-135 Saratoga ave suite 7",
+          "acw_since": "",
+          "last_solventless": "2026-06-17",
+          "menu_url": ""
+        }
+      ]
+    },
+    {
+      "region": "Capital Region",
+      "stockists": [
+        {
+          "published": false,
+          "name": "Chronic",
+          "town": "Albany",
+          "address": "Central Ave, Albany, NY 12210, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Dark horse dispensary",
+          "town": "Albany",
+          "address": "15 Centre St",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Route 20 cannabis",
+          "town": "Albany",
+          "address": "2028 Western Ave, Albany",
+          "acw_since": "",
+          "last_solventless": "2026-06-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Wild roots",
+          "town": "Castleton-On-Hudson",
+          "address": "4179 US-20, Castleton-On-Hudson, NY 12033, US",
+          "acw_since": "",
+          "last_solventless": "2026-06-25",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannaplanet catskill",
+          "town": "Catskill",
+          "address": "170 w bridge st",
+          "acw_since": "",
+          "last_solventless": "2026-06-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannabis central",
+          "town": "Clifton Park",
+          "address": "1520 Crescent Rd, Clifton park, NY 12065, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "The bakery",
+          "town": "Cohoes",
+          "address": "1099 Loudon Rd, Cohoes, NY 12047, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannabique",
+          "town": "Colonie",
+          "address": "243 wolf rd",
+          "acw_since": "",
+          "last_solventless": "2026-05-20",
+          "menu_url": ""
+        },
+        {
+          "published": true,
+          "name": "THTree",
+          "town": "Coxsackie",
+          "address": "12193 US-9W, Coxsackie, NY 12192, US",
+          "acw_since": "2026-08-05",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannaplanet kingston",
+          "town": "Kingston",
+          "address": "1221 ulster ave",
+          "acw_since": "",
+          "last_solventless": "2026-06-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Hub",
+          "town": "Kingston",
+          "address": "728 Broadway, Kingston, NY 12401, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "State of mind",
+          "town": "Latham",
+          "address": "521 Troy-Schenectady Rd, Latham, NY 12110, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "High freqency",
+          "town": "Rensselear",
+          "address": "96 columbia st",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Madame Jane",
+          "town": "Schenectady",
+          "address": "102 State St, Schenectady, NY 12305, US",
+          "acw_since": "",
+          "last_solventless": "2026-05-01",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "No Name Cannabis",
+          "town": "Troy",
+          "address": "137 4th St, Troy, NY 12180, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        }
+      ]
+    },
+    {
+      "region": "Central New York",
+      "stockists": [
+        {
+          "published": false,
+          "name": "Flynnstoned north syracuse",
+          "town": "Syracuse",
+          "address": "3711 Brewerton Rd, Syracuse, NY 13212, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Exit 31 exotic",
+          "town": "Utica",
+          "address": "255 Genesee St",
+          "acw_since": "",
+          "last_solventless": "2026-05-29",
+          "menu_url": ""
+        }
+      ]
+    },
+    {
+      "region": "Southern Tier",
+      "stockists": [
+        {
+          "published": false,
+          "name": "Flynnstoned Binghamton",
+          "town": "Binghamton",
+          "address": "1143 Front St, Binghamton, NY 13905, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Collegetown",
+          "town": "Ithaca",
+          "address": "105 Dryden rd, Ithaca",
+          "acw_since": "",
+          "last_solventless": "2026-05-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Dosha",
+          "town": "Oneonta",
+          "address": "76 Main St, Oneonta, NY 13820, US",
+          "acw_since": "",
+          "last_solventless": "2026-05-05",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Greens Greenery",
+          "town": "Unadilla",
+          "address": "54 NY-357, Unadilla, NY 13849, US",
+          "acw_since": "",
+          "last_solventless": "2026-05-29",
+          "menu_url": ""
+        }
+      ]
+    },
+    {
+      "region": "Western New York",
+      "stockists": [
+        {
+          "published": false,
+          "name": "Evergreen",
+          "town": "Brockport",
+          "address": "51 N Main St, Brockport, NY 14420, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Buffalo dreams",
+          "town": "Buffalo",
+          "address": "900 Niagara falls blvd",
+          "acw_since": "",
+          "last_solventless": "2026-06-03",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "East leaf dispensary",
+          "town": "Buffalo",
+          "address": "2442 Clinton St, Buffalo, NY 14224, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Green philosophy 716",
+          "town": "Buffalo",
+          "address": "10 slade avenue, Buffalo, NY 14224, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Leaf Plug",
+          "town": "Buffalo",
+          "address": "3341 Sheridan Dr, Buffalo, NY 14226, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Premier Earth",
+          "town": "Buffalo",
+          "address": "1297 Hertel Ave, Buffalo, NY 14216, US",
+          "acw_since": "",
+          "last_solventless": "2026-05-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "East leaf 2",
+          "town": "East Aurora",
+          "address": "203 Main St, East Aurora, NY 14052, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Sessco",
+          "town": "East Rochester",
+          "address": "115 Main St, East Rochester, NY 14445, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannaspace",
+          "town": "Hamburg",
+          "address": "4151 McKinley Pkwy, Hamburg, NY 14075, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Mango cannabis",
+          "town": "Henrietta",
+          "address": "3553 west henrietta road",
+          "acw_since": "",
+          "last_solventless": "2026-07-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Kushmart lackawanna",
+          "town": "Lockawanna",
+          "address": "2470 hamburgh tpke",
+          "acw_since": "",
+          "last_solventless": "2026-06-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Native Haze",
+          "town": "Macedon",
+          "address": "1503 Canandaigua Rd, Macedon, NY 14502, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Love nug",
+          "town": "North Tonawanda",
+          "address": "3176 Niagara Falls Blvd, North Tonawanda, NY 14120, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Good life collective  rochester",
+          "town": "Rochester",
+          "address": "155 Monroe Ave, Rochester, NY 14607, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Green comfort",
+          "town": "Rochester",
+          "address": "999 S Clinton Ave, Rochester, NY 14620, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Happy Goat (Canna Life)",
+          "town": "Rochester",
+          "address": "1330 Mt Hope Ave",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Misfits",
+          "town": "Rochester",
+          "address": "420 Jefferson Rd, Rochester, NY 14623, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "mj dispensary henrietta",
+          "town": "Rochester",
+          "address": "900 Jefferson rd ste 902",
+          "acw_since": "",
+          "last_solventless": "2026-06-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Finger Lakes Cannabis Co",
+          "town": "Victor",
+          "address": "5 Railroad St, Victor, NY 14564, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        }
+      ]
+    },
+    {
+      "region": "Hudson Valley",
+      "stockists": [
+        {
+          "published": false,
+          "name": "Farmers choice",
+          "town": "Fishkill",
+          "address": "18 Westage Dr, Fishkill, NY 12524, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Daydream",
+          "town": "Highland",
+          "address": "600 state route 299",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannaplanet middletown",
+          "town": "Middletown",
+          "address": "400 north galleria drive",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Farmers choice new paltz",
+          "town": "New Paltz",
+          "address": "1 old route 299",
+          "acw_since": "",
+          "last_solventless": "2026-06-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannabis reserve",
+          "town": "New Rochelle",
+          "address": "1307 North ave",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "High life dispesary",
+          "town": "New Rochelle",
+          "address": "19 huguenot st",
+          "acw_since": "",
+          "last_solventless": "2026-05-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannabis hut newburgh",
+          "town": "Newburgh",
+          "address": "165 s plank rd",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Treehouse",
+          "town": "Nyack",
+          "address": "28 NY-59, Nyack, NY 10960, US",
+          "acw_since": "",
+          "last_solventless": "2026-06-26",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Treehouse Cannabis",
+          "town": "Nyack",
+          "address": "123 Main St",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Up the river",
+          "town": "Ossining",
+          "address": "34 Main St, Ossining, NY 10562, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Valley greens",
+          "town": "Peekskill",
+          "address": "939 Central Ave, Peekskill, NY 10566, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-23",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannabis hut poughkeepsie",
+          "town": "Poughkeepsie",
+          "address": "4-10 Taft rd",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Grounded",
+          "town": "Poughkeepsie",
+          "address": "3665 Albany Post Rd",
+          "acw_since": "",
+          "last_solventless": "2026-05-19",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Purple plains",
+          "town": "Pound Ridge",
+          "address": "32 Westchester Ave, Pound Ridge, NY 10576, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-15",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Green wellness",
+          "town": "Queens",
+          "address": "270-01 Hillside Ave., Queens, NY 11040, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Upstate pines cannabis",
+          "town": "Red Hook",
+          "address": "7345 s broadway",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannanis realm rockland",
+          "town": "Spring Valley",
+          "address": "76 NY-59, Spring Valley, NY 10977, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Nipapoa LLC (Mindset Cannabis Shop)",
+          "town": "Tarrytown",
+          "address": "51 Main St, Tarrytown",
+          "acw_since": "",
+          "last_solventless": "2026-07-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Bethel BUDS",
+          "town": "White Lake",
+          "address": "1577 route 17b",
+          "acw_since": "",
+          "last_solventless": "2026-06-03",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannabis realm",
+          "town": "White Plains",
+          "address": "475 Central Ave, White Plains, NY 10606, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        }
+      ]
+    },
+    {
+      "region": "New York City",
+      "stockists": [
+        {
+          "published": true,
+          "name": "New Amsterdam",
+          "town": "New York",
+          "address": "45 W 14th St, New York, NY 10011, US",
+          "acw_since": "2026-08-05",
+          "last_solventless": "2026-08-05",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Seaweed",
+          "town": "Arverne",
+          "address": "7313 Beach Channel Dr",
+          "acw_since": "",
+          "last_solventless": "2026-07-15",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Buzzy brooklyn",
+          "town": "Brooklyn",
+          "address": "137 court st",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Hii",
+          "town": "Brooklyn",
+          "address": "152 bedford ave",
+          "acw_since": "",
+          "last_solventless": "2026-07-15",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Kaya bliss bayridge",
+          "town": "Brooklyn",
+          "address": "8412 3rd ave",
+          "acw_since": "",
+          "last_solventless": "2026-06-26",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Stashmasters",
+          "town": "Bushwick",
+          "address": "1119 Broadway, Bushwick, NY 11221, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "The flowery",
+          "town": "Forrest Hills",
+          "address": "63-54 108th st, Forrest hills, NY 11375, USA",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Clouditiude",
+          "town": "Great Kills",
+          "address": "4034 Hylan Blvd, Great Kills, NY 10308, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Green apple",
+          "town": "Greenpoint",
+          "address": "572 Manhattan Ave, Greenpoint",
+          "acw_since": "",
+          "last_solventless": "2026-06-26",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Cannabis realm queens",
+          "town": "Jamaica",
+          "address": "172-02 Hillside ave",
+          "acw_since": "",
+          "last_solventless": "2026-07-15",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "A&P Dispensary",
+          "town": "Kew Gardens",
+          "address": "81-37 Lefferts Blvd, Kew Gardens, NY 11415, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Chelsea cannabis",
+          "town": "New York",
+          "address": "104 7th Ave, New York, NY 10011, US",
+          "acw_since": "",
+          "last_solventless": "2026-06-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Conbud",
+          "town": "New York",
+          "address": "85 Delancey St, New York, NY 10002, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "The daily green",
+          "town": "New York",
+          "address": "719 7th Ave, New York, NY 10036, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Torches NYC",
+          "town": "New York",
+          "address": "12 E 42nd st, New York, NY 10017, USA",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Beast Coast Group LLC dba House of Strains",
+          "town": "Queens County",
+          "address": "16105 29th Ave, Queens County",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Green Flower Wellness 5 LLC",
+          "town": "Queens County",
+          "address": "270-01 Hillside Ave., Queens County",
+          "acw_since": "",
+          "last_solventless": "2026-05-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Dankley",
+          "town": "Queens Village",
+          "address": "219-17 Hillside Ave., Queens Village, NY 11427, US",
+          "acw_since": "",
+          "last_solventless": "2026-06-26",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Latebloomers",
+          "town": "Ridgewood",
+          "address": "57-01 Myrtle Ave, Ridgewood, NY 11385, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Stashbox dispensary",
+          "town": "Rosedale",
+          "address": "230-04 S Conduit Ave, Rosedale, NY 11413, US",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Flowery staten :richmand",
+          "town": "Staten Island",
+          "address": "2059 richmand ave",
+          "acw_since": "",
+          "last_solventless": "2026-05-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "NUGHUB NY LLC",
+          "town": "Staten Island",
+          "address": "1350 Forest AVE, Staten island",
+          "acw_since": "",
+          "last_solventless": "2026-07-16",
+          "menu_url": ""
+        }
+      ]
+    },
+    {
+      "region": "Long Island",
+      "stockists": [
+        {
+          "published": false,
+          "name": "Cannablooms",
+          "town": "Farmingville",
+          "address": "2400 N Ocean Ave, Farmingville, NY 11738, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Strong strains",
+          "town": "Setauket- East Setauket",
+          "address": "19 Technology Dr, Setauket- East Setauket, NY 11733, US",
+          "acw_since": "",
+          "last_solventless": "2026-07-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "High rise",
+          "town": "Southhampton",
+          "address": "257 county road 39a",
+          "acw_since": "",
+          "last_solventless": "2026-05-29",
+          "menu_url": ""
+        }
+      ]
+    },
+    {
+      "region": "Unknown",
+      "stockists": [
+        {
+          "published": false,
+          "name": "Sashies Dispensary",
+          "town": "Ballston Spa",
+          "address": "201 Northline Rd, Ballston Spa",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Dream Daze",
+          "town": "Depew",
+          "address": "5100 Transit Rd",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Happy Days Dispensary - Farmingdale",
+          "town": "Farmingdale",
+          "address": "456 Elm Ave",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Reef Cannabis Dispensary",
+          "town": "Greenfield Center",
+          "address": "2532 State Hwy 9N, Greenfield Center",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Kushmart",
+          "town": "Lancaster",
+          "address": "5211 Broadway, Lancaster",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Lenox HiLL",
+          "town": "New York",
+          "address": "334 east 73rd st",
+          "acw_since": "",
+          "last_solventless": "2026-05-05",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Herb-Z",
+          "town": "North Syracuse",
+          "address": "109 E Taft Rd, North Syracuse",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "The Herb Cave",
+          "town": "Plattsburgh",
+          "address": "519 State Rte 3, Plattsburgh",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Salmon river",
+          "town": "Pulaski",
+          "address": "3808 NY-13, Pulaski",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Diamond Tree Dispensary",
+          "town": "Syracuse",
+          "address": "2700 Erie Blvd E",
+          "acw_since": "",
+          "last_solventless": "2026-05-01",
+          "menu_url": ""
+        }
+      ]
+    }
+  ]
+}
