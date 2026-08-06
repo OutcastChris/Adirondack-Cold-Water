@@ -46,6 +46,15 @@
           "acw_since": "",
           "last_solventless": "2026-06-17",
           "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "The Herb Cave",
+          "town": "Plattsburgh",
+          "address": "519 State Rte 3, Plattsburgh",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
         }
       ]
     },
@@ -186,6 +195,24 @@
           "acw_since": "",
           "last_solventless": "2026-04-17",
           "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Sashies Dispensary",
+          "town": "Ballston Spa",
+          "address": "201 Northline Rd, Ballston Spa",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Reef Cannabis Dispensary",
+          "town": "Greenfield Center",
+          "address": "2532 State Hwy 9N, Greenfield Center",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
         }
       ]
     },
@@ -208,6 +235,33 @@
           "address": "255 Genesee St",
           "acw_since": "",
           "last_solventless": "2026-05-29",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Herb-Z",
+          "town": "North Syracuse",
+          "address": "109 E Taft Rd, North Syracuse",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Salmon river",
+          "town": "Pulaski",
+          "address": "3808 NY-13, Pulaski",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Diamond Tree Dispensary",
+          "town": "Syracuse",
+          "address": "2700 Erie Blvd E",
+          "acw_since": "",
+          "last_solventless": "2026-05-01",
           "menu_url": ""
         }
       ]
@@ -425,6 +479,24 @@
           "address": "5 Railroad St, Victor, NY 14564, US",
           "acw_since": "",
           "last_solventless": "2026-07-16",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Dream Daze",
+          "town": "Depew",
+          "address": "5100 Transit Rd",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Kushmart",
+          "town": "Lancaster",
+          "address": "5211 Broadway, Lancaster",
+          "acw_since": "",
+          "last_solventless": "2026-04-17",
           "menu_url": ""
         }
       ]
@@ -814,6 +886,15 @@
           "acw_since": "",
           "last_solventless": "2026-07-16",
           "menu_url": ""
+        },
+        {
+          "published": false,
+          "name": "Lenox HiLL",
+          "town": "New York",
+          "address": "334 east 73rd st",
+          "acw_since": "",
+          "last_solventless": "2026-05-05",
+          "menu_url": ""
         }
       ]
     },
@@ -846,29 +927,6 @@
           "acw_since": "",
           "last_solventless": "2026-05-29",
           "menu_url": ""
-        }
-      ]
-    },
-    {
-      "region": "Unknown",
-      "stockists": [
-        {
-          "published": false,
-          "name": "Sashies Dispensary",
-          "town": "Ballston Spa",
-          "address": "201 Northline Rd, Ballston Spa",
-          "acw_since": "",
-          "last_solventless": "2026-04-17",
-          "menu_url": ""
-        },
-        {
-          "published": false,
-          "name": "Dream Daze",
-          "town": "Depew",
-          "address": "5100 Transit Rd",
-          "acw_since": "",
-          "last_solventless": "2026-04-17",
-          "menu_url": ""
         },
         {
           "published": false,
@@ -877,69 +935,6 @@
           "address": "456 Elm Ave",
           "acw_since": "",
           "last_solventless": "2026-04-17",
-          "menu_url": ""
-        },
-        {
-          "published": false,
-          "name": "Reef Cannabis Dispensary",
-          "town": "Greenfield Center",
-          "address": "2532 State Hwy 9N, Greenfield Center",
-          "acw_since": "",
-          "last_solventless": "2026-04-17",
-          "menu_url": ""
-        },
-        {
-          "published": false,
-          "name": "Kushmart",
-          "town": "Lancaster",
-          "address": "5211 Broadway, Lancaster",
-          "acw_since": "",
-          "last_solventless": "2026-04-17",
-          "menu_url": ""
-        },
-        {
-          "published": false,
-          "name": "Lenox HiLL",
-          "town": "New York",
-          "address": "334 east 73rd st",
-          "acw_since": "",
-          "last_solventless": "2026-05-05",
-          "menu_url": ""
-        },
-        {
-          "published": false,
-          "name": "Herb-Z",
-          "town": "North Syracuse",
-          "address": "109 E Taft Rd, North Syracuse",
-          "acw_since": "",
-          "last_solventless": "2026-04-17",
-          "menu_url": ""
-        },
-        {
-          "published": false,
-          "name": "The Herb Cave",
-          "town": "Plattsburgh",
-          "address": "519 State Rte 3, Plattsburgh",
-          "acw_since": "",
-          "last_solventless": "2026-04-17",
-          "menu_url": ""
-        },
-        {
-          "published": false,
-          "name": "Salmon river",
-          "town": "Pulaski",
-          "address": "3808 NY-13, Pulaski",
-          "acw_since": "",
-          "last_solventless": "2026-04-17",
-          "menu_url": ""
-        },
-        {
-          "published": false,
-          "name": "Diamond Tree Dispensary",
-          "town": "Syracuse",
-          "address": "2700 Erie Blvd E",
-          "acw_since": "",
-          "last_solventless": "2026-05-01",
           "menu_url": ""
         }
       ]
