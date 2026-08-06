@@ -21,8 +21,21 @@ const esc = (s) => String(s == null ? '' : s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const directions = (addr) => 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(addr);
 
+// Regions that must never render, regardless of any published flag. "Unknown"
+// is a data-cleanup bucket; publishing from it would surface an "Unknown"
+// heading. Reassign those accounts to a real region before publishing them.
+const NEVER_RENDER = new Set(['unknown', '', 'null', 'undefined']);
+const ignored = (name) => NEVER_RENDER.has(String(name == null ? '' : name).trim().toLowerCase());
+
+// Warn (build-time only) if anyone published inside an ignored region.
+DATA.regions.filter(r => ignored(r.region)).forEach(r => {
+  const pub = (r.stockists || []).filter(s => s.published === true);
+  if (pub.length) console.warn(`WARNING: ${pub.length} published shop(s) in never-render region "${r.region}" were skipped. Reassign them to a real region.`);
+});
+
 // Published entries only, grouped by region, in the file's region order.
 const groups = DATA.regions
+  .filter(r => !ignored(r.region))
   .map(r => ({ region: r.region, shops: (r.stockists || []).filter(s => s.published === true) }))
   .filter(g => g.shops.length > 0);
 const hasAny = groups.length > 0;
