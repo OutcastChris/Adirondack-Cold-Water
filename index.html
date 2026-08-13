@@ -233,12 +233,10 @@
     .pillar p { color: var(--kraft-70); font-size: 1.02rem; margin: 0; }
 
     /* Process */
-    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: step; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
     .step { padding: 30px 26px; }
-    .step::before {
-      counter-increment: step; content: "0" counter(step);
-      font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--gold);
-    }
+    .step-icon { display: block; margin-bottom: 16px; color: var(--navy); }
+    .step-icon svg { width: 42px; height: 42px; display: block; }
     .step h3 { font-size: 1.5rem; margin: 6px 0 10px; }
     .step p { color: var(--navy-70); font-size: 1rem; margin: 0; }
 
@@ -411,18 +409,49 @@
         </div>
         <div class="steps">
           <div class="step">
+            <span class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 7V41"/><path d="M9.3 15.5L38.7 32.5"/><path d="M38.7 15.5L9.3 32.5"/>
+                <path d="M21.11 10.45L24 7L26.89 10.45"/><path d="M26.89 37.55L24 41L21.11 37.55"/>
+                <path d="M10.84 19.73L9.3 15.5L13.73 14.72"/><path d="M37.16 28.27L38.7 32.5L34.27 33.28"/>
+                <path d="M34.27 14.72L38.7 15.5L37.16 19.73"/><path d="M13.73 33.28L9.3 32.5L10.84 28.27"/>
+              </svg>
+            </span>
             <h3>Fresh Frozen</h3>
             <p>Harvested and frozen at peak ripeness. Locks in the living terpenes.</p>
           </div>
           <div class="step">
+            <span class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 7C27.5 14 30 17.5 30 21.5A6 6 0 1 1 18 21.5C18 17.5 20.5 14 24 7Z"/>
+                <path d="M12 34q3 -3 6 0t6 0t6 0"/>
+                <path d="M14 40q3 -3 6 0t6 0"/>
+              </svg>
+            </span>
             <h3>Ice Water Wash</h3>
             <p>Cold agitation frees the trichome heads. Pure resin.</p>
           </div>
           <div class="step">
+            <span class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="24" cy="24" r="15"/>
+                <path d="M9 24H39"/><path d="M9.9 19H38.1"/><path d="M9.9 29H38.1"/>
+                <path d="M24 9V39"/><path d="M19 9.9V38.1"/><path d="M29 9.9V38.1"/>
+              </svg>
+            </span>
             <h3>Dried Hash</h3>
             <p>Sifted and freeze-dried to protect every compound.</p>
           </div>
           <div class="step">
+            <span class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="11" y="12" width="26" height="5" rx="1.5"/>
+                <rect x="11" y="31" width="26" height="5" rx="1.5"/>
+                <path d="M24 20.5C25.8 23 26.8 24.3 26.8 25.8A2.8 2.8 0 1 1 21.2 25.8C21.2 24.3 22.2 23 24 20.5Z"/>
+                <path d="M24 5.5V9.5"/><path d="M21.8 7.6L24 9.8L26.2 7.6"/>
+                <path d="M24 42.5V38.5"/><path d="M21.8 40.4L24 38.2L26.2 40.4"/>
+              </svg>
+            </span>
             <h3>Rosin Press</h3>
             <p>Heat and pressure release the oil. Live rosin, complete.</p>
           </div>
