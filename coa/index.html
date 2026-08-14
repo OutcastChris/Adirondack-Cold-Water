@@ -56,10 +56,40 @@
       <div class="section-head coa-intro">
         <span class="eyebrow">Lab Results</span>
         <h1 class="cond">Certificates of Analysis</h1>
-        <p>Every batch is third-party tested. Results are posted here as each batch is released. Check back soon, or ask for the batch COA at your dispensary.</p>
+        <p>Every batch is third-party tested. Find the batch code on your jar label, then look it up below.</p>
+      </div>
+      <div class="coa-search-wrap">
+        <input id="coa-search" type="search" placeholder="Search by batch code (e.g. BOR-2607-A)" aria-label="Search certificates by batch code" autocomplete="off" />
       </div>
     </div>
 
+    <div class="wrap coa-results">
+      <section class="coa-cut" data-cut="Skylight">
+        <h3 class="coa-cut-name cond firstwater">Skylight</h3>
+        <ul class="coa-list">
+          <li class="coa-entry" data-batch="gh1-sgpr-202605-ro1" data-cut="skylight">
+            <div class="coa-id">
+              <span class="coa-batch">Batch GH1-SGPR-202605-RO1</span>
+              <span class="coa-date">Tested 2026-07-23</span>
+            </div>
+            <a class="coa-view" href="files/GH1-SGPR-202605-RO1.pdf" target="_blank" rel="noopener">View COA <span aria-hidden="true">&#8599;</span></a>
+          </li>
+        </ul>
+      </section>
+      <section class="coa-cut" data-cut="Guide's Blend">
+        <h3 class="coa-cut-name cond basecamp">Guide's Blend</h3>
+        <ul class="coa-list">
+          <li class="coa-entry" data-batch="nwf-072926-gb" data-cut="guide's blend">
+            <div class="coa-id">
+              <span class="coa-batch">Batch NWF-072926-GB</span>
+              <span class="coa-date">Tested 2026-08-03</span>
+            </div>
+            <a class="coa-view" href="files/NWF-072926-GB.pdf" target="_blank" rel="noopener">View COA <span aria-hidden="true">&#8599;</span></a>
+          </li>
+        </ul>
+      </section>
+      <p id="coa-noresults" class="coa-noresults" hidden>No certificate matches that batch code. Check the code on your jar label.</p>
+    </div>
 
     <section class="coa-cta band">
       <div class="wrap contact-inner">

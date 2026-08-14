@@ -1,6 +1,6 @@
 {
   "updated": "2026-08-14",
-  "how_to_use": "Certificates of Analysis. Only entries with published set to true render on the site. Add a batch: create an entry with the cut, the batch code printed on the jar label, the test date, and either a file (a PDF committed under coa/files/) or a url (the lab's public result page). Flip published to true when the COA is cleared for release.",
+  "how_to_use": "Certificates of Analysis. Only entries with published set to true render on the site. Add a batch: create an entry with the cut, the batch code printed on the jar label, the COA date, and either a file (a PDF committed under coa/files/) or a url (the lab's public result page). Flip published to true when the COA is cleared for release. After editing, run: node tools/generate-coas.mjs",
   "fields": {
     "published": "true renders on the site, false is staged and hidden",
     "cut": "must match a cut name in brand-tokens.json",
@@ -8,12 +8,11 @@
     "batch": "the batch/lot code printed on the jar label",
     "tested": "COA date (YYYY-MM-DD), blank is allowed",
     "lab": "testing lab name, optional",
-    "file": "path to a PDF under coa/files/, e.g. files/BOR-2607-A.pdf (leave blank if using url)",
+    "file": "path to a PDF under coa/files/, e.g. files/GH1-SGPR-202605-RO1.pdf (leave blank if using url)",
     "url": "public lab result page, opens in a new tab (leave blank if using file)"
   },
   "coas": [
-    { "published": false, "cut": "Boreas", "collection": "firstWater", "batch": "BOR-2607-A", "tested": "2026-07-02", "lab": "", "file": "", "url": "" },
-    { "published": false, "cut": "Skylight", "collection": "firstWater", "batch": "SKY-2606-B", "tested": "2026-06-20", "lab": "", "file": "", "url": "" },
-    { "published": false, "cut": "Guide's Blend", "collection": "baseCamp", "batch": "GBL-2605-A", "tested": "2026-05-15", "lab": "", "file": "", "url": "" }
+    { "published": true, "cut": "Skylight", "collection": "firstWater", "batch": "GH1-SGPR-202605-RO1", "tested": "2026-07-23", "lab": "ACT Laboratories", "file": "files/GH1-SGPR-202605-RO1.pdf", "url": "" },
+    { "published": true, "cut": "Guide's Blend", "collection": "baseCamp", "batch": "NWF-072926-GB", "tested": "2026-08-03", "lab": "ACT Laboratories", "file": "files/NWF-072926-GB.pdf", "url": "" }
   ]
 }
