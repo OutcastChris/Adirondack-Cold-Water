@@ -43,10 +43,10 @@ const header = (P) => `
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="links" id="nav-links">
         <a href="${P}index.html#story">Story</a>
-        <a href="${P}index.html#values">Values</a>
         <a href="${P}index.html#process">Process</a>
         <a href="index.html">Cuts</a>
         <a href="${P}find/index.html">Find Us</a>
+        <a href="${P}coa/index.html">Lab Results</a>
         <a href="${P}index.html#contact">Contact</a>
       </nav>
     </div>
