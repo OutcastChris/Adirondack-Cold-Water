@@ -51,6 +51,16 @@
       "lab": "ACT Laboratories",
       "file": "files/GH1-MCT1-202605-RO1.pdf",
       "url": ""
+    },
+    {
+      "published": true,
+      "cut": "Schroon",
+      "collection": "firstWater",
+      "batch": "GH1-070826-SCH",
+      "tested": "2026-08-03",
+      "lab": "ACT Laboratories",
+      "file": "files/GH1-070826-SCH.pdf",
+      "url": ""
     }
   ]
 }
