@@ -12,7 +12,45 @@
     "url": "public lab result page, opens in a new tab (leave blank if using file)"
   },
   "coas": [
-    { "published": true, "cut": "Skylight", "collection": "firstWater", "batch": "GH1-SGPR-202605-RO1", "tested": "2026-07-23", "lab": "ACT Laboratories", "file": "files/GH1-SGPR-202605-RO1.pdf", "url": "" },
-    { "published": true, "cut": "Guide's Blend", "collection": "baseCamp", "batch": "NWF-072926-GB", "tested": "2026-08-03", "lab": "ACT Laboratories", "file": "files/NWF-072926-GB.pdf", "url": "" }
+    {
+      "published": true,
+      "cut": "Skylight",
+      "collection": "firstWater",
+      "batch": "GH1-SGPR-202605-RO1",
+      "tested": "2026-07-23",
+      "lab": "ACT Laboratories",
+      "file": "files/GH1-SGPR-202605-RO1.pdf",
+      "url": ""
+    },
+    {
+      "published": true,
+      "cut": "Guide's Blend",
+      "collection": "baseCamp",
+      "batch": "NWF-072926-GB",
+      "tested": "2026-08-03",
+      "lab": "ACT Laboratories",
+      "file": "files/NWF-072926-GB.pdf",
+      "url": ""
+    },
+    {
+      "published": true,
+      "cut": "Boreas",
+      "collection": "firstWater",
+      "batch": "OD1-GGT2-202510-RO1",
+      "tested": "2026-07-23",
+      "lab": "ACT Laboratories",
+      "file": "files/OD1-GGT2-202510-RO1.pdf",
+      "url": ""
+    },
+    {
+      "published": true,
+      "cut": "Guide's Blend",
+      "collection": "baseCamp",
+      "batch": "GH1-MCT1-202605-RO1",
+      "tested": "2026-07-23",
+      "lab": "ACT Laboratories",
+      "file": "files/GH1-MCT1-202605-RO1.pdf",
+      "url": ""
+    }
   ]
 }
