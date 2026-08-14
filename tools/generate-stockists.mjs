@@ -84,6 +84,7 @@ const footer = `
         <a href="../index.html#process">Process</a>
         <a href="../cuts/index.html">Cuts</a>
         <a href="index.html">Find Us</a>
+        <a href="../coa/index.html">Lab Results</a>
         <a href="../index.html#contact">Contact</a>
         <a href="https://instagram.com/adirondackcoldwater" rel="noopener">Instagram</a>
       </nav>

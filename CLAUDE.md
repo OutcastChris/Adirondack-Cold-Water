@@ -20,8 +20,11 @@ browser and it runs.
 │   └── <cut>.html         # One page per cut (generated from brand-tokens.json)
 ├── find/
 │   └── index.html         # Where to Buy (generated from _data/stockists.json)
+├── coa/
+│   └── index.html         # Lab Results / COAs (generated from _data/coas.json)
 ├── _data/
-│   └── stockists.json     # Stockist master (NOT served by Pages; see below)
+│   ├── stockists.json     # Stockist master (NOT served by Pages; see below)
+│   └── coas.json          # COA master (NOT served by Pages; same rules)
 ├── assets/
 │   ├── site.css           # Shared design system for the cuts + find pages
 │   ├── site.js            # Shared age gate + nav for the cuts + find pages
@@ -31,7 +34,8 @@ browser and it runs.
 │       ├── collections/  cuts/  products/  social/
 ├── tools/
 │   ├── generate-cuts.mjs      # Regenerates cuts/ from brand-tokens.json
-│   └── generate-stockists.mjs # Regenerates find/ from _data/stockists.json
+│   ├── generate-stockists.mjs # Regenerates find/ from _data/stockists.json
+│   └── generate-coas.mjs      # Regenerates coa/ from _data/coas.json
 ├── brand-tokens.json      # Source of truth: colors, type, collections, cuts
 ├── ASSET-MANIFEST.md      # What every supplied image is for
 ├── CLAUDE.md              # This file
@@ -106,6 +110,23 @@ properties in one place in `index.html`):
 
 To add a shop: set `published: true` (and `acw_since`) in `_data/stockists.json`,
 run `node tools/generate-stockists.mjs`, and commit the regenerated `find/`.
+
+## Lab Results (COA)
+
+`coa/index.html` is generated from `_data/coas.json` by
+`tools/generate-coas.mjs`. Same pattern as stockists:
+
+- **Only `published: true` entries render.** Certificates are grouped by cut
+  (brand-tokens order), newest test date first, with a client-side batch-code
+  search (`assets/site.js`).
+- Each entry links to **either** a PDF committed under `coa/files/` (`file`) or
+  a lab's public result page (`url`), opening in a new tab as the lab's own doc.
+- **Do not invent potency figures, batch codes, or test dates.** Only real COAs.
+- Empty state is intentional (no list, "posted per batch" copy). A cut with no
+  published COAs does not render.
+- To add a COA: add an entry to `_data/coas.json` with the cut, batch code, test
+  date, and a `file` or `url`; set `published: true`; run
+  `node tools/generate-coas.mjs`; commit.
 
 ## Conventions
 

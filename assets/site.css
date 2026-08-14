@@ -170,6 +170,29 @@ section { padding: clamp(58px, 8vw, 100px) 0; }
 .contact-meta { margin-top: 22px; font-family: var(--font-ui); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--kraft-70); }
 .contact-meta a { color: var(--kraft); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
 
+/* ---- Lab Results / COA (coa/) ---- */
+.coa-intro { text-align: center; }
+.coa-intro h1 { font-size: clamp(2rem, 5vw, 3.1rem); letter-spacing: 0.01em; }
+.coa-intro p { color: var(--navy-70); font-size: 1.12rem; margin: 10px auto 0; max-width: 54ch; }
+.coa-search-wrap { max-width: 460px; margin: clamp(24px, 3vw, 34px) auto 0; }
+#coa-search { width: 100%; font-family: var(--font-ui); font-size: 0.95rem; padding: 14px 18px; border: 1.5px solid rgba(13,27,42,0.25); border-radius: 3px; background: rgba(255,255,255,0.35); color: var(--navy); }
+#coa-search:focus { outline: none; border-color: var(--navy); }
+#coa-search::placeholder { color: var(--navy-55); }
+.coa-results { padding-top: clamp(30px, 4vw, 44px); }
+.coa-cut { margin-bottom: clamp(30px, 4vw, 46px); }
+.coa-cut:last-child { margin-bottom: 0; }
+.coa-cut-name { display: inline-block; font-size: clamp(1.4rem, 3.2vw, 1.9rem); color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 6px; }
+.coa-cut-name.basecamp { color: var(--green); }
+.coa-list { list-style: none; margin: 18px 0 0; padding: 0; }
+.coa-entry { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(13,27,42,0.14); }
+.coa-entry:first-child { border-top: 1px solid rgba(13,27,42,0.14); }
+.coa-batch { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; }
+.coa-date { font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem; color: var(--navy-70); margin-left: 12px; }
+.coa-view { font-family: var(--font-ui); text-decoration: none; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); border-bottom: 1px solid var(--gold); padding-bottom: 2px; white-space: nowrap; flex-shrink: 0; }
+.coa-view:hover { color: var(--gold); }
+.coa-noresults { text-align: center; color: var(--navy-70); font-family: var(--font-ui); font-size: 0.95rem; padding-top: 10px; }
+.coa-cta { margin-top: clamp(34px, 5vw, 56px); }
+
 /* ---- Footer ---- */
 footer { background: var(--navy); color: var(--kraft-70); font-family: var(--font-ui); font-size: 0.86rem; border-top: 1px solid rgba(230,214,179,0.16); }
 footer .foot { display: flex; justify-content: space-between; gap: 28px; flex-wrap: wrap; align-items: flex-start; padding: 48px 0 26px; }
@@ -205,4 +228,6 @@ footer .foot-links a:hover { color: var(--kraft); }
 @media (max-width: 640px) {
   .shop { flex-direction: column; align-items: flex-start; gap: 10px; }
   .shop-town { margin-left: 0; display: block; margin-top: 4px; }
+  .coa-entry { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .coa-date { margin-left: 0; display: block; margin-top: 4px; }
 }

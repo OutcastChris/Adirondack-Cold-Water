@@ -44,4 +44,27 @@
 
   var y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
+
+  // COA batch search (only on the Lab Results page)
+  var coaSearch = document.getElementById("coa-search");
+  if (coaSearch) {
+    var entries = [].slice.call(document.querySelectorAll(".coa-entry"));
+    var cutSections = [].slice.call(document.querySelectorAll(".coa-cut"));
+    var noRes = document.getElementById("coa-noresults");
+    coaSearch.addEventListener("input", function () {
+      var q = coaSearch.value.trim().toLowerCase();
+      var anyVisible = false;
+      entries.forEach(function (el) {
+        var match = !q ||
+          el.getAttribute("data-batch").indexOf(q) !== -1 ||
+          el.getAttribute("data-cut").indexOf(q) !== -1;
+        el.hidden = !match;
+        if (match) anyVisible = true;
+      });
+      cutSections.forEach(function (sec) {
+        sec.hidden = sec.querySelectorAll(".coa-entry:not([hidden])").length === 0;
+      });
+      if (noRes) noRes.hidden = anyVisible;
+    });
+  }
 })();
