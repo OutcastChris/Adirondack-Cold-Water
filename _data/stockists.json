@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06",
+  "updated": "2026-08-18",
   "how_to_use": "Only entries with published set to true are rendered on the site. Everything else stays in this file as a staged record. Flip published to true once that account has received Adirondack Cold Water branded product, and set acw_since to the delivery date. Set published back to false if an account stops carrying us.",
   "fields": {
     "published": "true renders on the site, false is staged and hidden",
@@ -138,7 +138,7 @@
           "name": "THTree",
           "town": "Coxsackie",
           "address": "12193 US-9W, Coxsackie, NY 12192, US",
-          "acw_since": "2026-08-05",
+          "acw_since": "2026-08-06",
           "last_solventless": "2026-04-17",
           "menu_url": ""
         },
@@ -212,6 +212,15 @@
           "address": "2532 State Hwy 9N, Greenfield Center",
           "acw_since": "",
           "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": true,
+          "name": "Lucky Dog 420",
+          "town": "Ballston Spa",
+          "address": "Lucky Dog 420, Ballston Spa, NY",
+          "acw_since": "2026-08-17",
+          "last_solventless": "",
           "menu_url": ""
         }
       ]
@@ -622,11 +631,11 @@
           "menu_url": ""
         },
         {
-          "published": false,
+          "published": true,
           "name": "Purple plains",
           "town": "Pound Ridge",
           "address": "32 Westchester Ave, Pound Ridge, NY 10576, US",
-          "acw_since": "",
+          "acw_since": "2026-08-11",
           "last_solventless": "2026-07-15",
           "menu_url": ""
         },
@@ -929,12 +938,21 @@
           "menu_url": ""
         },
         {
-          "published": false,
+          "published": true,
           "name": "Happy Days Dispensary - Farmingdale",
           "town": "Farmingdale",
           "address": "456 Elm Ave",
-          "acw_since": "",
+          "acw_since": "2026-08-13",
           "last_solventless": "2026-04-17",
+          "menu_url": ""
+        },
+        {
+          "published": true,
+          "name": "Joint Venture Cannabis Dispensary",
+          "town": "Medford",
+          "address": "Joint Venture Cannabis Dispensary, Medford, NY",
+          "acw_since": "2026-08-13",
+          "last_solventless": "",
           "menu_url": ""
         }
       ]
