@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adirondack Cold Water | Solventless Live Rosin | Strong. Clean. Solventless.</title>
   <meta name="description" content="Adirondack Cold Water. Solventless live rosin, grown, washed and pressed in Granville, New York by Outcast Acres Farm. Strong. Clean. Solventless." />
-  <meta name="theme-color" content="#0D1B2A" />
+  <meta name="theme-color" content="#202e3f" />
   <link rel="canonical" href="https://adirondackcoldwater.com/" />
 
   <!-- Favicons -->
@@ -39,15 +39,15 @@
 
     :root {
       /* ---- Brand palette (brand-tokens.json) ---- */
-      --navy: #0D1B2A;   /* Primary ink. Body, headings, First Water. */
-      --green: #1F4D2E;  /* Base Camp collection only. */
+      --navy: #202e3f;   /* Primary ink. Body, headings, First Water. */
+      --green: #193124;  /* Base Camp collection only. */
       --kraft: #E6D6B3;  /* Page background, always under the paper texture. */
       --black: #111111;
       --white: #FFFFFF;
-      --gold: #B08D4F;   /* Hairline rules and small dividers only. */
+      --brown: #804d30;   /* Hairline rules and small dividers only. */
 
-      --navy-70: rgba(13, 27, 42, 0.70);
-      --navy-55: rgba(13, 27, 42, 0.55);
+      --navy-70: rgba(32, 46, 63, 0.70);
+      --navy-55: rgba(32, 46, 63, 0.55);
       /* Light-on-navy text: kraft-based, so there is no separate cream tone. */
       --kraft-70: rgba(230, 214, 179, 0.74);
       --kraft-45: rgba(230, 214, 179, 0.48);
@@ -102,8 +102,8 @@
       color: var(--navy-70);
     }
 
-    /* Gold hairline rule */
-    .rule { width: 56px; height: 2px; background: var(--gold); border: 0; margin: 18px auto; }
+    /* Brown hairline rule */
+    .rule { width: 56px; height: 2px; background: var(--brown); border: 0; margin: 18px auto; }
     .rule.left { margin-left: 0; }
 
     /* ---------- Buttons ---------- */
@@ -158,7 +158,7 @@
       position: sticky; top: 0; z-index: 50;
       background: rgba(230, 214, 179, 0.90);
       backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(13, 27, 42, 0.14);
+      border-bottom: 1px solid rgba(32, 46, 63, 0.14);
     }
     .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
     .brand { display: flex; align-items: center; text-decoration: none; }
@@ -173,7 +173,7 @@
     }
     nav.links a::after {
       content: ""; position: absolute; left: 0; bottom: -2px; height: 1.5px; width: 0;
-      background: var(--gold); transition: width .22s ease;
+      background: var(--brown); transition: width .22s ease;
     }
     nav.links a:hover::after { width: 100%; }
     .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
@@ -201,7 +201,7 @@
       background-color: #F3ECDC;
       background-image: var(--tex-paper);
       background-size: cover;
-      border: 1px solid rgba(13, 27, 42, 0.14);
+      border: 1px solid rgba(32, 46, 63, 0.14);
       border-radius: 3px;
     }
 
@@ -218,8 +218,8 @@
     .story .prose p.sub { color: var(--navy-70); }
     .story-card { padding: 0; }
     .story-card .badge { width: 58px; margin-bottom: 16px; }
-    .spec { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid rgba(13,27,42,0.14); }
-    .spec:first-child { border-top: 1px solid rgba(13,27,42,0.14); }
+    .spec { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid rgba(32,46,63,0.14); }
+    .spec:first-child { border-top: 1px solid rgba(32,46,63,0.14); }
     .spec:last-child { border-bottom: 0; }
     .spec .k { font-family: var(--font-ui); color: var(--navy-70); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.7rem; font-weight: 600; }
     .spec .v { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; }
@@ -259,7 +259,7 @@
     .contact-inner h2 { font-size: clamp(2rem, 5vw, 3.1rem); }
     .contact-inner p { color: var(--kraft-70); font-size: 1.14rem; margin: 14px 0 30px; }
     .contact-meta { margin-top: 26px; font-family: var(--font-ui); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--kraft-70); }
-    .contact-meta a { color: var(--kraft); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+    .contact-meta a { color: var(--kraft); text-decoration: none; border-bottom: 1px solid var(--brown); padding-bottom: 2px; }
 
     /* Footer (same navy as the bands; a hairline separates it from Contact) */
     footer { background: var(--navy); color: var(--kraft-70); font-family: var(--font-ui); font-size: 0.86rem; border-top: 1px solid rgba(230,214,179,0.16); }
@@ -282,18 +282,18 @@
       nav.links {
         position: absolute; top: 100%; right: 0; left: 0;
         flex-direction: column; gap: 0; align-items: stretch;
-        background: var(--kraft); border-bottom: 1px solid rgba(13,27,42,0.14);
+        background: var(--kraft); border-bottom: 1px solid rgba(32,46,63,0.14);
         padding: 6px 6vw 18px; transform: translateY(-8px); opacity: 0; pointer-events: none; transition: .2s;
       }
       nav.links.open { transform: none; opacity: 1; pointer-events: auto; }
-      nav.links a { padding: 13px 0; border-bottom: 1px solid rgba(13,27,42,0.10); }
+      nav.links a { padding: 13px 0; border-bottom: 1px solid rgba(32,46,63,0.10); }
       .nav-toggle { display: block; }
       .story { grid-template-columns: 1fr; }
       .pillars { grid-template-columns: 1fr; }
       .pillar { border-left: 0; border-top: 1px solid rgba(230,214,179,0.20); padding: 26px 0; }
       .pillar:first-child { border-top: 0; }
       .steps { grid-template-columns: 1fr; gap: 6px; }
-      .step { padding: 22px 0; border-bottom: 1px solid rgba(13,27,42,0.12); }
+      .step { padding: 22px 0; border-bottom: 1px solid rgba(32,46,63,0.12); }
     }
     @media (min-width: 861px) and (max-width: 1040px) {
       .steps { grid-template-columns: repeat(2, 1fr); }
@@ -499,7 +499,7 @@
       </article>
 
       <div class="wrap">
-        <p class="collections-note"><a href="cuts/" style="border-bottom: 1px solid var(--gold); padding-bottom: 2px; text-decoration: none; color: var(--navy);">Explore every cut</a>, with the nose, palate and finish for each.</p>
+        <p class="collections-note"><a href="cuts/" style="border-bottom: 1px solid var(--brown); padding-bottom: 2px; text-decoration: none; color: var(--navy);">Explore every cut</a>, with the nose, palate and finish for each.</p>
       </div>
     </section>
 

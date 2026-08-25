@@ -79,7 +79,7 @@ const headTags = ({ title, desc, canonical, ogImage, ogType = 'website' }) => `
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${title}</title>
   <meta name="description" content="${desc}" />
-  <meta name="theme-color" content="#0D1B2A" />
+  <meta name="theme-color" content="#202e3f" />
   <link rel="canonical" href="${canonical}" />
   <link rel="icon" href="../assets/brand/logos/ACW-Favicon.svg" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/logos/ACW-Favicon-32x32.png" />

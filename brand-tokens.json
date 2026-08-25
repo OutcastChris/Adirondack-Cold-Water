@@ -7,18 +7,18 @@
   "instagram": "@adirondackcoldwater",
   "tagline": "Strong. Clean. Solventless.",
   "color": {
-    "navy": "#0D1B2A",
-    "green": "#1F4D2E",
+    "navy": "#202e3f",
+    "green": "#193124",
     "kraft": "#E6D6B3",
     "black": "#111111",
     "white": "#FFFFFF",
-    "gold": "#B08D4F"
+    "brown": "#804d30"
   },
   "colorRules": {
     "navy": "Primary ink. Body text, headings, First Water collection.",
     "green": "Base Camp collection only. Never used for body text or navigation.",
     "kraft": "Page background, always with the paper texture over it.",
-    "gold": "Hairline rules and small dividers only. Never type, never fills."
+    "brown": "Hairline rules and small dividers only. Never type, never fills."
   },
   "type": {
     "display": { "family": "Playfair Display", "weight": 900, "case": "uppercase", "letterSpacing": "0.014em", "transform": "scaleX(0.90)" },
@@ -28,8 +28,8 @@
     "note": "These are placeholder faces. The licensed brand face replaces the display and secondary roles later. Keep font-family in one CSS variable so the swap is a one line change."
   },
   "collections": {
-    "firstWater": { "label": "First Water", "color": "#0D1B2A", "description": "Single source. One cultivar per jar, grown, washed and pressed on our own farm." },
-    "baseCamp": { "label": "Base Camp", "color": "#1F4D2E", "description": "Blends built for consistency. Everyday quality, every adventure." }
+    "firstWater": { "label": "First Water", "color": "#202e3f", "description": "Single source. One cultivar per jar, grown, washed and pressed on our own farm." },
+    "baseCamp": { "label": "Base Camp", "color": "#193124", "description": "Blends built for consistency. Everyday quality, every adventure." }
   },
   "cuts": [
     { "name": "Boreas", "collection": "firstWater", "nose": "Loud guava, sweet chem edge", "palate": "Tropical fruit over fuel", "finish": "Clean, sweet, lingering" },

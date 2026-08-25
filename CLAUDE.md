@@ -61,10 +61,10 @@ properties in one place in `index.html`):
 
 | Token       | Value       | Use                                                   |
 | ----------- | ----------- | ----------------------------------------------------- |
-| `--navy`    | `#0D1B2A`   | Primary ink. Body, headings, First Water collection.  |
-| `--green`   | `#1F4D2E`   | **Base Camp collection only.** Never body/nav text.   |
+| `--navy`    | `#202e3f`   | Primary ink. Body, headings, First Water collection.  |
+| `--green`   | `#193124`   | **Base Camp collection only.** Never body/nav text.   |
 | `--kraft`   | `#E6D6B3`   | Page background, always under the paper texture.       |
-| `--gold`    | `#B08D4F`   | Hairline rules and small dividers only. Never type/fill.|
+| `--brown`    | `#804d30`   | Hairline rules and small dividers only. Never type/fill.|
 | `--black`   | `#111111`   | Footer.                                               |
 | `--white`   | `#FFFFFF`   |                                                       |
 
