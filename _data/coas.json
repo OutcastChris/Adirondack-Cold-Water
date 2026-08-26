@@ -61,6 +61,16 @@
       "lab": "ACT Laboratories",
       "file": "files/GH1-070826-SCH.pdf",
       "url": ""
+    },
+    {
+      "published": true,
+      "cut": "Tupper",
+      "collection": "firstWater",
+      "batch": "SEF-081126-TUP",
+      "tested": "2026-08-15",
+      "lab": "ACT Laboratories",
+      "file": "files/SEF-081126-TUP.pdf",
+      "url": ""
     }
   ]
 }
