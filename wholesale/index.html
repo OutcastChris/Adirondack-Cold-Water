@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wholesale | Adirondack Cold Water Solventless Live Rosin</title>
+  <meta name="description" content="Wholesale inquiries for Adirondack Cold Water solventless live rosin. For licensed New York dispensaries and buyers. Tell us about your shop and our team will follow up." />
+  <meta name="theme-color" content="#202e3f" />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://adirondackcoldwater.com/wholesale/" />
+  <link rel="icon" href="../assets/brand/logos/ACW-Favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/logos/ACW-Favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="../assets/brand/logos/ACW-Favicon-512x512.png" />
+  <meta property="og:title" content="Wholesale | Adirondack Cold Water" />
+  <meta property="og:description" content="For licensed New York dispensaries and buyers. Reach out about carrying Adirondack Cold Water." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adirondackcoldwater.com/wholesale/" />
+  <meta property="og:image" content="https://adirondackcoldwater.com/assets/brand/banners/ACW-Web-Banner-1200x628.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://adirondackcoldwater.com/assets/brand/banners/ACW-Web-Banner-1200x628.jpg" />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <style>
+    /* ---------- Wholesale form ---------- */
+    .ws-intro { padding-top: clamp(40px, 6vw, 72px); }
+    .ws-wrap { max-width: 760px; margin: 0 auto; padding: 0 6vw clamp(60px, 9vw, 110px); }
+    .ws-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 22px; margin-top: clamp(24px, 4vw, 40px); }
+    .ws-field { display: flex; flex-direction: column; gap: 7px; }
+    .ws-field.full { grid-column: 1 / -1; }
+    .ws-form label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy); }
+    .ws-form label .req { color: var(--brown); margin-left: 2px; }
+    .ws-form label .opt { color: var(--navy); opacity: 0.5; font-weight: 500; letter-spacing: 0.1em; }
+    .ws-form input, .ws-form textarea {
+      font-family: var(--font-body); font-size: 1rem; color: var(--navy);
+      background: rgba(255,255,255,0.45); border: 1.5px solid rgba(32,46,63,0.28);
+      border-radius: 3px; padding: 13px 15px; width: 100%;
+    }
+    .ws-form textarea { resize: vertical; min-height: 130px; }
+    .ws-form input:focus, .ws-form textarea:focus { outline: none; border-color: var(--brown); box-shadow: 0 0 0 2px rgba(128,77,48,0.16); }
+    .ws-form input::placeholder, .ws-form textarea::placeholder { color: rgba(32,46,63,0.4); }
+    .ws-hp { position: absolute; left: -9999px; top: -9999px; }
+    .ws-actions { grid-column: 1 / -1; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 4px; }
+    .ws-note { grid-column: 1 / -1; font-size: 0.86rem; color: var(--navy); opacity: 0.72; margin: 0; }
+    #ws-submit[disabled] { opacity: 0.55; cursor: default; }
+    #ws-status { font-family: var(--font-ui); font-size: 0.82rem; letter-spacing: 0.04em; }
+    #ws-status.ok { color: var(--green); }
+    #ws-status.err { color: var(--brown); }
+    .ws-consumer { grid-column: 1 / -1; border-top: 1px solid rgba(128,77,48,0.42); margin-top: 8px; padding-top: 22px; font-size: 0.9rem; color: var(--navy); opacity: 0.85; }
+    .ws-consumer a { color: var(--navy); }
+    @media (max-width: 620px) { .ws-form { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body class="locked">
+
+  <div id="age-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-inner">
+      <img class="gate-mark" src="../assets/brand/logos/ACW-Logo-Icon-White.png" alt="Adirondack Cold Water" />
+      <h2 id="gate-title">Are you 21 or older?</h2>
+      <hr class="rule" />
+      <p>You must be 21 or older to enter. Adirondack Cold Water is intended for adults 21+.</p>
+      <div class="gate-actions">
+        <button class="btn" id="gate-yes">Yes, I&rsquo;m 21+</button>
+        <a class="btn ghost" href="https://www.samhsa.gov" rel="noopener">No, exit</a>
+      </div>
+      <div class="gate-note">By entering you confirm you are of legal age in your jurisdiction.</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="../index.html" aria-label="Adirondack Cold Water home">
+        <img class="horiz" src="../assets/brand/logos/ACW-Logo-Horizontal-Navy.svg" alt="Adirondack Cold Water" />
+        <img class="icon" src="../assets/brand/logos/ACW-Logo-Icon.svg" alt="Adirondack Cold Water" />
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="links" id="nav-links">
+        <a href="../index.html#story">Story</a>
+        <a href="../index.html#process">Process</a>
+        <a href="../cuts/index.html">Cuts</a>
+        <a href="../find/index.html">Find Us</a>
+        <a href="../coa/index.html">Lab Results</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap">
+      <div class="section-head ws-intro">
+        <span class="eyebrow">Wholesale</span>
+        <h1 class="cond">Carry Adirondack Cold Water.</h1>
+        <p>For licensed New York dispensaries and buyers. Tell us about your shop and our team will follow up about carrying our solventless live rosin.</p>
+      </div>
+    </div>
+
+    <div class="ws-wrap">
+      <form class="ws-form" id="ws-form" novalidate>
+        <!-- Web3Forms config: paste your access key below to activate delivery to Sales@ -->
+        <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY" />
+        <input type="hidden" name="subject" value="Wholesale inquiry — Adirondack Cold Water" />
+        <input type="hidden" name="from_name" value="ACW Wholesale Form" />
+        <!-- Honeypot: bots fill this; humans never see it -->
+        <input type="checkbox" name="botcheck" class="ws-hp" tabindex="-1" autocomplete="off" />
+
+        <div class="ws-field">
+          <label for="ws-business">Business / Dispensary <span class="req">*</span></label>
+          <input id="ws-business" name="Business / Dispensary" type="text" required autocomplete="organization" placeholder="Shop name" />
+        </div>
+        <div class="ws-field">
+          <label for="ws-contact">Contact name <span class="req">*</span></label>
+          <input id="ws-contact" name="Contact name" type="text" required autocomplete="name" placeholder="Your name" />
+        </div>
+        <div class="ws-field">
+          <label for="ws-email">Email <span class="req">*</span></label>
+          <input id="ws-email" name="email" type="email" required autocomplete="email" placeholder="you@shop.com" />
+        </div>
+        <div class="ws-field">
+          <label for="ws-phone">Phone <span class="opt">(optional)</span></label>
+          <input id="ws-phone" name="Phone" type="tel" autocomplete="tel" placeholder="(000) 000-0000" />
+        </div>
+        <div class="ws-field">
+          <label for="ws-license">OCM / License # <span class="opt">(optional)</span></label>
+          <input id="ws-license" name="License number" type="text" placeholder="Retail license number" />
+        </div>
+        <div class="ws-field">
+          <label for="ws-location">City &amp; region <span class="opt">(optional)</span></label>
+          <input id="ws-location" name="City & region" type="text" placeholder="City, NY" />
+        </div>
+        <div class="ws-field full">
+          <label for="ws-message">What are you looking for? <span class="req">*</span></label>
+          <textarea id="ws-message" name="Message" required placeholder="Cuts of interest, volume, timing, questions."></textarea>
+        </div>
+
+        <div class="ws-actions">
+          <button class="btn" id="ws-submit" type="submit">Send Inquiry</button>
+          <span id="ws-status" role="status" aria-live="polite"></span>
+        </div>
+        <p class="ws-note">We only use this to respond to your wholesale inquiry. No prices, ordering, or consumer sales here.</p>
+
+        <p class="ws-consumer">Not a retailer? Consumer questions go to <a href="mailto:hello@adirondackcoldwater.com">hello@adirondackcoldwater.com</a>.</p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <a class="foot-logo" href="../index.html" aria-label="Adirondack Cold Water home">
+        <img src="../assets/brand/logos/ACW-Logo-Primary-White.png" alt="Adirondack Cold Water" />
+      </a>
+      <nav class="foot-links">
+        <a href="../index.html#story">Story</a>
+        <a href="../index.html#process">Process</a>
+        <a href="../cuts/index.html">Cuts</a>
+        <a href="../find/index.html">Find Us</a>
+        <a href="../coa/index.html">Lab Results</a>
+        <a href="index.html">Wholesale</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://instagram.com/adirondackcoldwater" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+    <div class="wrap legal">
+      <p><strong>For adults 21 and over. Keep out of reach of children.</strong> Licensed by the New York State Office of Cannabis Management, OCM-PROC-25-000317.</p>
+      <p>&copy; <span id="year">2026</span> Adirondack Cold Water &middot; Outcast Acres Farm LLC, Granville, New York. Strong. Clean. Solventless.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/site.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById("ws-form");
+      var btn = document.getElementById("ws-submit");
+      var status = document.getElementById("ws-status");
+      var KEY = form.elements["access_key"].value;
+
+      function setStatus(msg, kind) { status.textContent = msg; status.className = kind || ""; }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        // Safety guard: don't pretend to send if the form isn't configured yet.
+        if (!KEY || KEY.indexOf("REPLACE_WITH") === 0) {
+          setStatus("This form isn't live yet. Email hello@adirondackcoldwater.com for now.", "err");
+          return;
+        }
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        btn.disabled = true;
+        setStatus("Sending…", "");
+        var data = Object.fromEntries(new FormData(form).entries());
+
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(data)
+        })
+        .then(function (r) { return r.json(); })
+        .then(function (j) {
+          if (j.success) {
+            form.reset();
+            setStatus("Thanks. We’ll be in touch.", "ok");
+          } else {
+            setStatus("Something went wrong. Please email hello@adirondackcoldwater.com.", "err");
+            btn.disabled = false;
+          }
+        })
+        .catch(function () {
+          setStatus("Network error. Please email hello@adirondackcoldwater.com.", "err");
+          btn.disabled = false;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
