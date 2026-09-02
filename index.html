@@ -140,7 +140,7 @@
     }
     #age-gate .gate-inner { width: min(460px, 100%); }
     #age-gate .gate-mark { width: 104px; margin: 0 auto 24px; }
-    #age-gate h1 {
+    #age-gate h2 {
       font-family: var(--font-display); font-weight: 900;
       font-size: clamp(1.9rem, 6vw, 2.7rem); letter-spacing: 0.01em; margin-bottom: 6px;
     }
@@ -152,6 +152,7 @@
     #age-gate .btn.ghost:hover { background: var(--kraft); color: var(--navy); }
     #age-gate .gate-note { margin-top: 24px; font-size: 0.74rem; letter-spacing: 0.03em; color: var(--kraft-45); font-family: var(--font-ui); }
     body.locked { overflow: hidden; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
     /* ---------- Header ---------- */
     header {
@@ -306,7 +307,7 @@
   <div id="age-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
     <div class="gate-inner">
       <img class="gate-mark" src="assets/brand/logos/ACW-Logo-Icon-White.png" alt="Adirondack Cold Water" />
-      <h1 id="gate-title">Are you 21 or older?</h1>
+      <h2 id="gate-title">Are you 21 or older?</h2>
       <hr class="rule" />
       <p>You must be 21 or older to enter. Adirondack Cold Water is intended for adults 21+.</p>
       <div class="gate-actions">
@@ -343,6 +344,7 @@
     <!-- ===== Hero ===== -->
     <section class="hero">
       <div class="wrap">
+        <h1 class="sr-only">Adirondack Cold Water solventless live rosin</h1>
         <img class="hero-logo" src="assets/brand/logos/ACW-Logo-Horizontal-Navy.svg" alt="Adirondack Cold Water, Live Rosin" />
         <p class="lede">Solventless live rosin, grown, washed and pressed in Granville, New York.</p>
         <div class="hero-cta">

@@ -39,7 +39,8 @@
     { "name": "Tupper", "collection": "firstWater", "nose": "Bright lime, sweet citrus", "palate": "Citrus candy, soft floral", "finish": "Crisp, clean, tart" },
     { "name": "Raquette", "collection": "firstWater", "nose": "Sweet anise, spiced orange", "palate": "Licorice over kush gas", "finish": "Spiced, dry, resinous" },
     { "name": "Skylight", "collection": "firstWater", "nose": "Ripe strawberry, guava", "palate": "Sweet cream over tropical", "finish": "Soft, sweet, rounded" },
-    { "name": "Guide's Blend", "collection": "baseCamp", "nose": "Strawberry with a savory edge", "palate": "Sweet cream, garlic funk", "finish": "Balanced, sweet, grounded" }
+    { "name": "Guide's Blend", "collection": "baseCamp", "nose": "Strawberry with a savory edge", "palate": "Sweet cream, garlic funk", "finish": "Balanced, sweet, grounded" },
+    { "name": "Independence", "collection": "baseCamp", "nose": "Sweet floral, spiced earth", "palate": "Honeyed citrus over pine", "finish": "Smooth, warm, drying" }
   ],
   "tiers": ["Full Melt", "Private Reserve", "Tier 1", "Tier 2", "Blend"],
   "tierNote": "Tier is assigned per batch by grading. Never bind a tier to a cut in site content."

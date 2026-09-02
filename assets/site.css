@@ -76,7 +76,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 900; line
 #age-gate { position: fixed; inset: 0; z-index: 1000; background: var(--navy); color: var(--kraft); display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; }
 #age-gate .gate-inner { width: min(460px, 100%); }
 #age-gate .gate-mark { width: 104px; margin: 0 auto 24px; }
-#age-gate h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.9rem, 6vw, 2.7rem); letter-spacing: 0.01em; margin-bottom: 6px; }
+#age-gate h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.9rem, 6vw, 2.7rem); letter-spacing: 0.01em; margin-bottom: 6px; }
 #age-gate p { color: var(--kraft-70); font-size: 1rem; margin: 14px auto 26px; max-width: 34ch; }
 .gate-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 #age-gate .btn { border-color: var(--kraft); background: var(--kraft); color: var(--navy); }

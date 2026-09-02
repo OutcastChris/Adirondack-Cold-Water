@@ -44,7 +44,7 @@ const gate = `
   <div id="age-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
     <div class="gate-inner">
       <img class="gate-mark" src="../assets/brand/logos/ACW-Logo-Icon-White.png" alt="Adirondack Cold Water" />
-      <h1 id="gate-title">Are you 21 or older?</h1>
+      <h2 id="gate-title">Are you 21 or older?</h2>
       <hr class="rule" />
       <p>You must be 21 or older to enter. Adirondack Cold Water is intended for adults 21+.</p>
       <div class="gate-actions">
