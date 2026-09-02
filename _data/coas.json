@@ -71,6 +71,26 @@
       "lab": "ACT Laboratories",
       "file": "files/SEF-081126-TUP.pdf",
       "url": ""
+    },
+    {
+      "published": true,
+      "cut": "Boreas",
+      "collection": "firstWater",
+      "batch": "NWF-081326-BOR-T2",
+      "tested": "2026-08-31",
+      "lab": "ACT Laboratories",
+      "file": "files/NWF-081326-BOR-T2.pdf",
+      "url": ""
+    },
+    {
+      "published": true,
+      "cut": "Independence",
+      "collection": "baseCamp",
+      "batch": "OFS-082426-IND",
+      "tested": "2026-08-31",
+      "lab": "ACT Laboratories",
+      "file": "files/OFS-082426-IND.pdf",
+      "url": ""
     }
   ]
 }
