@@ -41,6 +41,11 @@
     /* Deep-link targets clear the sticky header */
     main [id] { scroll-margin-top: 108px; }
 
+    /* .cond squeezes type toward its center, which is right for the site's
+       centered headings but indents left-aligned ones off their column edge.
+       Everything on this page except the cover and contact band is left-set. */
+    .tr-head .cond, .sub-head .cond, .step .cond, .duo-card .cond { transform-origin: left; }
+
     /* ---------- Layout ---------- */
     .tr-wrap { width: min(740px, 92vw); margin-inline: auto; }
     main section { padding: clamp(40px, 6vw, 64px) 0; }
