@@ -53,8 +53,12 @@
     .tr-head .eyebrow { display: block; margin-bottom: 8px; }
     .tr-head h2 { font-size: clamp(1.7rem, 4.6vw, 2.5rem); letter-spacing: 0.01em; display: inline; }
     .tr-head .intro { color: var(--navy-70); font-size: 1.05rem; margin: 10px 0 0; }
-    .copylink { display: inline-block; vertical-align: 0.35em; margin-left: 12px; background: none; border: 0; cursor: pointer; font-family: var(--font-ui); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy-55); border-bottom: 1px solid var(--brown); padding: 0 0 2px; }
-    .copylink:hover { color: var(--navy); }
+    .copylink { display: inline-flex; align-items: center; gap: 6px; vertical-align: 0.2em; margin-left: 12px; background: none; border: 0; cursor: pointer; padding: 2px; color: var(--navy-55); }
+    .copylink:hover, .copylink:focus-visible { color: var(--navy); }
+    .copylink svg { width: 16px; height: 16px; display: block; }
+    .copylink .copied-note { display: none; font-family: var(--font-ui); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+    .copylink.done svg { display: none; }
+    .copylink.done .copied-note { display: inline; }
 
     /* ---------- Cover. The title block sits on clean kraft above the art —
        never over the drawing — and the art's deliberately empty upper third
@@ -305,7 +309,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part One</span>
-          <h2 class="cond">Who we are</h2><button class="copylink" data-copy="#who" type="button">Link</button>
+          <h2 class="cond">Who we are</h2><button class="copylink" data-copy="#who" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">We grow First Water here. Every Adirondack Cold Water batch is washed, pressed, and jarred here.</p>
         </div>
         <div class="idea">
@@ -335,7 +339,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part One</span>
-          <h2 class="cond">How we make it</h2><button class="copylink" data-copy="#process" type="button">Link</button>
+          <h2 class="cond">How we make it</h2><button class="copylink" data-copy="#process" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">Six steps. It can be described in six steps because there is nothing hidden in it.</p>
         </div>
 
@@ -506,7 +510,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part One</span>
-          <h2 class="cond">Why the flower matters</h2><button class="copylink" data-copy="#input" type="button">Link</button>
+          <h2 class="cond">Why the flower matters</h2><button class="copylink" data-copy="#input" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">There is no step where rosin gets fixed. Whatever went in is what comes out.</p>
         </div>
         <div class="idea">
@@ -540,7 +544,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part One</span>
-          <h2 class="cond">How we grow</h2><button class="copylink" data-copy="#growing" type="button">Link</button>
+          <h2 class="cond">How we grow</h2><button class="copylink" data-copy="#growing" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">Two environments, both on our own farm. They are different, not better and worse.</p>
         </div>
         <!-- Art slots: 10-protected-culture and 11-outdoor. They render as an
@@ -597,7 +601,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part One</span>
-          <h2 class="cond">Lines</h2><button class="copylink" data-copy="#lines" type="button">Link</button>
+          <h2 class="cond">Lines</h2><button class="copylink" data-copy="#lines" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">The line tells you where it came from. That is all it tells you.</p>
         </div>
         <div class="duo">
@@ -624,7 +628,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part One</span>
-          <h2 class="cond">Tiers</h2><button class="copylink" data-copy="#tiers" type="button">Link</button>
+          <h2 class="cond">Tiers</h2><button class="copylink" data-copy="#tiers" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">Tier is a grade, and it is earned one batch at a time.</p>
         </div>
         <div class="callout" style="margin-top: 0">
@@ -738,7 +742,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part One</span>
-          <h2 class="cond">Reading a jar</h2><button class="copylink" data-copy="#jar" type="button">Link</button>
+          <h2 class="cond">Reading a jar</h2><button class="copylink" data-copy="#jar" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">There is a lot of folklore here and most of it is wrong.</p>
         </div>
         <div class="idea">
@@ -760,7 +764,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part One</span>
-          <h2 class="cond">Terms customers will use</h2><button class="copylink" data-copy="#terms" type="button">Link</button>
+          <h2 class="cond">Terms customers will use</h2><button class="copylink" data-copy="#terms" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">Know these so you are not caught out.</p>
         </div>
         <dl class="term-list">
@@ -785,7 +789,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part Two</span>
-          <h2 class="cond">What solventless means</h2><button class="copylink" data-copy="#solventless" type="button">Link</button>
+          <h2 class="cond">What solventless means</h2><button class="copylink" data-copy="#solventless" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">Ice, water, heat, and pressure. That is the entire list of inputs.</p>
         </div>
         <div class="idea">
@@ -809,7 +813,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part Two</span>
-          <h2 class="cond">Trichomes</h2><button class="copylink" data-copy="#trichomes" type="button">Link</button>
+          <h2 class="cond">Trichomes</h2><button class="copylink" data-copy="#trichomes" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">Everything a customer is paying for sits in structures they can barely see.</p>
         </div>
         <!-- Art slots: 08-trichome-cross-section and 09-trichome-field. When approved,
@@ -852,7 +856,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part Two</span>
-          <h2 class="cond">Terpenes</h2><button class="copylink" data-copy="#terpenes" type="button">Link</button>
+          <h2 class="cond">Terpenes</h2><button class="copylink" data-copy="#terpenes" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">Everything we love about the smell is a defense mechanism that predates us by thousands of years.</p>
         </div>
         <div class="idea">
@@ -890,7 +894,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part Two</span>
-          <h2 class="cond">THCA and THC</h2><button class="copylink" data-copy="#thca" type="button">Link</button>
+          <h2 class="cond">THCA and THC</h2><button class="copylink" data-copy="#thca" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">The plant primarily makes THCA. Heat converts it to THC.</p>
         </div>
         <div class="idea">
@@ -912,7 +916,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part Two</span>
-          <h2 class="cond">The entourage effect</h2><button class="copylink" data-copy="#entourage" type="button">Link</button>
+          <h2 class="cond">The entourage effect</h2><button class="copylink" data-copy="#entourage" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">A theory, and worth stating as one.</p>
         </div>
         <div class="idea">
@@ -936,7 +940,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part Two</span>
-          <h2 class="cond">Reading a COA</h2><button class="copylink" data-copy="#coa" type="button">Link</button>
+          <h2 class="cond">Reading a COA</h2><button class="copylink" data-copy="#coa" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">Every jar has one behind it, and the numbers change with every run.</p>
         </div>
         <div class="idea">
@@ -964,7 +968,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part Two</span>
-          <h2 class="cond">Handling and storage</h2><button class="copylink" data-copy="#handling" type="button">Link</button>
+          <h2 class="cond">Handling and storage</h2><button class="copylink" data-copy="#handling" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">What the customer paid for is the part that escapes easiest.</p>
         </div>
         <div class="idea">
@@ -994,7 +998,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part Three</span>
-          <h2 class="cond">Talking points</h2><button class="copylink" data-copy="#counter" type="button">Link</button>
+          <h2 class="cond">Talking points</h2><button class="copylink" data-copy="#counter" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">Lead with the process, not with superlatives. These are written to be said as written.</p>
         </div>
         <blockquote class="script">This is made with ice water, heat, and pressure. No chemical solvents at any stage. There is nothing added and nothing to purge out.</blockquote>
@@ -1040,7 +1044,7 @@
       <div class="tr-wrap">
         <div class="tr-head">
           <span class="eyebrow">Part Three</span>
-          <h2 class="cond">What not to say</h2><button class="copylink" data-copy="#never-say" type="button">Link</button>
+          <h2 class="cond">What not to say</h2><button class="copylink" data-copy="#never-say" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
           <p class="intro">New York treats brand education as advertising. No health claims. Do not promote potency. Do not invent tasting notes, lab numbers, origins, or product claims. If it is batch-specific, check the label or the COA before you say it.</p>
         </div>
         <ul class="nono">
@@ -1181,9 +1185,8 @@
         btn.addEventListener("click", function () {
           var url = location.origin + location.pathname + btn.getAttribute("data-copy");
           function done() {
-            var was = btn.textContent;
-            btn.textContent = "Copied";
-            setTimeout(function () { btn.textContent = was; }, 1400);
+            btn.classList.add("done");
+            setTimeout(function () { btn.classList.remove("done"); }, 1400);
           }
           if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(url).then(done, function () {
