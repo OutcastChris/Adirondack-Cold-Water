@@ -140,9 +140,14 @@ takeaway, and a cold reference. Rules:
 - **Unlinked and unindexed.** It is reachable by URL only: never link it from
   the main navigation or footers of consumer pages, and never remove its
   `noindex` meta. It is internal training material, not consumer marketing.
-- **The training document is the only content source**
-  (`ACW_Budtender_Training_v1_0.docx`, kept outside the repo). Do not fill
-  gaps from general cannabis knowledge. No pricing, no strain/cultivar names
+- **The screen copy deck governs all on-page wording**
+  (`ACW_Training_Screen_Copy.md`, kept outside the repo, structured as
+  HEADLINE / SUB / EXPAND / CALLOUT): headline and sub always visible,
+  expand behind a native `<details>` tap, callouts never hidden, and items
+  without an expand get no disclosure affordance. The training document
+  (`ACW_Budtender_Training_v1_0.docx`) remains the source of truth for
+  facts. Do not rewrite the deck's copy or fill gaps from general cannabis
+  knowledge. No pricing, no strain/cultivar names
   (cut names only), no flavor descriptors, no lab numbers, no health or
   effect claims, no first/only/best/finest claims, and never state or imply
   the product is grown in the Adirondacks (Granville, NY / North Country are
