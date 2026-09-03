@@ -142,9 +142,10 @@ takeaway, and a cold reference. Rules:
   `noindex` meta. It is internal training material, not consumer marketing.
 - **The screen copy deck governs all on-page wording**
   (`ACW_Training_Screen_Copy.md`, kept outside the repo, structured as
-  HEADLINE / SUB / EXPAND / CALLOUT): headline and sub always visible,
-  expand behind a native `<details>` tap, callouts never hidden, and items
-  without an expand get no disclosure affordance. The training document
+  HEADLINE / SUB / EXPAND / PAIR / CALLOUT): headline and sub always
+  visible, expand behind a native `<details>` tap, pairs side by side as
+  equals and never hidden, callouts never hidden, and items without an
+  expand get no disclosure affordance. The training document
   (`ACW_Budtender_Training_v1_0.docx`) remains the source of truth for
   facts. Do not rewrite the deck's copy or fill gaps from general cannabis
   knowledge. No pricing, no strain/cultivar names
