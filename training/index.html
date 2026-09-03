@@ -85,13 +85,16 @@
     .idea:last-child { border-bottom: 1px solid rgba(32,46,63,0.14); }
     .idea h3, .idea h4 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.25rem, 3vw, 1.55rem); line-height: 1.2; }
     .idea .lead { margin: 8px 0 0; color: var(--navy-70); font-size: 1.02rem; }
-    details.more { margin-top: 4px; }
-    details.more summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-ui); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy-70); padding: 10px 0 4px; }
+    details.more { margin-top: 12px; }
+    /* The expand control is a compact version of the site's ghost button,
+       so it reads as an invitation to tap rather than a stray label. */
+    details.more summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-ui); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy); border: 1.5px solid var(--navy); border-radius: 2px; padding: 9px 16px; transition: background .18s ease, color .18s ease; }
     details.more summary::-webkit-details-marker { display: none; }
-    details.more summary::before { content: "+"; font-size: 0.9rem; line-height: 1; color: var(--navy-55); width: 12px; }
+    details.more summary::before { content: "+"; font-size: 0.95rem; line-height: 1; }
     details.more[open] summary::before { content: "\2212"; }
-    details.more summary:hover { color: var(--navy); }
-    .more-body { padding: 4px 0 8px; color: var(--navy); font-size: 1rem; }
+    details.more summary:hover, details.more summary:focus-visible { background: var(--navy); color: var(--kraft); }
+    details.more[open] summary { background: var(--navy); color: var(--kraft); }
+    .more-body { padding: 12px 0 8px; color: var(--navy); font-size: 1rem; }
     .more-body p { margin: 0 0 14px; }
     .more-body p:last-child { margin-bottom: 0; }
 
