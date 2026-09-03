@@ -22,6 +22,7 @@ Or simply open `index.html` in a browser.
 - `cuts/` is the cuts index plus one page per cut, generated from `brand-tokens.json`
 - `assets/site.css` / `assets/site.js` are the shared design system and behavior for the cuts pages
 - `assets/brand/` holds the logos, textures, and imagery (see `ASSET-MANIFEST.md`)
+- `training/` is the budtender training page for dispensary staff (share by URL; deliberately unlinked and `noindex`)
 - `assets/fonts/` holds the self-hosted Playfair Display and Inter web fonts
 - `brand-tokens.json` is the source of truth for colors, type, collections, and cut copy
 - `tools/generate-cuts.mjs` regenerates the `cuts/` pages from `brand-tokens.json`

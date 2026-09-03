@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budtender Training | Adirondack Cold Water</title>
+  <meta name="description" content="Staff training and product reference for licensed New York dispensary teams carrying Adirondack Cold Water solventless live rosin." />
+  <meta name="theme-color" content="#202e3f" />
+  <!-- Training material for licensed retail staff; deliberately unlinked from the
+       main navigation and kept out of search. Do not remove the noindex. -->
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="../assets/brand/logos/ACW-Favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/logos/ACW-Favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="../assets/brand/logos/ACW-Favicon-512x512.png" />
+  <meta property="og:title" content="Budtender Training | Adirondack Cold Water" />
+  <meta property="og:description" content="Staff training and product reference for licensed New York dispensary teams." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adirondackcoldwater.com/training/" />
+  <meta property="og:image" content="https://adirondackcoldwater.com/assets/brand/banners/ACW-Square-1080x1080.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <style>
+    /* ============================================================
+       Budtender training page. Three jobs: a live anchor the rep
+       talks over, a texted takeaway, and a cold reference.
+       Wording comes from the screen copy deck
+       (ACW_Training_Screen_Copy.md, kept outside the repo):
+       HEADLINE and SUB are always visible, EXPAND sits behind a
+       native <details> tap, CALLOUT blocks are never hidden.
+       ============================================================ */
+
+    /* ---------- Header: brand mark + persistent section index ---------- */
+    .tr-bar { display: flex; align-items: center; gap: 14px; padding: 11px 0 9px; }
+    .tr-bar .brand img { height: 32px; display: block; }
+    .tr-bar .tr-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy-70); border-left: 1px solid rgba(32,46,63,0.25); padding-left: 14px; }
+    .tr-index { display: flex; gap: 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 0 4vw 0; border-top: 1px solid rgba(32,46,63,0.10); }
+    .tr-index::-webkit-scrollbar { display: none; }
+    .tr-index a { flex-shrink: 0; font-family: var(--font-ui); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy-70); text-decoration: none; padding: 11px 10px; border-bottom: 2px solid transparent; }
+    .tr-index a.active { color: var(--navy); border-bottom-color: var(--brown); }
+
+    /* Deep-link targets clear the sticky header */
+    main [id] { scroll-margin-top: 108px; }
+
+    /* .cond squeezes type toward its center, which is right for the site's
+       centered headings but indents left-aligned ones off their column edge.
+       Everything on this page except the cover and contact band is left-set. */
+    .tr-head .cond, .sub-head .cond, .step .cond, .duo-card .cond { transform-origin: left; }
+
+    /* ---------- Layout ---------- */
+    .tr-wrap { width: min(740px, 92vw); margin-inline: auto; }
+    main section { padding: clamp(40px, 6vw, 64px) 0; }
+    .tr-head { margin-bottom: clamp(20px, 3vw, 30px); }
+    .tr-head .eyebrow { display: block; margin-bottom: 8px; }
+    .tr-head h2 { font-size: clamp(1.7rem, 4.6vw, 2.5rem); letter-spacing: 0.01em; display: inline; }
+    .tr-head .intro { color: var(--navy-70); font-size: 1.05rem; margin: 10px 0 0; }
+    .copylink { display: inline-flex; align-items: center; gap: 6px; vertical-align: 0.2em; margin-left: 12px; background: none; border: 0; cursor: pointer; padding: 2px; color: var(--navy-55); }
+    .copylink:hover, .copylink:focus-visible { color: var(--navy); }
+    .copylink svg { width: 16px; height: 16px; display: block; }
+    .copylink .copied-note { display: none; font-family: var(--font-ui); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+    .copylink.done svg { display: none; }
+    .copylink.done .copied-note { display: inline; }
+
+    /* ---------- Cover. The title block sits on clean kraft above the art —
+       never over the drawing — and the art's deliberately empty upper third
+       is cropped so the two read as one composition on the shared kraft
+       ground. ---------- */
+    .cover { padding: 0 0 clamp(36px, 5vw, 56px); }
+    .cover-frame { width: min(740px, 100%); margin-inline: auto; }
+    .cover-frame img { width: 100%; height: auto; }
+    .cover-crop { overflow: hidden; }
+    .cover-crop img { margin-top: -26%; }
+    .cover-overlay { text-align: center; padding: clamp(30px, 7vw, 54px) 6vw 20px; }
+    .cover-overlay .mark { width: clamp(150px, 34vw, 210px); height: auto; margin: 0 auto 20px; }
+    .cover-overlay h1 { font-size: clamp(1.9rem, 5.2vw, 3rem); letter-spacing: 0.01em; }
+    .cover-overlay .standfirst { color: var(--navy-70); font-size: clamp(1.05rem, 2.9vw, 1.28rem); max-width: 42ch; margin: 16px auto 0; }
+    .cover-overlay .cover-sub { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy-70); margin-top: 16px; line-height: 2; }
+    .cover-foot { padding-top: clamp(26px, 4vw, 38px); }
+    .cover-quote { margin: 0; border-left: 2px solid var(--brown); padding: 4px 0 4px 20px; font-size: 1.08rem; color: var(--navy); }
+    .cover-quote footer { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy-70); margin-top: 10px; }
+    .howto { margin-top: clamp(22px, 3.5vw, 32px); }
+    .howto .intro { color: var(--navy-70); font-size: 1.05rem; margin: 0 0 6px; }
+
+    /* ---------- HEADLINE + SUB, with EXPAND behind a tap ---------- */
+    .idea { padding: 18px 0; border-top: 1px solid rgba(32,46,63,0.14); }
+    .idea:last-child { border-bottom: 1px solid rgba(32,46,63,0.14); }
+    .idea h3, .idea h4 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.25rem, 3vw, 1.55rem); line-height: 1.2; }
+    .idea .lead { margin: 8px 0 0; color: var(--navy-70); font-size: 1.02rem; }
+    details.more { margin-top: 12px; }
+    /* The expand control is a compact version of the site's ghost button,
+       so it reads as an invitation to tap rather than a stray label. */
+    details.more summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-ui); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy); border: 1.5px solid var(--navy); border-radius: 2px; padding: 9px 16px; transition: background .18s ease, color .18s ease; }
+    details.more summary::-webkit-details-marker { display: none; }
+    details.more summary::before { content: "+"; font-size: 0.95rem; line-height: 1; }
+    details.more[open] summary::before { content: "\2212"; }
+    details.more summary:hover, details.more summary:focus-visible { background: var(--navy); color: var(--kraft); }
+    details.more[open] summary { background: var(--navy); color: var(--kraft); }
+    .more-body { padding: 12px 0 8px; color: var(--navy); font-size: 1rem; }
+    .more-body p { margin: 0 0 14px; }
+    .more-body p:last-child { margin-bottom: 0; }
+
+    /* Sub-topic heads inside a section (e.g. If a customer asks) */
+    .sub-head { margin: clamp(34px, 5vw, 48px) 0 clamp(16px, 2.5vw, 24px); }
+    .sub-head h3 { font-size: clamp(1.4rem, 3.6vw, 1.9rem); }
+    .sub-head .intro { color: var(--navy-70); font-size: 1.02rem; margin: 8px 0 0; }
+
+    /* ---------- Callouts: compliance and judgment notes, never hidden ---------- */
+    .callout { border-top: 1px solid var(--brown); border-bottom: 1px solid var(--brown); padding: 18px 0; margin: clamp(22px, 3.5vw, 32px) 0 0; }
+    .callout .k { display: block; font-family: var(--font-ui); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy-70); margin-bottom: 8px; }
+    .callout p { margin: 0 0 12px; }
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* ---------- Illustration slots. Art is navy line on the exact kraft
+       token, so it sits flush on the page: no card, border, frame, radius,
+       or shadow. A slot whose file is missing is hidden by script. ---------- */
+    .art { margin: 0; }
+    /* darken lets the page's paper grain show through the art's flat kraft
+       background, so the square never edges against the texture */
+    .art img { width: 100%; height: auto; mix-blend-mode: darken; }
+    .part-mark { margin: 0 auto; width: clamp(90px, 16vw, 130px); }
+
+    /* ---------- The six steps ---------- */
+    .step { padding: clamp(26px, 4vw, 38px) 0; border-top: 1px solid rgba(32,46,63,0.14); }
+    .step-grid { display: grid; grid-template-columns: 1fr minmax(220px, 300px); gap: clamp(18px, 4vw, 40px); align-items: center; }
+    .step-num { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.4rem, 6vw, 3.4rem); line-height: 1; color: var(--navy); opacity: 0.28; display: block; }
+    .step .step-name { display: block; margin: 4px 0 6px; }
+    .step h3 { font-size: clamp(1.4rem, 3.6vw, 1.9rem); }
+    .step .lead { margin: 10px 0 0; color: var(--navy-70); font-size: 1.05rem; }
+    .step-art { max-width: 300px; margin: 0 auto; }
+    @media (max-width: 700px) {
+      .step-grid { grid-template-columns: 1fr; }
+      .step-art { max-width: min(340px, 84vw); order: 2; }
+      .step-body { order: 1; }
+      .step-more { order: 3; }
+    }
+
+    /* ---------- Paired cards (growing environments, lines) ---------- */
+    .duo { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 3vw, 26px); margin-top: 8px; }
+    @media (max-width: 640px) { .duo { grid-template-columns: 1fr; } }
+    .duo-card { border: 1px solid rgba(32,46,63,0.22); border-radius: 3px; padding: clamp(16px, 3vw, 24px); background: rgba(255,255,255,0.20); }
+    .duo-card h3 { font-size: clamp(1.3rem, 3vw, 1.6rem); line-height: 1.2; }
+    .duo-card.fw h3 { color: var(--navy); }
+    .duo-card.bc h3 { color: var(--green); }
+    .duo-card .lead { margin: 8px 0 0; color: var(--navy-70); font-size: 0.99rem; }
+    .duo-art { margin-bottom: clamp(16px, 3vw, 26px); }
+
+    /* ---------- Source-and-grade diagram. Two systems on two axes:
+       the lane says where material came from, the grade says how the
+       batch performed at the bench. Never redraw as a single ladder. ---------- */
+    .td { --rail: clamp(102px, 24vw, 168px); --tdgap: clamp(12px, 3vw, 24px); position: relative; margin-top: clamp(24px, 4vw, 34px); font-family: var(--font-ui); }
+    .td-flow { width: calc(100% - var(--rail) - var(--tdgap)); }
+    .td-axis { text-align: center; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--navy-55); margin: 0 0 10px; }
+    .td-axis .n { color: var(--navy); }
+    .td-lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .td-lane { position: relative; min-height: 78px; border: 1.5px solid var(--navy); border-radius: 3px; padding: 12px 10px; text-align: center; background: rgba(255,255,255,0.22); }
+    .td-lane.bc { border-color: var(--green); }
+    .td-kicker { display: block; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); }
+    .td-lane.bc .td-kicker { color: var(--green); }
+    .td-sub { display: block; font-size: 0.66rem; letter-spacing: 0.03em; line-height: 1.5; color: var(--navy-70); margin-top: 5px; }
+    /* Blends leave the Base Camp lane here, before the batch is graded */
+    .td-lane.bc::after { content: ""; position: absolute; top: 39px; left: calc(100% + 1.5px); width: calc(var(--tdgap) + var(--rail) / 2); border-top: 2px dashed rgba(25,49,36,0.55); }
+    .td-merge { position: relative; height: 30px; }
+    .td-merge::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 14px; border-left: 2px solid rgba(32,46,63,0.5); border-right: 2px solid rgba(32,46,63,0.5); border-bottom: 2px solid rgba(32,46,63,0.5); }
+    .td-merge::after { content: ""; position: absolute; top: 14px; bottom: 0; left: 50%; border-left: 2px solid rgba(32,46,63,0.5); }
+    .td-node { width: min(320px, 100%); margin: 0 auto; border: 1.5px solid var(--navy); border-radius: 3px; padding: 10px 14px; text-align: center; background: rgba(255,255,255,0.22); }
+    .td-node strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; letter-spacing: 0.01em; color: var(--navy); }
+    .td-drop { position: relative; width: 0; height: 24px; border-left: 2px solid rgba(32,46,63,0.5); margin: 0 auto; }
+    .td-drop.arrow { height: 30px; }
+    .td-drop.arrow::after { content: ""; position: absolute; bottom: 0; left: -6px; border: 5px solid transparent; border-top: 7px solid rgba(32,46,63,0.6); }
+    .td-ladder { display: flex; flex-direction: column; align-items: center; }
+    .td-rung { width: 0; height: 12px; border-left: 2px solid rgba(32,46,63,0.5); }
+    .td-badge { text-align: center; border-radius: 3px; padding: 10px 12px; }
+    .td-badge strong { display: block; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+    .td-badge.pr { width: min(300px, 100%); background: var(--navy); border: 1.5px solid var(--navy); color: var(--kraft); }
+    .td-badge.pr .td-sub { color: var(--kraft-70); }
+    .td-badge.t1 { width: min(272px, 92%); border: 1.5px solid var(--navy); color: var(--navy); }
+    .td-badge.t2 { width: min(244px, 84%); border: 1px solid rgba(32,46,63,0.45); color: var(--navy); }
+    .td-rail { position: absolute; top: 0; right: 0; bottom: 0; width: var(--rail); display: flex; flex-direction: column; align-items: center; }
+    .td-rail .td-gap { height: 30px; flex-shrink: 0; }
+    .td-bylabel { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); text-align: center; line-height: 1.6; padding: 4px 2px; }
+    .td-line { flex: 1; width: 0; border-left: 2px dashed rgba(25,49,36,0.5); min-height: 24px; }
+    .td-blends { width: 100%; border: 1.5px dashed var(--green); border-radius: 3px; padding: 10px 8px; text-align: center; background: rgba(255,255,255,0.16); }
+    .td-blends strong { display: block; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
+    .td-footnote { border-top: 1px solid var(--brown); margin-top: clamp(20px, 3vw, 28px); padding-top: 14px; font-size: 0.92rem; color: var(--navy-70); }
+    .td-footnote p { margin: 0 0 10px; }
+    .td-footnote p:last-child { margin: 0; }
+
+    /* ---------- Terms ---------- */
+    .term-list { margin: 0; }
+    .term-list > div { padding: 14px 0; border-bottom: 1px solid rgba(32,46,63,0.14); }
+    .term-list > div:first-child { border-top: 1px solid rgba(32,46,63,0.14); }
+    .term-list dt { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; }
+    .term-list dd { margin: 4px 0 0; color: var(--navy-70); font-size: 0.99rem; }
+
+    /* ---------- Counter scripts + Q&A ---------- */
+    .script { margin: 0 0 18px; border-left: 2px solid var(--brown); padding: 4px 0 4px 20px; font-size: 1.1rem; line-height: 1.65; }
+    .qa details { border-top: 1px solid rgba(32,46,63,0.14); }
+    .qa details:last-child { border-bottom: 1px solid rgba(32,46,63,0.14); }
+    .qa summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 12px; padding: 16px 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.1rem, 2.6vw, 1.3rem); line-height: 1.3; color: var(--navy); }
+    .qa summary::-webkit-details-marker { display: none; }
+    .qa summary::before { content: "+"; flex-shrink: 0; font-family: var(--font-ui); color: var(--navy-55); font-weight: 400; }
+    .qa details[open] summary::before { content: "\2212"; }
+    .qa .qa-a { padding: 0 0 18px 26px; color: var(--navy); font-size: 1rem; }
+    .qa .qa-a p { margin: 0 0 12px; }
+    .qa .qa-a p:last-child { margin: 0; }
+
+    /* ---------- What not to say ---------- */
+    .nono { list-style: none; margin: 0; padding: 0; }
+    .nono li { padding: 13px 0; border-bottom: 1px solid rgba(32,46,63,0.14); font-size: 1.02rem; }
+    .nono li:first-child { border-top: 1px solid rgba(32,46,63,0.14); }
+    .nono li strong { font-weight: 700; }
+
+    /* ---------- Contact ---------- */
+    .tr-contact .contact-inner p.small { font-size: 0.95rem; margin-top: 20px; }
+    .tr-legal { margin-top: 26px; font-family: var(--font-ui); font-size: 0.74rem; letter-spacing: 0.04em; line-height: 1.8; color: var(--kraft-45); }
+  </style>
+</head>
+<body class="locked">
+
+  <div id="age-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-inner">
+      <img class="gate-mark" src="../assets/brand/logos/ACW-Logo-Icon-White.png" alt="Adirondack Cold Water" />
+      <h2 id="gate-title">Are you 21 or older?</h2>
+      <hr class="rule" />
+      <p>You must be 21 or older to enter. Adirondack Cold Water is intended for adults 21+.</p>
+      <div class="gate-actions">
+        <button class="btn" id="gate-yes">Yes, I&rsquo;m 21+</button>
+        <a class="btn ghost" href="https://www.samhsa.gov" rel="noopener">No, exit</a>
+      </div>
+      <div class="gate-note">By entering you confirm you are of legal age in your jurisdiction.</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap tr-bar">
+      <a class="brand" href="../index.html" aria-label="Adirondack Cold Water home">
+        <img src="../assets/brand/logos/ACW-Logo-Icon.svg" alt="Adirondack Cold Water" />
+      </a>
+      <span class="tr-label">Staff Training</span>
+    </div>
+    <nav class="tr-index" id="tr-index" aria-label="Training sections">
+      <a href="#who">Who We Are</a>
+      <a href="#process">The Process</a>
+      <a href="#input">The Flower</a>
+      <a href="#growing">How We Grow</a>
+      <a href="#lines">Lines</a>
+      <a href="#tiers">Tiers</a>
+      <a href="#jar">The Jar</a>
+      <a href="#terms">Terms</a>
+      <a href="#solventless">Solventless 101</a>
+      <a href="#coa">COAs</a>
+      <a href="#handling">Handling</a>
+      <a href="#counter">At the Counter</a>
+      <a href="#never-say">Never Say</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= Cover ================= -->
+    <section class="cover" id="cover">
+      <div class="cover-frame">
+        <div class="cover-overlay">
+          <img class="mark" src="../assets/brand/logos/ACW-Logo-Primary-Navy.svg" alt="Adirondack Cold Water" />
+          <h1 class="cond"><span class="sr-only">Adirondack Cold Water: </span>How we make it,<br />and how to sell it</h1>
+          <p class="standfirst">Solventless live rosin made in Granville, New York. This is everything behind the jar, written to be said out loud at a counter.</p>
+          <p class="cover-sub">For retail staff of licensed New York dispensaries</p>
+        </div>
+        <figure class="art cover-crop" style="margin:0">
+          <img id="cover-art" src="../assets/brand/training/01-hero-800.webp"
+               srcset="../assets/brand/training/01-hero-800.webp 800w, ../assets/brand/training/01-hero-1600.webp 1600w"
+               sizes="(max-width: 800px) 100vw, 740px"
+               width="1600" height="1600" fetchpriority="high" decoding="async" alt="" />
+        </figure>
+      </div>
+      <div class="tr-wrap cover-foot">
+        <!-- The attributed opening quote is ON HOLD per the copy deck: its wording
+             was edited and the attribution changed without Brian's sign-off. Once
+             he approves both, replace the blockquote below with:
+        <blockquote class="cover-quote">
+          Bubble hash gets its character from capturing essentially pure resin glands through a simple, solvent&nbsp;free, cold process that prioritizes the plant&rsquo;s natural profile. Doing it entirely by hand heightens the craft element, trading speed and scale for tactile control in the hands of a careful maker. Quality still starts with excellent cannabis and ends with careful collection, drying, and storage.
+          <footer>Brian, wash room, Outcast Acres Farm</footer>
+        </blockquote>
+        -->
+        <blockquote class="cover-quote">
+          Good hash starts with good flower. We keep it cold, separate the trichome heads carefully, dry them, and press them. There is no later step where you can fix bad starting material.
+        </blockquote>
+        <div class="howto">
+          <p class="intro">Three parts. What we make, why it matters, and what to say about it.</p>
+          <div class="idea">
+            <h3>Part One is our product.</h3>
+            <p class="lead">Who we are, how we make it, and what our lines and tiers actually mean.</p>
+          </div>
+          <div class="idea">
+            <h3>Part Two is the category.</h3>
+            <p class="lead">Most customers meeting rosin for the first time have no frame of reference. This is the background that makes it make sense.</p>
+          </div>
+          <div class="idea">
+            <h3>Part Three is the counter.</h3>
+            <p class="lead">Lines that work said out loud, the six questions you will actually get, and the things we never claim.</p>
+          </div>
+          <div class="callout">
+            <p>Everything in here is written to be said out loud. If a customer asks something this guide does not answer, say you will find out. That answer is always better than a guess, and the contact details are at the <a href="#contact">bottom</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Part One ================= -->
+
+    <section id="who">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part One</span>
+          <h2 class="cond">Who we are</h2><button class="copylink" data-copy="#who" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">We grow First Water here. Every Adirondack Cold Water batch is washed, pressed, and jarred here.</p>
+        </div>
+        <div class="idea">
+          <h3>We are a licensed New York cultivator, processor, and distributor.</h3>
+          <p class="lead">Outcast Acres started as a hemp farm and grew into all three. Our cultivator license was one of the very first issued in New York&rsquo;s first round of adult-use conditional cultivator (AUCC) licenses, in 2022.</p>
+        </div>
+        <div class="idea">
+          <h3>Nothing is outsourced. Nothing is bought in finished.</h3>
+          <p class="lead">We wash, press, jar, and deliver every batch ourselves. We own the process, so if there is a problem it comes back to us.</p>
+        </div>
+        <div class="idea">
+          <h3>Adirondack Cold Water is our solventless live rosin.</h3>
+          <p class="lead">The name is ours. The farm is in Granville, in the North Country, and that is what goes on the label.</p>
+        </div>
+        <div class="idea">
+          <h3>Every batch is third-party tested.</h3>
+          <p class="lead">In accordance with OCM guidelines, before it leaves the farm. The COA for the jar in your hand is the one that counts.</p>
+        </div>
+        <div class="callout">
+          <span class="k">On geography</span>
+          <p>Granville is in Washington County, outside the Adirondack Park. Adirondack Cold Water is a brand name, not a claim about where the flower was grown. Say Granville, New York, or the North Country. Never say grown in the Adirondacks or crafted in the Adirondacks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part One</span>
+          <h2 class="cond">How we make it</h2><button class="copylink" data-copy="#process" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">Six steps. It can be described in six steps because there is nothing hidden in it.</p>
+        </div>
+
+        <div class="step" id="step-1">
+          <div class="step-grid">
+            <div class="step-body">
+              <span class="step-num" aria-hidden="true">1</span>
+              <span class="eyebrow step-name">Fresh frozen</span>
+              <h3 class="cond">We freeze the flower the day it comes down.</h3>
+              <p class="lead">Every hour it sits warm is aroma leaving permanently.</p>
+            </div>
+            <figure class="art step-art">
+              <img src="../assets/brand/training/02-fresh-frozen-800.webp"
+                   srcset="../assets/brand/training/02-fresh-frozen-800.webp 800w, ../assets/brand/training/02-fresh-frozen-1600.webp 1600w"
+                   sizes="(max-width: 700px) 84vw, 300px"
+                   width="1600" height="1600" loading="lazy" decoding="async"
+                   alt="Walk-in freezer with the door open and cold vapor rolling out. Navy line illustration." />
+            </figure>
+            <details class="more step-more">
+              <summary>Click here to Learn More</summary>
+              <div class="more-body">
+                <p>Flower is harvested at peak ripeness and frozen immediately. Terpenes are volatile, meaning they evaporate readily at room temperature without needing much heat at all. That is why you can smell a jar of cannabis from across the room: what you are smelling is terpenes leaving the plant and entering the air. Freezing stops that loss and holds onto the lighter, more fragile compounds that a long dry and cure would drive off.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="step" id="step-2">
+          <div class="step-grid">
+            <div class="step-body">
+              <span class="step-num" aria-hidden="true">2</span>
+              <span class="eyebrow step-name">Ice water wash</span>
+              <h3 class="cond">Ice water and a paddle. That is the whole extraction.</h3>
+              <p class="lead">Cold makes the resin heads brittle enough to snap off cleanly. The water only carries them.</p>
+            </div>
+            <!-- Art slot: 03-ice-water-wash. When approved, run it through normalize.py,
+                 export 800/1600px WebP into assets/brand/training/, then paste:
+            <figure class="art step-art">
+              <img src="../assets/brand/training/03-ice-water-wash-800.webp"
+                   srcset="../assets/brand/training/03-ice-water-wash-800.webp 800w, ../assets/brand/training/03-ice-water-wash-1600.webp 1600w"
+                   sizes="(max-width: 700px) 84vw, 300px"
+                   width="1600" height="1600" loading="lazy" decoding="async"
+                   alt="Close crop of ice water and a paddle mid-wash. Navy line illustration." />
+            </figure>
+            -->
+            <details class="more step-more">
+              <summary>Click here to Learn More</summary>
+              <div class="more-body">
+                <p>The frozen material is agitated in ice water, by hand, with a paddle. Cold makes the trichome heads brittle so that gentle agitation snaps them off the plant. Water is only the transport medium. Resin is not soluble in water, so the heads do not dissolve, they detach and get carried through the system. That is the opposite of a chemical extraction, where a solvent dissolves the target compounds and then has to be evaporated back out.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="step" id="step-3">
+          <div class="step-grid">
+            <div class="step-body">
+              <span class="step-num" aria-hidden="true">3</span>
+              <span class="eyebrow step-name">Screen separation</span>
+              <h3 class="cond">Everything gets sorted by size.</h3>
+              <p class="lead">Debris up top, resin in the middle, fine contaminants straight through the bottom.</p>
+            </div>
+            <!-- Art slot: 04-screen-separation. When approved, normalize + export, then paste:
+            <figure class="art step-art">
+              <img src="../assets/brand/training/04-screen-separation-800.webp"
+                   srcset="../assets/brand/training/04-screen-separation-800.webp 800w, ../assets/brand/training/04-screen-separation-1600.webp 1600w"
+                   sizes="(max-width: 700px) 84vw, 300px"
+                   width="1600" height="1600" loading="lazy" decoding="async"
+                   alt="Nested mesh bags used for screen separation. Navy line illustration." />
+            </figure>
+            -->
+            <details class="more step-more">
+              <summary>Click here to Learn More</summary>
+              <div class="more-body">
+                <p>What comes out of the wash vessel is a slurry, meaning solids suspended in liquid rather than dissolved in it: loose trichome heads, plant fragments, and ice water all moving together. The slurry runs through a stacked series of mesh bags of decreasing size. Sizing the screens is how you separate resin from everything it was floating alongside.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="step" id="step-4">
+          <div class="step-grid">
+            <div class="step-body">
+              <span class="step-num" aria-hidden="true">4</span>
+              <span class="eyebrow step-name">Freeze dry</span>
+              <h3 class="cond">The ice leaves without melting.</h3>
+              <p class="lead">Under vacuum, the ice goes straight to vapor, so the hash dries without a warm liquid phase.</p>
+            </div>
+            <figure class="art step-art">
+              <img src="../assets/brand/training/05-freeze-dry-800.webp"
+                   srcset="../assets/brand/training/05-freeze-dry-800.webp 800w, ../assets/brand/training/05-freeze-dry-1600.webp 1600w"
+                   sizes="(max-width: 700px) 84vw, 300px"
+                   width="1600" height="1600" loading="lazy" decoding="async"
+                   alt="Freeze dryer vacuum chamber loaded with four trays. Navy line illustration." />
+            </figure>
+            <details class="more step-more">
+              <summary>Click here to Learn More</summary>
+              <div class="more-body">
+                <p>Wet hash is dried in a freeze dryer under vacuum. Frozen water sublimates, meaning it converts directly from ice into vapor without passing through a liquid stage. Skipping that stage matters, because heat and moisture are exactly what degrade terpenes and allow microbial growth. Removing water this way protects the aroma and keeps the product stable.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="step" id="step-5">
+          <div class="step-grid">
+            <div class="step-body">
+              <span class="step-num" aria-hidden="true">5</span>
+              <span class="eyebrow step-name">Rosin press</span>
+              <h3 class="cond">Heat and pressure, and nothing else.</h3>
+              <p class="lead">This is the only point in the entire process where we deliberately apply heat.</p>
+            </div>
+            <figure class="art step-art">
+              <img src="../assets/brand/training/06-rosin-press-800.webp"
+                   srcset="../assets/brand/training/06-rosin-press-800.webp 800w, ../assets/brand/training/06-rosin-press-1600.webp 1600w"
+                   sizes="(max-width: 700px) 84vw, 300px"
+                   width="1600" height="1600" loading="lazy" decoding="async"
+                   alt="Rosin press closed on a bag with resin running out between the plates. Navy line illustration." />
+            </figure>
+            <details class="more step-more">
+              <summary>Click here to Learn More</summary>
+              <div class="more-body">
+                <p>The dried hash is pressed between heated plates. The resin liquefies and flows out. That is the finished rosin.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="step" id="step-6">
+          <div class="step-grid">
+            <div class="step-body">
+              <span class="step-num" aria-hidden="true">6</span>
+              <span class="eyebrow step-name">Fresh press or cold cure</span>
+              <h3 class="cond">What happens after the press decides the texture.</h3>
+              <p class="lead">Two finishes, same material. The choice is made after the resin is already made.</p>
+            </div>
+            <!-- Art slot: 07-two-finishes. When approved, normalize + export, then paste:
+            <figure class="art step-art">
+              <img src="../assets/brand/training/07-two-finishes-800.webp"
+                   srcset="../assets/brand/training/07-two-finishes-800.webp 800w, ../assets/brand/training/07-two-finishes-1600.webp 1600w"
+                   sizes="(max-width: 700px) 84vw, 300px"
+                   width="1600" height="1600" loading="lazy" decoding="async"
+                   alt="Two jars side by side: translucent fresh press and opaque cold cure. Navy line illustration." />
+            </figure>
+            -->
+          </div>
+          <!-- PAIR: two equals, always visible, never behind a tap -->
+          <div class="duo" style="margin-top: clamp(16px, 3vw, 24px)">
+            <div class="duo-card">
+              <h3 class="cond">Fresh press</h3>
+              <p class="lead">Jarred straight off the press, still translucent and sappy. It is the most immediate expression of the material, and it is where the flavor sits brightest.</p>
+            </div>
+            <div class="duo-card">
+              <h3 class="cond">Cold cure</h3>
+              <p class="lead">Held cold for a set period after pressing. The fats, waxes, and terpene fractions come together into an opaque batter. Rounder aroma, easier to handle, and more stable on the shelf.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="idea" style="border-bottom: 1px solid rgba(32,46,63,0.14)">
+          <h3>Cloudy is the cure working.</h3>
+          <p class="lead">Customers see opacity and assume something is wrong with it. Nothing is. Cold cure turns clear rosin into an opaque batter, and that change is the whole point of curing it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="input">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part One</span>
+          <h2 class="cond">Why the flower matters</h2><button class="copylink" data-copy="#input" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">There is no step where rosin gets fixed. Whatever went in is what comes out.</p>
+        </div>
+        <div class="idea">
+          <h3>Nothing can be added and nothing can be removed.</h3>
+          <p class="lead">A solventless process only concentrates what the plant already made. That makes the starting material the entire product.</p>
+          <details class="more">
+            <summary>Click here to Learn More</summary>
+            <div class="more-body">
+              <p>There is no refining step, no distillation, no way to strip out what you do not want or add back what you lost. Rosin preserves a broad native profile of cannabinoids and aromatic compounds, because we separate and press the resin rather than distilling it.</p>
+            </div>
+          </details>
+        </div>
+        <div class="idea">
+          <h3>Rosin takes a mechanical route.</h3>
+          <p class="lead">We separate the resin with ice water, dry it, and press it. There is no distillation step, and we do not formulate the finished product with added terpenes.</p>
+          <details class="more">
+            <summary>Click here to Learn More</summary>
+            <div class="more-body">
+              <p>Other concentrates are made by different routes, including distillation followed by reformulation. Those are real products with real uses. If a customer wants a comparison, explain the two processing routes and let them decide what matters to them.</p>
+            </div>
+          </details>
+        </div>
+        <div class="idea">
+          <h3>Bad input cannot hide in rosin.</h3>
+          <p class="lead">There is no later step where poor starting material gets corrected, so the flower going in sets the ceiling.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="growing">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part One</span>
+          <h2 class="cond">How we grow</h2><button class="copylink" data-copy="#growing" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">Two environments, both on our own farm. They are different, not better and worse.</p>
+        </div>
+        <!-- Art slots: 10-protected-culture and 11-outdoor. They render as an
+             equal pair, flush on the page (never inside the cards): same size,
+             same viewing distance, neither more appealing than the other.
+             When approved, normalize + export, then paste inside .duo-art:
+        <div class="duo duo-art" aria-hidden="true">
+          <figure class="art">
+            <img src="../assets/brand/training/10-protected-culture-800.webp"
+                 srcset="../assets/brand/training/10-protected-culture-800.webp 800w, ../assets/brand/training/10-protected-culture-1600.webp 1600w"
+                 sizes="(max-width: 640px) 84vw, 340px"
+                 width="1600" height="1600" loading="lazy" decoding="async"
+                 alt="Greenhouse rows under protected culture. Navy line illustration." />
+          </figure>
+          <figure class="art">
+            <img src="../assets/brand/training/11-outdoor-800.webp"
+                 srcset="../assets/brand/training/11-outdoor-800.webp 800w, ../assets/brand/training/11-outdoor-1600.webp 1600w"
+                 sizes="(max-width: 640px) 84vw, 340px"
+                 width="1600" height="1600" loading="lazy" decoding="async"
+                 alt="Full-season outdoor field. Navy line illustration." />
+          </figure>
+        </div>
+        -->
+        <div class="duo">
+          <div class="duo-card">
+            <h3 class="cond">Protected culture is about control.</h3>
+            <p class="lead">A wash cannot correct anything, so the cleanest input we have is the one grown where we control the most.</p>
+            <details class="more">
+              <summary>Click here to Learn More</summary>
+              <div class="more-body">
+                <p>Greenhouse and mixed light. Growing under protection means lower pest and mold pressure, no field contamination, and a stable environment right through the finish. Every batch of ours that reaches Private Reserve comes from protected culture.</p>
+              </div>
+            </details>
+          </div>
+          <div class="duo-card">
+            <h3 class="cond">Outdoor is about exposure.</h3>
+            <p class="lead">Full sun, full season, full natural spectrum, and a plant that responds to all of it.</p>
+            <details class="more">
+              <summary>Click here to Learn More</summary>
+              <div class="more-body">
+                <p>Sunlight delivers a complete spectrum at intensities no cultivation light reproduces. An outdoor plant is exposed continuously to light, wind, temperature swing, soil biology, and pest pressure, and different environments can produce different expressions. It is also the lower impact way to grow, since the primary energy input is the sun.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="callout">
+          <span class="k">How to frame this at the counter</span>
+          <p>Two growing environments with different strengths, not a good one and a bad one. Protected culture gives control and the cleanest input. Outdoor gives full spectrum exposure and complex expression. Our tier ladder reflects how a specific batch graded at the bench, not a verdict on either method. Describe the environments, describe the process, and let the customer decide.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lines">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part One</span>
+          <h2 class="cond">Lines</h2><button class="copylink" data-copy="#lines" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">The line tells you where it came from. That is all it tells you.</p>
+        </div>
+        <div class="duo">
+          <div class="duo-card fw">
+            <h3 class="cond">First Water is ours end to end.</h3>
+            <p class="lead">Single cultivar, grown on our farm, washed and pressed by us. One source in the jar.</p>
+          </div>
+          <div class="duo-card bc">
+            <h3 class="cond">Base Camp is partner farms, plus every blend.</h3>
+            <p class="lead">Same process, same standards, same testing. Different source.</p>
+          </div>
+        </div>
+        <div class="idea" style="margin-top: clamp(18px, 3vw, 26px); border-bottom: 1px solid rgba(32,46,63,0.14)">
+          <h3>Every blend lives in Base Camp, no exceptions.</h3>
+          <p class="lead">This is the one people get wrong. Guide&rsquo;s Blend is made entirely from our own farm material and it still sits in Base Camp, because every blend does.</p>
+        </div>
+        <div class="callout">
+          <p>Lanes, not a ranking. Line tells you the source. Tier tells you the grade.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tiers">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part One</span>
+          <h2 class="cond">Tiers</h2><button class="copylink" data-copy="#tiers" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">Tier is a grade, and it is earned one batch at a time.</p>
+        </div>
+        <div class="callout" style="margin-top: 0">
+          <span class="k">The one thing to get right</span>
+          <p>Tier is assigned to a batch, not to a cut. The same cut can grade differently from one run to the next, because every run is different. Tier is not a THC ranking and it is not a terpene ranking. A Tier 2 jar can test higher than a Private Reserve jar on either number, and that is normal.</p>
+        </div>
+        <div class="idea" style="margin-top: clamp(18px, 3vw, 26px); border-bottom: 1px solid rgba(32,46,63,0.14)">
+          <h3>Grading happens at the bench, on what the resin does.</h3>
+          <p class="lead">How completely it melts, its color, and the condition of the trichome heads. Not what the lab says.</p>
+        </div>
+
+        <!-- Source lane and grade are two separate systems. Two axes: never
+             collapse this into a single vertical ladder. -->
+        <div class="tier-diagram">
+          <p class="sr-only">Two separate systems. Source lanes: First Water is a single cultivar grown on our own farm; Base Camp is partner farm single cultivars. Material from either lane becomes a batch, a single run of material. Every batch goes through bench grading on melt, color, and head condition, which assigns one of three badges: Private Reserve, Tier 1, or Tier 2. Blends split off from the Base Camp lane before grading and carry no tier at all. Private Reserve requires protected culture growing, and both lanes can reach it. Outdoor material tops out at Tier 1. Tier is assigned to the batch, not the cut, and it is not a potency ranking.</p>
+          <div class="td" aria-hidden="true">
+            <div class="td-flow">
+              <p class="td-axis">One axis &middot; <span class="n">the source lane</span></p>
+              <div class="td-lanes">
+                <div class="td-lane fw">
+                  <span class="td-kicker">First Water</span>
+                  <span class="td-sub">Single cultivar &middot; our own farm</span>
+                </div>
+                <div class="td-lane bc">
+                  <span class="td-kicker">Base Camp</span>
+                  <span class="td-sub">Partner farm single cultivars</span>
+                </div>
+              </div>
+              <div class="td-merge"></div>
+              <div class="td-node">
+                <strong>The batch</strong>
+                <span class="td-sub">a single run of material</span>
+              </div>
+              <div class="td-drop"></div>
+              <p class="td-axis" style="margin:10px 0">A separate axis &middot; <span class="n">the grade</span></p>
+              <div class="td-node">
+                <strong>Bench grading</strong>
+                <span class="td-sub">melt &middot; color &middot; head condition</span>
+              </div>
+              <div class="td-drop arrow"></div>
+              <div class="td-ladder">
+                <div class="td-badge pr">
+                  <strong>Private Reserve</strong>
+                  <span class="td-sub">protected culture required &mdash; both lanes can reach it</span>
+                </div>
+                <div class="td-rung"></div>
+                <div class="td-badge t1">
+                  <strong>Tier 1</strong>
+                  <span class="td-sub">outdoor material tops out here</span>
+                </div>
+                <div class="td-rung"></div>
+                <div class="td-badge t2">
+                  <strong>Tier 2</strong>
+                  <span class="td-sub">same standards, everyday jar</span>
+                </div>
+              </div>
+            </div>
+            <div class="td-rail">
+              <div class="td-gap"></div>
+              <div class="td-bylabel">Blends split off here,<br />before grading</div>
+              <div class="td-line"></div>
+              <div class="td-blends">
+                <strong>Blends</strong>
+                <span class="td-sub">built to a profile &middot; carry no tier at all</span>
+              </div>
+            </div>
+          </div>
+          <div class="td-footnote">
+            <p>The ladder is a genuine hierarchy of how the resin performed at the bench. It is not a potency ranking.</p>
+            <p>Tier is assigned to the batch, not the cut. The same cut can grade differently on different runs.</p>
+          </div>
+        </div>
+
+        <div class="idea" style="margin-top: clamp(26px, 4vw, 36px)">
+          <h3>Private Reserve has to be grown under protection.</h3>
+          <p class="lead">That is a requirement, not a guarantee. Plenty of protected culture material grades into Tier 1 or Tier 2 instead.</p>
+          <details class="more">
+            <summary>Click here to Learn More</summary>
+            <div class="more-body">
+              <p>Greenhouse, mixed light, or indoor. A batch still has to earn it at the bench on melt, color, and head condition. Private Reserve appears in both lines: a partner farm growing under protection can produce a Base Camp Private Reserve.</p>
+            </div>
+          </details>
+        </div>
+        <div class="idea">
+          <h3>Tier 1 is the cleanest selection off a run.</h3>
+          <p class="lead">The cleanest selection off an outdoor run, or protected culture material that graded below Private Reserve. Outdoor tops out here.</p>
+        </div>
+        <div class="idea">
+          <h3>Tier 2 is real solventless at an everyday price.</h3>
+          <p class="lead">Same farm, same wash, same standards, same testing. It is how somebody finds out what rosin tastes like without paying a premium first.</p>
+          <details class="more">
+            <summary>Click here to Learn More</summary>
+            <div class="more-body">
+              <p>Tier 2 is not leftover material and it is not a second thought. It earns its shelf space on its own. Sell it as what it is rather than as what it is not.</p>
+            </div>
+          </details>
+        </div>
+        <div class="idea">
+          <h3>Blends do not carry a tier.</h3>
+          <p class="lead">A blend is built to a profile rather than graded against one, so there is no badge on it.</p>
+        </div>
+
+        <div class="callout">
+          <span class="k">What we do not discuss</span>
+          <p>Customers will ask which strain sits behind a cut name. That is not something we share. Sell the cut name and the profile. And do not describe a flavor unless approved copy exists for that cut. If none exists, describe the line and the process instead. Never improvise a tasting note.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="jar">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part One</span>
+          <h2 class="cond">Reading a jar</h2><button class="copylink" data-copy="#jar" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">There is a lot of folklore here and most of it is wrong.</p>
+        </div>
+        <div class="idea">
+          <h3>Color is a hint, not a verdict.</h3>
+          <p class="lead">Lighter usually means fresher material and a clean wash. It is not cannabinoid content, and darker does not mean contaminated.</p>
+        </div>
+        <div class="idea">
+          <h3>Cloudy is texture, not purity.</h3>
+          <p class="lead">Fresh press is translucent because it has not been cured. Cold cure is opaque because it has. An opaque jar is not a dirty jar.</p>
+        </div>
+        <div class="idea">
+          <h3>Melt, aroma, and the COA. In that order.</h3>
+          <p class="lead">That is what an experienced buyer is actually reading, and none of it is visible from across the counter.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part One</span>
+          <h2 class="cond">Terms customers will use</h2><button class="copylink" data-copy="#terms" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">Know these so you are not caught out.</p>
+        </div>
+        <dl class="term-list">
+          <div><dt>Hash</dt><dd>Ice water hash. The separated, dried trichome heads before pressing. A finished product in its own right, not only an input.</dd></div>
+          <div><dt>Full melt</dt><dd>Hash of the highest melt grade, vaporizing almost completely with little residue. A grade of hash, not a type of rosin.</dd></div>
+          <div><dt>Live rosin</dt><dd>Rosin pressed from hash made from fresh frozen material. Live refers to the input, not the press.</dd></div>
+          <div><dt>Fresh press</dt><dd>Rosin jarred straight off the press. Translucent, sappy, brightest flavor.</dd></div>
+          <div><dt>Cold cure</dt><dd>Rosin held cold after pressing until it comes together. Opaque, batter texture, rounder aroma, more stable.</dd></div>
+          <div><dt>Badder or batter</dt><dd>Common names for the texture a cold cure produces.</dd></div>
+          <div><dt>Jam</dt><dd>A loose, glossy consistency.</dd></div>
+          <div><dt>Piattella</dt><dd>A cold cured hash format, pressed into a plate rather than pressed into rosin.</dd></div>
+        </dl>
+        <div class="callout">
+          <p>If a customer asks for a format that is not on the shelf, say we release regularly and you will let them know when there is something to show. Do not name or promise a product that has not launched.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Part Two ================= -->
+
+    <section id="solventless">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part Two</span>
+          <h2 class="cond">What solventless means</h2><button class="copylink" data-copy="#solventless" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">Ice, water, heat, and pressure. That is the entire list of inputs.</p>
+        </div>
+        <div class="idea">
+          <h3>No solvent touches the material at any point.</h3>
+          <p class="lead">No butane, no propane, no ethanol, no CO2. What ends up in the jar is the resin gland itself.</p>
+          <details class="more">
+            <summary>Click here to Learn More</summary>
+            <div class="more-body">
+              <p>The trichome head that grew on the plant, separated mechanically and pressed into oil. Nothing is added and nothing is distilled out.</p>
+            </div>
+          </details>
+        </div>
+        <div class="idea">
+          <h3>There is nothing to purge, because nothing was introduced.</h3>
+          <p class="lead">Solvent based concentrates get tested for residual solvent because trace amounts can survive into the finished oil. That test category does not apply here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="trichomes">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part Two</span>
+          <h2 class="cond">Trichomes</h2><button class="copylink" data-copy="#trichomes" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">Everything a customer is paying for sits in structures they can barely see.</p>
+        </div>
+        <!-- Art slots: 08-trichome-cross-section and 09-trichome-field. When approved,
+             normalize + export, then paste here (they sit stacked, flush on the kraft):
+        <figure class="art" style="max-width:340px;margin:0 auto 18px">
+          <img src="../assets/brand/training/08-trichome-cross-section-800.webp"
+               srcset="../assets/brand/training/08-trichome-cross-section-800.webp 800w, ../assets/brand/training/08-trichome-cross-section-1600.webp 1600w"
+               sizes="(max-width: 700px) 84vw, 340px"
+               width="1600" height="1600" loading="lazy" decoding="async"
+               alt="Cross section of a trichome head. Navy line illustration." />
+        </figure>
+        <figure class="art" style="max-width:340px;margin:0 auto 18px">
+          <img src="../assets/brand/training/09-trichome-field-800.webp"
+               srcset="../assets/brand/training/09-trichome-field-800.webp 800w, ../assets/brand/training/09-trichome-field-1600.webp 1600w"
+               sizes="(max-width: 700px) 84vw, 340px"
+               width="1600" height="1600" loading="lazy" decoding="async"
+               alt="Magnified field of trichomes on the plant surface. Navy line illustration." />
+        </figure>
+        -->
+        <div class="idea">
+          <h3>The chemistry lives in the trichome, not in the plant.</h3>
+          <p class="lead">That is the entire reason washing works. You are removing the part that holds what you want and leaving the rest behind.</p>
+        </div>
+        <div class="idea">
+          <h3>A trichome head is built a bit like a grape.</h3>
+          <p class="lead">An outer membrane, with the cannabinoids and terpenes on the inside.</p>
+        </div>
+        <div class="idea">
+          <h3>They are 50 to 100 microns across, about the width of a hair.</h3>
+          <p class="lead">A jar of rosin is millions of them, separated one wash at a time.</p>
+        </div>
+        <div class="idea">
+          <h3>Resin may be part of how the plant handles sunlight.</h3>
+          <p class="lead">One leading explanation is that it helps protect the plant from UV, which would account for why it concentrates on the surfaces most exposed to light.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="terpenes">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part Two</span>
+          <h2 class="cond">Terpenes</h2><button class="copylink" data-copy="#terpenes" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">Everything we love about the smell is a defense mechanism that predates us by thousands of years.</p>
+        </div>
+        <div class="idea">
+          <h3>Terpenes are how the plant defends itself.</h3>
+          <p class="lead">Not sugars and proteins for daily survival, but chemistry aimed at UV, insects, fungus, and anything trying to eat it.</p>
+          <details class="more">
+            <summary>Click here to Learn More</summary>
+            <div class="more-body">
+              <p>A primary metabolite is something a plant makes to live day to day. A secondary metabolite is something it makes to defend itself. Cannabinoids and terpenes are secondary metabolites, and the trichome is where that defense is manufactured and stored.</p>
+            </div>
+          </details>
+        </div>
+        <div class="idea">
+          <h3>Plants were doing this long before anyone cultivated them.</h3>
+          <p class="lead">Repelling insects, deterring fungal attack, and in some cases attracting the predators of their own pests.</p>
+        </div>
+        <div class="idea">
+          <h3>They are not unique to cannabis.</h3>
+          <p class="lead">Limonene is why citrus peel smells like citrus. Pinene is why a pine forest smells like pine. Linalool is the main aromatic compound in lavender.</p>
+          <details class="more">
+            <summary>Click here to Learn More</summary>
+            <div class="more-body">
+              <p>Cannabis just produces an unusually complex mix of them.</p>
+            </div>
+          </details>
+        </div>
+        <div class="idea">
+          <h3>Cannabis makes over a hundred cannabinoids and hundreds of aromatic compounds.</h3>
+          <p class="lead">Rosin carries a broad range of them through to the jar, because nothing is distilled out along the way.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="thca">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part Two</span>
+          <h2 class="cond">THCA and THC</h2><button class="copylink" data-copy="#thca" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">The plant primarily makes THCA. Heat converts it to THC.</p>
+        </div>
+        <div class="idea">
+          <h3>THCA is the acid form the plant produces.</h3>
+          <p class="lead">It is not decarboxylated, so it does not cross the blood brain barrier the way THC does.</p>
+        </div>
+        <div class="idea">
+          <h3>Heat converts THCA into THC.</h3>
+          <p class="lead">Smoking or dabbing does it in real time, because the material is being heated as it is consumed.</p>
+        </div>
+        <div class="idea">
+          <h3>That is why a COA lists both.</h3>
+          <p class="lead">Total THC estimates the potential THC after decarboxylation. It is a lab calculation, not a prediction of how somebody will feel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="entourage">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part Two</span>
+          <h2 class="cond">The entourage effect</h2><button class="copylink" data-copy="#entourage" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">A theory, and worth stating as one.</p>
+        </div>
+        <div class="idea">
+          <h3>The working theory is that these compounds act together, not alone.</h3>
+          <p class="lead">The character of a cultivar comes from the whole mixture rather than from THC by itself.</p>
+          <details class="more">
+            <summary>Click here to Learn More</summary>
+            <div class="more-body">
+              <p>Cannabinoids, terpenes, and flavonoids interacting with one another. It remains an area of active research rather than settled science, and it should be described that way.</p>
+            </div>
+          </details>
+        </div>
+        <div class="idea">
+          <h3>What we can say is what is preserved.</h3>
+          <p class="lead">Rosin carries a broader mix of the compounds present in the starting material. Whether those compounds interact in a predictable entourage effect is still being studied.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="coa">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part Two</span>
+          <h2 class="cond">Reading a COA</h2><button class="copylink" data-copy="#coa" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">Every jar has one behind it, and the numbers change with every run.</p>
+        </div>
+        <div class="idea">
+          <h3>Total terpenes is the number worth showing.</h3>
+          <p class="lead">Most menu tags display THC and nothing else. Terpenes are where rosin distinguishes itself, and plenty of point of sale systems have the field and leave it blank.</p>
+          <details class="more">
+            <summary>Click here to Learn More</summary>
+            <div class="more-body">
+              <p>Ask your manager to populate it. It gives the customer another batch-specific number besides THC.</p>
+            </div>
+          </details>
+        </div>
+        <div class="idea">
+          <h3>THC is not how we grade it.</h3>
+          <p class="lead">Tier comes from what the resin does at the bench: melt, color, and head condition. Numbers vary batch to batch.</p>
+        </div>
+        <div class="idea">
+          <h3>Never quote a number you have not checked.</h3>
+          <p class="lead">Read the COA for the lot actually on the shelf, not one from memory or a sales sheet. Our published certificates are at <a href="../coa/index.html">adirondackcoldwater.com/coa</a>, searchable by batch code.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="handling">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part Two</span>
+          <h2 class="cond">Handling and storage</h2><button class="copylink" data-copy="#handling" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">What the customer paid for is the part that escapes easiest.</p>
+        </div>
+        <div class="idea">
+          <h3>Store it cold.</h3>
+          <p class="lead">Rosin is terpene-rich and temperature-sensitive. Refrigeration is what keeps the aroma in the jar.</p>
+          <details class="more">
+            <summary>Click here to Learn More</summary>
+            <div class="more-body">
+              <p>Terpenes are volatile, so warmth and time work against them. Once they are gone they cannot be added back, and what the customer paid for is partly that aroma.</p>
+            </div>
+          </details>
+        </div>
+        <div class="idea">
+          <h3>Dab it lower than they are used to.</h3>
+          <p class="lead">Roughly 450 to 500 degrees Fahrenheit. Running hot burns the terpenes off before they are ever tasted.</p>
+        </div>
+        <div class="idea">
+          <h3>Clean tool, closed jar.</h3>
+          <p class="lead">Air and warmth are what cost the customer the thing they paid for.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Part Three ================= -->
+
+    <section id="counter">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part Three</span>
+          <h2 class="cond">Talking points</h2><button class="copylink" data-copy="#counter" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">Lead with the process, not with superlatives. These are written to be said as written.</p>
+        </div>
+        <blockquote class="script">This is made with ice water, heat, and pressure. No chemical solvents at any stage. There is nothing added and nothing to purge out.</blockquote>
+        <blockquote class="script">Most oil on the shelf is distilled down toward pure THC, which takes the flavor out with everything else, so terpenes get blended back in afterward. Rosin never had anything taken out, so what you taste is the actual plant. There is a theory called the entourage effect, that the cannabinoids and terpenes work together in the ratios the plant grew them in. Pull them apart and rebuild it and you do not get the same thing back.</blockquote>
+        <blockquote class="script">Rosin cannot be fixed after the fact, so it can only be as good as the flower that went into it. This came off the farm that made it.</blockquote>
+        <blockquote class="script">If you already know flower, rosin is the resin off fresh frozen flower, separated with ice water and pressed. It is a concentrate, but the point is the process and the plant profile, not chasing a bigger number.</blockquote>
+        <blockquote class="script">First Water is grown, washed, pressed, and jarred by us in Granville. Base Camp starts with partner farm material or a blend, then comes through the same wash, press, jar, and testing here.</blockquote>
+
+        <div class="sub-head" id="asks">
+          <h3 class="cond">If a customer asks</h3>
+          <p class="intro">Six questions you will get, and what to say.</p>
+        </div>
+        <div class="qa">
+          <details>
+            <summary>What is the difference between First Water and Base Camp?</summary>
+            <div class="qa-a"><p>First Water is single cultivar from the farm that makes it. Base Camp is partner farm material and all of the blends. Same process and same standards, different source. It is not a ranking.</p></div>
+          </details>
+          <details>
+            <summary>What does Private Reserve mean?</summary>
+            <div class="qa-a"><p>It is a grade assigned to that specific batch based on how the resin performs at the bench, and it only comes from protected culture growing. It is not a THC ranking.</p></div>
+          </details>
+          <details>
+            <summary>Why is the THC lower than the jar next to it?</summary>
+            <div class="qa-a"><p>THC is not how we grade it. Tier comes from what the resin does at the bench: melt, color, and head condition. Numbers vary batch to batch, so use the COA for the jar actually on the shelf, and look at total terpenes alongside THC.</p></div>
+          </details>
+          <details>
+            <summary>Why is this one cloudy and that one clear?</summary>
+            <div class="qa-a"><p>That is the finish, not the quality. Clear and sappy is fresh press, jarred straight off the press. Cloudy is cold cure, held cold after pressing until it comes together into a batter. Different texture, different aroma character, same material.</p></div>
+          </details>
+          <details>
+            <summary>What strain is it really?</summary>
+            <div class="qa-a"><p>That is not something the farm shares. The cut name is the name.</p></div>
+          </details>
+          <details>
+            <summary>Is this better than the solvent concentrates?</summary>
+            <div class="qa-a"><p>Describe the difference rather than ranking them. It is made without solvents and without added terpenes, so nothing is purged out and nothing is blended in. Let the customer decide what matters to them.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="never-say">
+      <div class="tr-wrap">
+        <div class="tr-head">
+          <span class="eyebrow">Part Three</span>
+          <h2 class="cond">What not to say</h2><button class="copylink" data-copy="#never-say" type="button" aria-label="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="copied-note" aria-hidden="true">Copied</span></button>
+          <p class="intro">New York treats brand education as advertising. No health claims. Do not promote potency. Do not invent tasting notes, lab numbers, origins, or product claims. If it is batch-specific, check the label or the COA before you say it.</p>
+        </div>
+        <ul class="nono">
+          <li><strong>No health, medical, therapeutic, or curative claims</strong> of any kind. That includes anxiety, sleep, pain, and wellness.</li>
+          <li>Do not say rosin is <strong>healthier or better for you</strong>. Describe the process and let the customer draw the conclusion.</li>
+          <li>No comparative potency or quality claims that are <strong>not supported by the COA</strong> for that batch.</li>
+          <li>Do not claim or imply that any cannabis product is <strong>approved, endorsed, or certified by a government body</strong>.</li>
+          <li>Do not say the product is <strong>grown or crafted in the Adirondacks</strong>. Granville, New York is the accurate claim.</li>
+          <li>Do not claim <strong>first, only, best, or finest</strong> about anything.</li>
+          <li>Do not say <strong>which cultivar sits behind a cut name</strong>.</li>
+          <li>Do not describe a <strong>flavor for a cut without approved copy</strong>.</li>
+          <li>Do not quote a <strong>lab number without checking the COA</strong> for that lot.</li>
+          <li>Do not <strong>name or promise a product that has not launched</strong>.</li>
+        </ul>
+        <div class="callout">
+          <p>Stick to what the COA and the label state: cannabinoid content, terpene content, batch and license information, and testing status.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band tr-contact" id="contact">
+      <div class="wrap contact-inner">
+        <span class="eyebrow">Contact</span>
+        <h2 class="cond">Anything about a specific batch, cultivar, or COA comes straight to us.</h2>
+        <hr class="rule" />
+        <div class="hero-cta" style="justify-content:center;">
+          <a class="btn" href="mailto:jessica@outcastacresfarm.com">Email Jessica</a>
+          <a class="btn ghost" href="tel:+15185385943">518-538-5943</a>
+        </div>
+        <div class="contact-meta">Jessica Ben-Yishay, Territory Sales Manager &middot; <a href="mailto:jessica@outcastacresfarm.com">jessica@outcastacresfarm.com</a></div>
+        <div class="contact-meta"><a href="mailto:hello@adirondackcoldwater.com">hello@adirondackcoldwater.com</a></div>
+        <p class="tr-legal">Outcast Acres Farm LLC, Granville, NY 12832. Processor OCM&#8209;PROC&#8209;25&#8209;000317. Distributor OCM&#8209;DIST&#8209;24&#8209;000060. For adults 21 and over. Training material for licensed retail staff.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <a class="foot-logo" href="../index.html" aria-label="Adirondack Cold Water home">
+        <img src="../assets/brand/logos/ACW-Logo-Primary-White.png" alt="Adirondack Cold Water" />
+      </a>
+      <nav class="foot-links">
+        <a href="../index.html#story">Story</a>
+        <a href="../index.html#process">Process</a>
+        <a href="../cuts/index.html">Cuts</a>
+        <a href="../find/index.html">Find Us</a>
+        <a href="../coa/index.html">Lab Results</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="wrap legal">
+      <p><strong>For adults 21 and over. Keep out of reach of children.</strong> Licensed by the New York State Office of Cannabis Management, OCM-PROC-25-000317.</p>
+      <p>&copy; <span id="year">2026</span> Adirondack Cold Water &middot; Outcast Acres Farm LLC, Granville, New York. Strong. Clean. Solventless.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/site.js"></script>
+  <script>
+    /* Training page only: hide art slots whose file is missing, keep the
+       cover legible without its illustration, highlight the section index
+       as the reader scrolls, and copy deep links per section. */
+    (function () {
+      // Deep links (#tiers etc.): the native jump is blocked by the age-gate
+      // lock, and fonts/images shift the layout for a moment after first
+      // paint. Re-jump until the target settles under the sticky header,
+      // backing off the moment the reader interacts.
+      var HEADER_CLEARANCE = 108; // matches scroll-margin-top
+      var userTookOver = false;
+      ["wheel", "touchstart", "keydown"].forEach(function (ev) {
+        addEventListener(ev, function () { userTookOver = true; }, { once: true, passive: true });
+      });
+      function hashTarget() {
+        if (!location.hash) return null;
+        try { return document.querySelector(location.hash); } catch (e) { return null; }
+      }
+      function settleJump() {
+        if (!hashTarget()) return;
+        var tries = 0;
+        var timer = setInterval(function () {
+          var target = hashTarget();
+          if (userTookOver || !target || ++tries > 9) { clearInterval(timer); return; }
+          if (Math.abs(target.getBoundingClientRect().top - HEADER_CLEARANCE) > 6) {
+            target.scrollIntoView({ behavior: "instant", block: "start" });
+          }
+        }, 300);
+      }
+      try {
+        if (sessionStorage.getItem("acw-age-verified") === "1") settleJump();
+      } catch (e) {}
+      var gateYes = document.getElementById("gate-yes");
+      if (gateYes) gateYes.addEventListener("click", settleJump);
+
+      // Missing artwork degrades to nothing rather than a broken image icon.
+      document.querySelectorAll(".art img").forEach(function (img) {
+        function fail() {
+          if (img.id === "cover-art") {
+            var cover = document.getElementById("cover");
+            if (cover) cover.classList.add("no-art");
+          }
+          var fig = img.closest(".art");
+          if (fig) fig.hidden = true;
+        }
+        if (img.complete && img.naturalWidth === 0) fail();
+        img.addEventListener("error", fail);
+      });
+
+      // Section index: highlight the section in view, keep it scrolled into sight.
+      var index = document.getElementById("tr-index");
+      if (index && "IntersectionObserver" in window) {
+        var links = {};
+        index.querySelectorAll("a[href^='#']").forEach(function (a) {
+          links[a.getAttribute("href").slice(1)] = a;
+        });
+        var current = null;
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var link = links[entry.target.id];
+            if (!link || link === current) return;
+            if (current) current.classList.remove("active");
+            current = link;
+            link.classList.add("active");
+            index.scrollTo({
+              left: link.offsetLeft - index.clientWidth / 2 + link.clientWidth / 2,
+              behavior: "smooth"
+            });
+          });
+        }, { rootMargin: "-25% 0px -65% 0px" });
+        Object.keys(links).forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) io.observe(el);
+        });
+      }
+
+      // Per-section deep links the rep can text out.
+      document.querySelectorAll(".copylink").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var url = location.origin + location.pathname + btn.getAttribute("data-copy");
+          function done() {
+            btn.classList.add("done");
+            setTimeout(function () { btn.classList.remove("done"); }, 1400);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(done, function () {
+              location.hash = btn.getAttribute("data-copy");
+              done();
+            });
+          } else {
+            location.hash = btn.getAttribute("data-copy");
+            done();
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
