@@ -22,6 +22,8 @@ browser and it runs.
 │   └── index.html         # Where to Buy (generated from _data/stockists.json)
 ├── coa/
 │   └── index.html         # Lab Results / COAs (generated from _data/coas.json)
+├── training/
+│   └── index.html         # Budtender training page (hand-authored; see below)
 ├── _data/
 │   ├── stockists.json     # Stockist master (NOT served by Pages; see below)
 │   └── coas.json          # COA master (NOT served by Pages; same rules)
@@ -32,6 +34,7 @@ browser and it runs.
 │   └── brand/             # Supplied brand assets. See ASSET-MANIFEST.md
 │       ├── logos/  textures/  banners/
 │       ├── collections/  cuts/  products/  social/
+│       └── training/      # Line illustrations for training/ (WebP pairs)
 ├── tools/
 │   ├── generate-cuts.mjs      # Regenerates cuts/ from brand-tokens.json
 │   ├── generate-stockists.mjs # Regenerates find/ from _data/stockists.json
@@ -127,6 +130,38 @@ run `node tools/generate-stockists.mjs`, and commit the regenerated `find/`.
 - To add a COA: add an entry to `_data/coas.json` with the cut, batch code, test
   date, and a `file` or `url`; set `published: true`; run
   `node tools/generate-coas.mjs`; commit.
+
+## Budtender training page (`training/`)
+
+`training/index.html` is a hand-authored staff training page for licensed
+dispensary teams — a live anchor the territory manager talks over, a texted
+takeaway, and a cold reference. Rules:
+
+- **Unlinked and unindexed.** It is reachable by URL only: never link it from
+  the main navigation or footers of consumer pages, and never remove its
+  `noindex` meta. It is internal training material, not consumer marketing.
+- **The training document is the only content source**
+  (`ACW_Budtender_Training_v1_0.docx`, kept outside the repo). Do not fill
+  gaps from general cannabis knowledge. No pricing, no strain/cultivar names
+  (cut names only), no flavor descriptors, no lab numbers, no health or
+  effect claims, no first/only/best/finest claims, and never state or imply
+  the product is grown in the Adirondacks (Granville, NY / North Country are
+  the accurate claims).
+- **Progressive disclosure is the design.** Each section leads with one short
+  spoken headline; full document text sits behind native `<details>`
+  disclosures. Nothing is cut, it is layered.
+- **The source-and-grade diagram** (in `#tiers`) is HTML/CSS, never an image,
+  and never a single vertical ladder: source lane (First Water / Base Camp)
+  is one axis, bench grade (Private Reserve / Tier 1 / Tier 2) is another,
+  and blends bypass grading with no tier. Tier stays batch-assigned — the
+  same rule as the rest of the site.
+- **Illustrations** live in `assets/brand/training/` and render flush (no
+  card/border/shadow, `mix-blend-mode: darken`). Missing artwork slots are
+  commented out in the HTML with paste-ready markup; see ASSET-MANIFEST.md
+  for the drop-in pipeline.
+- The page carries an extra compliance line (processor + distributor license
+  and "internal training material") in its contact section, on top of the
+  standard site footer.
 
 ## Conventions
 
