@@ -204,6 +204,14 @@ sees at `/retailers/` is their assets — never the email we sent them. Rules:
   adjacent `.copy-text` paragraph, so the paragraph is the canonical text.
   It covers ACW rosin cuts and the CORE vape line; same compliance rules as
   the email (no prices, no potency numbers, no health/effect claims, no tier).
+- **Wholesale policy PDFs live under `retailers/files/`** (versioned
+  filenames, e.g. `ACW-Wholesale-Payment-Terms-v1.0.pdf`) and are the
+  canonical documents; the on-page "How to pay" callout in `#policies` is a
+  plain-language summary that must be kept in lockstep with the PDF. On a new
+  version, add a new file and update the links/spec text — don't overwrite an
+  old version in place. The welcome email links both PDFs by full URL and
+  repeats the COD window and QuickBooks exclusion; update it in the same
+  change.
 - The page carries the same extra compliance line as `training/` (processor +
   distributor license, "partner material for licensed retailers").
 
