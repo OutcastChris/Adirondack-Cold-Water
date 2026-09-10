@@ -21,9 +21,10 @@
   <link rel="stylesheet" href="../assets/site.css" />
   <style>
     /* ============================================================
-       Retail partner kit. One URL a new account (and our own team)
-       can work from: the standard onboarding email, every brand
-       asset with its usage rules, and who to call for what.
+       Retail partner kit. The one URL a shop works from: every
+       brand asset with its usage rules, and who to call for what.
+       (The onboarding email the team sends lives separately at
+       /retailers/email/ — team-facing, not for this page.)
        Shares the internal-page pattern with training/.
        ============================================================ */
 
@@ -53,15 +54,6 @@
     .rk-cover .standfirst { color: var(--navy-70); font-size: clamp(1.05rem, 2.9vw, 1.28rem); max-width: 46ch; margin: 16px auto 0; }
     .rk-cover .cover-sub { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy-70); margin-top: 16px; line-height: 2; }
 
-    /* ---------- The onboarding email. The letter is the canonical text:
-       the copy and mail buttons read straight from the <pre>, so editing
-       the letter is the only edit needed. ---------- */
-    .letter-card { background: var(--white) url("../assets/brand/textures/paper-1600.jpg") center / cover; border: 1px solid rgba(32,46,63,0.18); border-radius: 3px; padding: clamp(22px, 4vw, 40px); margin-top: clamp(18px, 3vw, 26px); }
-    .letter-meta { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy-70); border-bottom: 1px solid rgba(128,77,48,0.42); padding-bottom: 12px; margin-bottom: 4px; }
-    .letter-meta strong { color: var(--navy); }
-    pre.letter { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.75; color: var(--navy); white-space: pre-wrap; word-wrap: break-word; }
-    .letter-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: clamp(18px, 3vw, 26px); }
-    #copy-status { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
     .fillin { font-size: 0.92rem; color: var(--navy-70); margin: 14px 0 0; }
 
     /* ---------- Callouts: usage rules, never hidden ---------- */
@@ -139,7 +131,6 @@
       <span class="rk-label">Retail Partners</span>
     </div>
     <nav class="rk-index" aria-label="Partner kit sections">
-      <a href="#email">Welcome Email</a>
       <a href="#media">Media Kit</a>
       <a href="#support">Support</a>
     </nav>
@@ -152,59 +143,8 @@
       <div class="rk-wrap">
         <img class="mark" src="../assets/brand/logos/ACW-Logo-Primary-Navy.svg" alt="Adirondack Cold Water" />
         <h1 class="cond">Welcome aboard.</h1>
-        <p class="standfirst">Everything a new Adirondack Cold Water account needs in one place: the welcome email, every brand asset with its rules, and who to reach for what.</p>
+        <p class="standfirst">Your Adirondack Cold Water asset kit: every logo, card, and banner with its rules &mdash; and who to reach for what.</p>
         <p class="cover-sub">For licensed New York dispensary partners</p>
-      </div>
-    </section>
-
-    <!-- ================= Onboarding email ================= -->
-    <section id="email">
-      <div class="rk-wrap">
-        <div class="rk-head">
-          <span class="eyebrow">Start Here</span>
-          <h2 class="cond">The welcome email.</h2>
-          <p class="intro">Every new account gets this same email, so nothing depends on who signed you. If you received it, this page is the link inside it. If you&rsquo;re on our team, copy it from here &mdash; never retype it &mdash; and fill in the two brackets before sending.</p>
-        </div>
-
-        <div class="letter-card">
-          <p class="letter-meta"><strong>Subject:</strong> Welcome to Adirondack Cold Water</p>
-          <!-- The <pre> below is the canonical email text. The Copy and
-               Mail buttons read it verbatim, so edit only here. Keep the
-               [brackets] — they mark what gets personalized per account.
-               Compliance: no prices, no potency numbers, no health or
-               effect claims, and never a tier tied to a cut. -->
-          <pre class="letter" id="letter">Hi [contact name],
-
-Welcome aboard &mdash; we&rsquo;re glad to have [dispensary name] carrying Adirondack Cold Water. We make small-batch solventless live rosin in Granville, New York: fresh-frozen flower, washed in ice water by hand, freeze dried, and pressed. No solvents at any step.
-
-A few things to have on hand from day one:
-
-MENU LISTING &mdash; List us as &ldquo;Adirondack Cold Water&rdquo; with the cut name, e.g. &ldquo;Adirondack Cold Water &mdash; Marcy.&rdquo; First Water jars are single-source; Base Camp jars are blends. Tier (Private Reserve, Tier 1, Tier 2) is graded per batch, so take it from the jar in hand, never from a saved menu template.
-
-LAB RESULTS &mdash; Every batch ships with its COA, and published certificates live at adirondackcoldwater.com/coa/ &mdash; searchable by the batch code printed on the jar.
-
-STAFF TRAINING &mdash; Our budtender guide is at adirondackcoldwater.com/training/. We&rsquo;ll walk your team through it in person, and it stands alone as a counter reference afterward.
-
-BRAND ASSETS &mdash; Logos, cut cards, and menu images are at adirondackcoldwater.com/retailers/. Please use them as supplied &mdash; no recropping, recoloring, or overlaid text.
-
-WHERE TO BUY &mdash; Once you&rsquo;re stocked, we&rsquo;ll add your shop to adirondackcoldwater.com/find/. Send over the menu link you&rsquo;d like it to point to.
-
-Your contact for orders, restocks, and training visits is Jessica Ben-Yishay, Territory Sales Manager &mdash; sales@outcastacresfarm.com. Anything else reaches us at hello@adirondackcoldwater.com.
-
-Strong. Clean. Solventless.
-
-&mdash; The Adirondack Cold Water team
-Outcast Acres Farm LLC, Granville, NY
-Processor OCM-PROC-25-000317 &middot; Distributor OCM-DIST-24-000060
-For adults 21 and over.</pre>
-        </div>
-
-        <div class="letter-actions">
-          <button class="btn" id="copy-email" type="button">Copy Email Text</button>
-          <a class="btn ghost" id="mail-email" href="#email">Open in Mail App</a>
-          <span id="copy-status" role="status" aria-live="polite"></span>
-        </div>
-        <p class="fillin">Before sending, replace <strong>[contact name]</strong> and <strong>[dispensary name]</strong>.</p>
       </div>
     </section>
 
@@ -454,49 +394,5 @@ For adults 21 and over.</pre>
   </footer>
 
   <script src="../assets/site.js"></script>
-  <script>
-    /* Retailers page only: copy the onboarding email (subject + body) and
-       open it in a mail app. Both read the <pre> so the letter is edited
-       in exactly one place. */
-    (function () {
-      var letter = document.getElementById("letter");
-      var copyBtn = document.getElementById("copy-email");
-      var mailLink = document.getElementById("mail-email");
-      var status = document.getElementById("copy-status");
-      if (!letter) return;
-
-      var SUBJECT = "Welcome to Adirondack Cold Water";
-      function body() { return letter.textContent.trim(); }
-
-      copyBtn.addEventListener("click", function () {
-        var text = "Subject: " + SUBJECT + "\n\n" + body();
-        function done() {
-          status.textContent = "Copied";
-          setTimeout(function () { status.textContent = ""; }, 1600);
-        }
-        function fallback() {
-          // Clipboard API unavailable (e.g. non-HTTPS preview): select the
-          // letter so a manual Ctrl/Cmd-C still works.
-          var range = document.createRange();
-          range.selectNodeContents(letter);
-          var sel = window.getSelection();
-          sel.removeAllRanges();
-          sel.addRange(range);
-          status.textContent = "Press Ctrl/Cmd-C to copy";
-          setTimeout(function () { status.textContent = ""; }, 2600);
-        }
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(done, fallback);
-        } else {
-          fallback();
-        }
-      });
-
-      mailLink.addEventListener("click", function () {
-        mailLink.href = "mailto:?subject=" + encodeURIComponent(SUBJECT) +
-                        "&body=" + encodeURIComponent(body());
-      });
-    })();
-  </script>
 </body>
 </html>

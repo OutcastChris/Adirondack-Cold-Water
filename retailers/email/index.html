@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onboarding Email | Adirondack Cold Water</title>
+  <meta name="description" content="The standard onboarding email for new Adirondack Cold Water retail accounts. Internal team use." />
+  <meta name="theme-color" content="#202e3f" />
+  <!-- Internal team page: the canonical onboarding email the territory
+       manager sends to every new retail account. Deliberately unlinked
+       (including from /retailers/) and kept out of search. Do not remove
+       the noindex. -->
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="../../assets/brand/logos/ACW-Favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/brand/logos/ACW-Favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="../../assets/brand/logos/ACW-Favicon-512x512.png" />
+  <meta property="og:title" content="Onboarding Email | Adirondack Cold Water" />
+  <meta property="og:description" content="Internal team page: the standard onboarding email for new retail accounts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adirondackcoldwater.com/retailers/email/" />
+  <meta property="og:image" content="https://adirondackcoldwater.com/assets/brand/banners/ACW-Square-1080x1080.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="../../assets/site.css" />
+  <style>
+    /* ============================================================
+       Team-only page holding the standard onboarding email. The
+       retailer-facing partner kit lives one level up at /retailers/;
+       this page exists so the first thing a shop sees there is their
+       assets, not the email we sent them.
+       ============================================================ */
+
+    .rk-bar { display: flex; align-items: center; gap: 14px; padding: 11px 0 9px; }
+    .rk-bar .brand img { height: 32px; display: block; }
+    .rk-bar .rk-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy-70); border-left: 1px solid rgba(32,46,63,0.25); padding-left: 14px; }
+
+    .rk-wrap { width: min(780px, 92vw); margin-inline: auto; }
+    main section { padding: clamp(40px, 6vw, 64px) 0; }
+    .rk-head { margin-bottom: clamp(20px, 3vw, 30px); }
+    .rk-head .eyebrow { display: block; margin-bottom: 8px; }
+    .rk-head h1 { font-size: clamp(1.7rem, 4.6vw, 2.5rem); letter-spacing: 0.01em; }
+    .rk-head .cond { transform-origin: left; }
+    .rk-head .intro { color: var(--navy-70); font-size: 1.05rem; margin: 10px 0 0; }
+
+    /* ---------- The letter is the canonical text: the copy and mail
+       buttons read straight from the <pre>, so editing the letter is
+       the only edit needed. ---------- */
+    .letter-card { background: var(--white) url("../../assets/brand/textures/paper-1600.jpg") center / cover; border: 1px solid rgba(32,46,63,0.18); border-radius: 3px; padding: clamp(22px, 4vw, 40px); margin-top: clamp(18px, 3vw, 26px); }
+    .letter-meta { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy-70); border-bottom: 1px solid rgba(128,77,48,0.42); padding-bottom: 12px; margin-bottom: 4px; }
+    .letter-meta strong { color: var(--navy); }
+    pre.letter { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.75; color: var(--navy); white-space: pre-wrap; word-wrap: break-word; }
+    .letter-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: clamp(18px, 3vw, 26px); }
+    #copy-status { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
+    .fillin { font-size: 0.92rem; color: var(--navy-70); margin: 14px 0 0; }
+    .fillin a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--brown); padding-bottom: 1px; }
+    .fillin a:hover { color: var(--brown); }
+
+    .rk-legal { margin-top: 26px; font-family: var(--font-ui); font-size: 0.74rem; letter-spacing: 0.04em; line-height: 1.8; color: var(--kraft-45); }
+  </style>
+</head>
+<body class="locked">
+
+  <div id="age-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-inner">
+      <img class="gate-mark" src="../../assets/brand/logos/ACW-Logo-Icon-White.png" alt="Adirondack Cold Water" />
+      <h2 id="gate-title">Are you 21 or older?</h2>
+      <hr class="rule" />
+      <p>You must be 21 or older to enter. Adirondack Cold Water is intended for adults 21+.</p>
+      <div class="gate-actions">
+        <button class="btn" id="gate-yes">Yes, I&rsquo;m 21+</button>
+        <a class="btn ghost" href="https://www.samhsa.gov" rel="noopener">No, exit</a>
+      </div>
+      <div class="gate-note">By entering you confirm you are of legal age in your jurisdiction.</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap rk-bar">
+      <a class="brand" href="../../index.html" aria-label="Adirondack Cold Water home">
+        <img src="../../assets/brand/logos/ACW-Logo-Icon.svg" alt="Adirondack Cold Water" />
+      </a>
+      <span class="rk-label">Team &middot; Onboarding Email</span>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="email">
+      <div class="rk-wrap">
+        <div class="rk-head">
+          <span class="eyebrow">Internal &mdash; Team Use</span>
+          <h1 class="cond">The welcome email.</h1>
+          <p class="intro">Every new account gets this same email, so nothing depends on who signed them. Copy it from here &mdash; never retype it &mdash; fill in the two brackets, and send. The links inside point the shop at the partner kit, COAs, and training.</p>
+        </div>
+
+        <div class="letter-card">
+          <p class="letter-meta"><strong>Subject:</strong> Welcome to Adirondack Cold Water</p>
+          <!-- The <pre> below is the canonical email text. The Copy and
+               Mail buttons read it verbatim, so edit only here. Keep the
+               [brackets] — they mark what gets personalized per account.
+               Compliance: no prices, no potency numbers, no health or
+               effect claims, and never a tier tied to a cut. -->
+          <pre class="letter" id="letter">Hi [contact name],
+
+Welcome aboard &mdash; we&rsquo;re glad to have [dispensary name] carrying Adirondack Cold Water. We make small-batch solventless live rosin in Granville, New York: fresh-frozen flower, washed in ice water by hand, freeze dried, and pressed. No solvents at any step.
+
+A few things to have on hand from day one:
+
+MENU LISTING &mdash; List us as &ldquo;Adirondack Cold Water&rdquo; with the cut name, e.g. &ldquo;Adirondack Cold Water &mdash; Marcy.&rdquo; First Water jars are single-source; Base Camp jars are blends. Tier (Private Reserve, Tier 1, Tier 2) is graded per batch, so take it from the jar in hand, never from a saved menu template.
+
+LAB RESULTS &mdash; Every batch ships with its COA, and published certificates live at adirondackcoldwater.com/coa/ &mdash; searchable by the batch code printed on the jar.
+
+STAFF TRAINING &mdash; Our budtender guide is at adirondackcoldwater.com/training/. We&rsquo;ll walk your team through it in person, and it stands alone as a counter reference afterward.
+
+BRAND ASSETS &mdash; Logos, cut cards, and menu images are at adirondackcoldwater.com/retailers/. Please use them as supplied &mdash; no recropping, recoloring, or overlaid text.
+
+WHERE TO BUY &mdash; Once you&rsquo;re stocked, we&rsquo;ll add your shop to adirondackcoldwater.com/find/. Send over the menu link you&rsquo;d like it to point to.
+
+Your contact for orders, restocks, and training visits is Jessica Ben-Yishay, Territory Sales Manager &mdash; sales@outcastacresfarm.com. Anything else reaches us at hello@adirondackcoldwater.com.
+
+Strong. Clean. Solventless.
+
+&mdash; The Adirondack Cold Water team
+Outcast Acres Farm LLC, Granville, NY
+Processor OCM-PROC-25-000317 &middot; Distributor OCM-DIST-24-000060
+For adults 21 and over.</pre>
+        </div>
+
+        <div class="letter-actions">
+          <button class="btn" id="copy-email" type="button">Copy Email Text</button>
+          <a class="btn ghost" id="mail-email" href="#email">Open in Mail App</a>
+          <span id="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <p class="fillin">Before sending, replace <strong>[contact name]</strong> and <strong>[dispensary name]</strong>. The retailer-facing kit the email links to is at <a href="../index.html">/retailers/</a>.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap contact-inner">
+        <span class="eyebrow">Adirondack Cold Water</span>
+        <h2 class="cond">One email, every account.</h2>
+        <div class="contact-meta">Jessica Ben-Yishay, Territory Sales Manager &middot; <a href="mailto:sales@outcastacresfarm.com">sales@outcastacresfarm.com</a></div>
+        <p class="rk-legal">Outcast Acres Farm LLC, Granville, NY 12832. Processor OCM&#8209;PROC&#8209;25&#8209;000317. Distributor OCM&#8209;DIST&#8209;24&#8209;000060. For adults 21 and over. Internal team material.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <a class="foot-logo" href="../../index.html" aria-label="Adirondack Cold Water home">
+        <img src="../../assets/brand/logos/ACW-Logo-Primary-White.png" alt="Adirondack Cold Water" />
+      </a>
+      <nav class="foot-links">
+        <a href="../../index.html#story">Story</a>
+        <a href="../../index.html#process">Process</a>
+        <a href="../../cuts/index.html">Cuts</a>
+        <a href="../../find/index.html">Find Us</a>
+        <a href="../../coa/index.html">Lab Results</a>
+        <a href="../../index.html#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="wrap legal">
+      <p><strong>For adults 21 and over. Keep out of reach of children.</strong> Licensed by the New York State Office of Cannabis Management, OCM-PROC-25-000317.</p>
+      <p>&copy; <span id="year">2026</span> Adirondack Cold Water &middot; Outcast Acres Farm LLC, Granville, New York. Strong. Clean. Solventless.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/site.js"></script>
+  <script>
+    /* Email page only: copy the onboarding email (subject + body) and
+       open it in a mail app. Both read the <pre> so the letter is
+       edited in exactly one place. */
+    (function () {
+      var letter = document.getElementById("letter");
+      var copyBtn = document.getElementById("copy-email");
+      var mailLink = document.getElementById("mail-email");
+      var status = document.getElementById("copy-status");
+      if (!letter) return;
+
+      var SUBJECT = "Welcome to Adirondack Cold Water";
+      function body() { return letter.textContent.trim(); }
+
+      copyBtn.addEventListener("click", function () {
+        var text = "Subject: " + SUBJECT + "\n\n" + body();
+        function done() {
+          status.textContent = "Copied";
+          setTimeout(function () { status.textContent = ""; }, 1600);
+        }
+        function fallback() {
+          // Clipboard API unavailable (e.g. non-HTTPS preview): select the
+          // letter so a manual Ctrl/Cmd-C still works.
+          var range = document.createRange();
+          range.selectNodeContents(letter);
+          var sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+          status.textContent = "Press Ctrl/Cmd-C to copy";
+          setTimeout(function () { status.textContent = ""; }, 2600);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fallback);
+        } else {
+          fallback();
+        }
+      });
+
+      mailLink.addEventListener("click", function () {
+        mailLink.href = "mailto:?subject=" + encodeURIComponent(SUBJECT) +
+                        "&body=" + encodeURIComponent(body());
+      });
+    })();
+  </script>
+</body>
+</html>

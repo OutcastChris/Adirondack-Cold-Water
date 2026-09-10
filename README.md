@@ -23,7 +23,7 @@ Or simply open `index.html` in a browser.
 - `assets/site.css` / `assets/site.js` are the shared design system and behavior for the cuts pages
 - `assets/brand/` holds the logos, textures, and imagery (see `ASSET-MANIFEST.md`)
 - `training/` is the budtender training page for dispensary staff (share by URL; deliberately unlinked and `noindex`)
-- `retailers/` is the retail partner kit — standard onboarding email, media downloads, and support contacts (share by URL; deliberately unlinked and `noindex`)
+- `retailers/` is the retail partner kit — media downloads and support contacts (share by URL; deliberately unlinked and `noindex`); `retailers/email/` holds the team's standard onboarding email, same rules
 - `assets/fonts/` holds the self-hosted Playfair Display and Inter web fonts
 - `brand-tokens.json` is the source of truth for colors, type, collections, and cut copy
 - `tools/generate-cuts.mjs` regenerates the `cuts/` pages from `brand-tokens.json`
