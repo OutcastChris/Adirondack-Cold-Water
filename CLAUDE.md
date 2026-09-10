@@ -24,6 +24,10 @@ browser and it runs.
 │   └── index.html         # Lab Results / COAs (generated from _data/coas.json)
 ├── training/
 │   └── index.html         # Budtender training page (hand-authored; see below)
+├── retailers/
+│   └── index.html         # Retail partner kit (hand-authored; see below)
+├── wholesale/
+│   └── index.html         # Wholesale inquiry form (hand-authored)
 ├── _data/
 │   ├── stockists.json     # Stockist master (NOT served by Pages; see below)
 │   └── coas.json          # COA master (NOT served by Pages; same rules)
@@ -168,6 +172,30 @@ takeaway, and a cold reference. Rules:
 - The page carries an extra compliance line (processor + distributor license
   and "internal training material") in its contact section, on top of the
   standard site footer.
+
+## Retail partner kit (`retailers/`)
+
+`retailers/index.html` is a hand-authored onboarding page for licensed retail
+accounts: the standard welcome email, the media kit, and support contacts.
+Rules:
+
+- **Unlinked and unindexed**, same as `training/`: reachable by URL only, never
+  linked from consumer navigation or footers, and never remove its `noindex`.
+- **The onboarding email's canonical text is the `<pre id="letter">` block.**
+  The Copy and Mail buttons read it verbatim at click time, so edit the letter
+  only there. Keep the `[contact name]` / `[dispensary name]` brackets — they
+  mark the per-account fill-ins. The email must never contain prices, potency
+  numbers, health/effect claims, or a tier bound to a cut, and must say
+  Granville, NY / North Country — never that product is grown in the
+  Adirondacks.
+- **Media kit links point at the files in `assets/brand/` in place** — no
+  copies, so new art dropped into the manifest folders only needs a new row or
+  tile here. Card grids lazy-load (`loading="lazy"`); keep that, the page links
+  ~10 MB of imagery.
+- Cut cards carry no tier. The three product cards do, so their section keeps
+  the tier warning callout — use only while the shelf batch matches.
+- The page carries the same extra compliance line as `training/` (processor +
+  distributor license, "partner material for licensed retailers").
 
 ## Conventions
 
