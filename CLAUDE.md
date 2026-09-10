@@ -175,19 +175,22 @@ takeaway, and a cold reference. Rules:
 
 ## Retail partner kit (`retailers/`)
 
-`retailers/index.html` is a hand-authored onboarding page for licensed retail
-accounts: the standard welcome email, the media kit, and support contacts.
-Rules:
+`retailers/index.html` is a hand-authored page for licensed retail accounts:
+the media kit and support contacts. The standard welcome email lives on its
+own team-facing page, `retailers/email/index.html`, so the first thing a shop
+sees at `/retailers/` is their assets — never the email we sent them. Rules:
 
-- **Unlinked and unindexed**, same as `training/`: reachable by URL only, never
-  linked from consumer navigation or footers, and never remove its `noindex`.
-- **The onboarding email's canonical text is the `<pre id="letter">` block.**
-  The Copy and Mail buttons read it verbatim at click time, so edit the letter
-  only there. Keep the `[contact name]` / `[dispensary name]` brackets — they
-  mark the per-account fill-ins. The email must never contain prices, potency
-  numbers, health/effect claims, or a tier bound to a cut, and must say
-  Granville, NY / North Country — never that product is grown in the
-  Adirondacks.
+- **Both pages are unlinked and unindexed**, same as `training/`: reachable by
+  URL only, never linked from consumer navigation or footers, and never remove
+  their `noindex`. The email page is not linked from `/retailers/` either
+  (it links the other way); keep that direction.
+- **The onboarding email's canonical text is the `<pre id="letter">` block**
+  in `retailers/email/index.html`. The Copy and Mail buttons read it verbatim
+  at click time, so edit the letter only there. Keep the `[contact name]` /
+  `[dispensary name]` brackets — they mark the per-account fill-ins. The email
+  must never contain prices, potency numbers, health/effect claims, or a tier
+  bound to a cut, and must say Granville, NY / North Country — never that
+  product is grown in the Adirondacks.
 - **Media kit links point at the files in `assets/brand/` in place** — no
   copies, so new art dropped into the manifest folders only needs a new row or
   tile here. Card grids lazy-load (`loading="lazy"`); keep that, the page links
