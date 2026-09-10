@@ -100,6 +100,20 @@
     .rk-contact .contact-inner p.small { font-size: 0.95rem; margin-top: 20px; }
     .rk-legal { margin-top: 26px; font-family: var(--font-ui); font-size: 0.74rem; letter-spacing: 0.04em; line-height: 1.8; color: var(--kraft-45); }
 
+    /* ---------- Menu & website copy. Verbatim from the approved
+       product-descriptions doc; each item's Copy button reads the
+       adjacent .copy-text, so the paragraph is the canonical text. ---------- */
+    .kit-group > h3.bc { color: var(--green); }
+    .copy-list { margin-top: 6px; }
+    .copy-item { padding: 16px 0; border-bottom: 1px solid rgba(32,46,63,0.14); }
+    .copy-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+    .copy-head h4 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--navy); }
+    .copy-head h4.bc { color: var(--green); }
+    .copy-desc { flex-shrink: 0; cursor: pointer; font-family: var(--font-ui); font-size: 0.64rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); background: transparent; border: 1.5px solid var(--navy); border-radius: 2px; padding: 7px 14px; transition: background .18s ease, color .18s ease; }
+    .copy-desc:hover, .copy-desc:focus-visible { background: var(--navy); color: var(--kraft); }
+    .copy-desc.done { background: var(--navy); color: var(--kraft); }
+    .copy-text { margin: 8px 0 0; color: var(--navy); font-size: 1rem; max-width: 74ch; }
+
     @media (max-width: 640px) {
       .kit-grid { grid-template-columns: repeat(2, 1fr); }
       .file-list li { flex-direction: column; gap: 8px; }
@@ -132,6 +146,7 @@
     </div>
     <nav class="rk-index" aria-label="Partner kit sections">
       <a href="#media">Media Kit</a>
+      <a href="#copy">Menu Copy</a>
       <a href="#support">Support</a>
     </nav>
   </header>
@@ -327,6 +342,94 @@
       </div>
     </section>
 
+    <!-- ================= Menu & website copy =================
+         Verbatim from the approved product-descriptions doc
+         (Outcast_Product_Descriptions, kept outside the repo).
+         Use as written — do not rewrite, trim, or fill gaps; a product
+         not in the doc is not listed here. No prices, no potency
+         numbers, no health/effect claims, no tier bound to a cut. -->
+    <section id="copy">
+      <div class="rk-wrap">
+        <div class="rk-head">
+          <span class="eyebrow">Menu &amp; Website Copy</span>
+          <h2 class="cond">Use as written.</h2>
+          <p class="intro">Approved descriptions for your menu and website &mdash; tap Copy and paste them word for word. Updated September 10, 2026.</p>
+        </div>
+
+        <div class="callout">
+          <span class="k">Why word for word</span>
+          <p>These are written to stay compliant, so please don&rsquo;t edit or add to them. Tier is left out on purpose &mdash; it&rsquo;s graded per batch, so take it from the jar in hand.</p>
+        </div>
+
+        <div class="kit-group">
+          <h3 class="cond">Brand line</h3>
+          <div class="copy-list">
+            <div class="copy-item">
+              <div class="copy-head"><h4>Adirondack Cold Water</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Solventless live rosin. From the North Country.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-group">
+          <h3 class="cond">First Water</h3>
+          <div class="copy-list">
+            <div class="copy-item">
+              <div class="copy-head"><h4>Boreas</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Boreas from our First Water line. Ripe tropical fruit and a sweet edge on the nose, sweet fruit over fuel, a clean and lingering finish. Farm grown, single source. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4>Tupper</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Tupper from our First Water line. Bright and tart with a sweet lift on the nose, crisp, sweet sour candy, a clean and refreshing finish. Farm grown, single source. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4>Schroon</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Schroon from our First Water line. Deep, sweet dark fruit on the nose, candy over fuel, a rich and faintly tart finish. Farm grown, single source. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4>Skylight</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Skylight from our First Water line. Bright sweet fruit and soft floral on the nose, candied fruit with light cream, a smooth and clean finish. Farm grown, single source. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-group">
+          <h3 class="cond bc">Base Camp</h3>
+          <div class="copy-list">
+            <div class="copy-item">
+              <div class="copy-head"><h4 class="bc">Guide&rsquo;s Blend</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Guide's Blend from our Base Camp line. Bramble and ripe fruit with a savory edge on the nose, sweet cream over funk, a balanced and grounded finish. Farm grown, blend. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4 class="bc">Independence</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Independence from our Base Camp line. Sweet floral and spiced earth on the nose, honeyed citrus over pine, a smooth and drying finish. Partner farm material, single source. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-group">
+          <h3 class="cond">CORE</h3>
+          <p class="note">2g all-in-one distillate vapes, from Outcast Acres Farm.</p>
+          <div class="copy-list">
+            <div class="copy-item">
+              <div class="copy-head"><h4>Super Lemon Haze</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Super Lemon Haze from CORE. Bright lemon zest and sweet citrus up front, with a peppery, earthy backbone. Sativa. 2g all-in-one vape. Cannabis distillate and cannabis-derived terpenes, made in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4>GMO</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">GMO from CORE. Savory, garlicky funk over a deep, earthy base. Indica. 2g all-in-one vape. Cannabis distillate and cannabis-derived terpenes, made in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4>Blackberry Kush</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Blackberry Kush from CORE. Sweet dark berry over earthy, hashy spice. Indica. 2g all-in-one vape. Cannabis distillate and cannabis-derived terpenes, made in Granville, New York.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="fillin">A cut you carry isn&rsquo;t listed? Its description hasn&rsquo;t been approved yet &mdash; email <a href="mailto:sales@outcastacresfarm.com">sales@outcastacresfarm.com</a> rather than writing your own.</p>
+      </div>
+    </section>
+
     <!-- ================= Support ================= -->
     <section id="support">
       <div class="rk-wrap">
@@ -394,5 +497,40 @@
   </footer>
 
   <script src="../assets/site.js"></script>
+  <script>
+    /* Retailers page only: per-item Copy buttons for the menu copy.
+       Each button copies the adjacent .copy-text paragraph verbatim. */
+    (function () {
+      document.querySelectorAll(".copy-desc").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var item = btn.closest(".copy-item");
+          var text = item ? item.querySelector(".copy-text").textContent.trim() : "";
+          if (!text) return;
+          function done() {
+            btn.classList.add("done");
+            btn.textContent = "Copied";
+            setTimeout(function () {
+              btn.classList.remove("done");
+              btn.textContent = "Copy";
+            }, 1600);
+          }
+          function fallback() {
+            // Clipboard API unavailable (e.g. non-HTTPS preview): select
+            // the paragraph so a manual Ctrl/Cmd-C still works.
+            var range = document.createRange();
+            range.selectNodeContents(item.querySelector(".copy-text"));
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, fallback);
+          } else {
+            fallback();
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
