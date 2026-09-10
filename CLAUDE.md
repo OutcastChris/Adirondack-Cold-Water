@@ -197,6 +197,13 @@ sees at `/retailers/` is their assets — never the email we sent them. Rules:
   ~10 MB of imagery.
 - Cut cards carry no tier. The three product cards do, so their section keeps
   the tier warning callout — use only while the shelf batch matches.
+- **The Menu & Website Copy section (`#copy`) is verbatim** from the approved
+  product-descriptions doc (`Outcast_Product_Descriptions_<date>.docx`, kept
+  outside the repo). Use as written: never rewrite, trim, or fill gaps, and a
+  product not in the doc is not listed. Per-item Copy buttons read the
+  adjacent `.copy-text` paragraph, so the paragraph is the canonical text.
+  It covers ACW rosin cuts and the CORE vape line; same compliance rules as
+  the email (no prices, no potency numbers, no health/effect claims, no tier).
 - The page carries the same extra compliance line as `training/` (processor +
   distributor license, "partner material for licensed retailers").
 
