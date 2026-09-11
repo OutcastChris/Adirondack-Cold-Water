@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18",
+  "updated": "2026-09-11",
   "how_to_use": "Only entries with published set to true are rendered on the site. Everything else stays in this file as a staged record. Flip published to true once that account has received Adirondack Cold Water branded product, and set acw_since to the delivery date. Set published back to false if an account stops carrying us.",
   "fields": {
     "published": "true renders on the site, false is staged and hidden",
@@ -532,11 +532,11 @@
           "menu_url": ""
         },
         {
-          "published": false,
+          "published": true,
           "name": "Cannaplanet middletown",
           "town": "Middletown",
           "address": "400 north galleria drive",
-          "acw_since": "",
+          "acw_since": "2026-09-02",
           "last_solventless": "2026-07-16",
           "menu_url": ""
         },
@@ -559,11 +559,11 @@
           "menu_url": ""
         },
         {
-          "published": false,
-          "name": "High life dispesary",
+          "published": true,
+          "name": "High Life Dispensary",
           "town": "New Rochelle",
           "address": "19 huguenot st",
-          "acw_since": "",
+          "acw_since": "2026-09-10",
           "last_solventless": "2026-05-29",
           "menu_url": ""
         },
@@ -604,11 +604,11 @@
           "menu_url": ""
         },
         {
-          "published": false,
+          "published": true,
           "name": "Valley greens",
           "town": "Peekskill",
           "address": "939 Central Ave, Peekskill, NY 10566, US",
-          "acw_since": "",
+          "acw_since": "2026-09-10",
           "last_solventless": "2026-04-23",
           "menu_url": ""
         },
