@@ -62,15 +62,6 @@
       "region": "Capital Region",
       "stockists": [
         {
-          "published": true,
-          "name": "Ganja Palace Dispensary",
-          "town": "Johnstown",
-          "address": "343 N Comrie Ave, Johnstown, NY 12095, US",
-          "acw_since": "2026-09-10",
-          "last_solventless": "",
-          "menu_url": ""
-        },
-        {
           "published": false,
           "name": "Chronic",
           "town": "Albany",
@@ -537,15 +528,6 @@
           "town": "White Plains",
           "address": "244 Main St, White Plains, NY 10601, US",
           "acw_since": "2026-09-10",
-          "last_solventless": "",
-          "menu_url": ""
-        },
-        {
-          "published": true,
-          "name": "CannaPlanet Liberty",
-          "town": "Liberty",
-          "address": "187 Mill Street, Liberty, NY 12754, US",
-          "acw_since": "2026-09-02",
           "last_solventless": "",
           "menu_url": ""
         },
