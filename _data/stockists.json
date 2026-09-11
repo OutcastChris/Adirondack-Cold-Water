@@ -226,6 +226,20 @@
       ]
     },
     {
+      "region": "Mohawk Valley",
+      "stockists": [
+        {
+          "published": true,
+          "name": "Ganja Palace Dispensary",
+          "town": "Johnstown",
+          "address": "343 N Comrie Ave, Johnstown, NY 12095, US",
+          "acw_since": "2026-09-10",
+          "last_solventless": "",
+          "menu_url": ""
+        }
+      ]
+    },
+    {
       "region": "Central New York",
       "stockists": [
         {
@@ -522,6 +536,15 @@
     {
       "region": "Hudson Valley",
       "stockists": [
+        {
+          "published": true,
+          "name": "CannaPlanet Liberty",
+          "town": "Liberty",
+          "address": "187 Mill St Suite 5&6, Liberty, NY 12754, US",
+          "acw_since": "2026-09-02",
+          "last_solventless": "",
+          "menu_url": ""
+        },
         {
           "published": true,
           "name": "Leafology",
