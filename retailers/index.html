@@ -21,9 +21,10 @@
   <link rel="stylesheet" href="../assets/site.css" />
   <style>
     /* ============================================================
-       Retail partner kit. One URL a new account (and our own team)
-       can work from: the standard onboarding email, every brand
-       asset with its usage rules, and who to call for what.
+       Retail partner kit. The one URL a shop works from: every
+       brand asset with its usage rules, and who to call for what.
+       (The onboarding email the team sends lives separately at
+       /retailers/email/, team-facing, not for this page.)
        Shares the internal-page pattern with training/.
        ============================================================ */
 
@@ -53,15 +54,6 @@
     .rk-cover .standfirst { color: var(--navy-70); font-size: clamp(1.05rem, 2.9vw, 1.28rem); max-width: 46ch; margin: 16px auto 0; }
     .rk-cover .cover-sub { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy-70); margin-top: 16px; line-height: 2; }
 
-    /* ---------- The onboarding email. The letter is the canonical text:
-       the copy and mail buttons read straight from the <pre>, so editing
-       the letter is the only edit needed. ---------- */
-    .letter-card { background: var(--white) url("../assets/brand/textures/paper-1600.jpg") center / cover; border: 1px solid rgba(32,46,63,0.18); border-radius: 3px; padding: clamp(22px, 4vw, 40px); margin-top: clamp(18px, 3vw, 26px); }
-    .letter-meta { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy-70); border-bottom: 1px solid rgba(128,77,48,0.42); padding-bottom: 12px; margin-bottom: 4px; }
-    .letter-meta strong { color: var(--navy); }
-    pre.letter { margin: 0; font-family: var(--font-body); font-size: 1rem; line-height: 1.75; color: var(--navy); white-space: pre-wrap; word-wrap: break-word; }
-    .letter-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: clamp(18px, 3vw, 26px); }
-    #copy-status { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
     .fillin { font-size: 0.92rem; color: var(--navy-70); margin: 14px 0 0; }
 
     /* ---------- Callouts: usage rules, never hidden ---------- */
@@ -108,6 +100,20 @@
     .rk-contact .contact-inner p.small { font-size: 0.95rem; margin-top: 20px; }
     .rk-legal { margin-top: 26px; font-family: var(--font-ui); font-size: 0.74rem; letter-spacing: 0.04em; line-height: 1.8; color: var(--kraft-45); }
 
+    /* ---------- Menu & website copy. Verbatim from the approved
+       product-descriptions doc; each item's Copy button reads the
+       adjacent .copy-text, so the paragraph is the canonical text. ---------- */
+    .kit-group > h3.bc { color: var(--green); }
+    .copy-list { margin-top: 6px; }
+    .copy-item { padding: 16px 0; border-bottom: 1px solid rgba(32,46,63,0.14); }
+    .copy-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+    .copy-head h4 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--navy); }
+    .copy-head h4.bc { color: var(--green); }
+    .copy-desc { flex-shrink: 0; cursor: pointer; font-family: var(--font-ui); font-size: 0.64rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); background: transparent; border: 1.5px solid var(--navy); border-radius: 2px; padding: 7px 14px; transition: background .18s ease, color .18s ease; }
+    .copy-desc:hover, .copy-desc:focus-visible { background: var(--navy); color: var(--kraft); }
+    .copy-desc.done { background: var(--navy); color: var(--kraft); }
+    .copy-text { margin: 8px 0 0; color: var(--navy); font-size: 1rem; max-width: 74ch; }
+
     @media (max-width: 640px) {
       .kit-grid { grid-template-columns: repeat(2, 1fr); }
       .file-list li { flex-direction: column; gap: 8px; }
@@ -139,8 +145,8 @@
       <span class="rk-label">Retail Partners</span>
     </div>
     <nav class="rk-index" aria-label="Partner kit sections">
-      <a href="#email">Welcome Email</a>
       <a href="#media">Media Kit</a>
+      <a href="#copy">Menu Copy</a>
       <a href="#support">Support</a>
     </nav>
   </header>
@@ -152,59 +158,8 @@
       <div class="rk-wrap">
         <img class="mark" src="../assets/brand/logos/ACW-Logo-Primary-Navy.svg" alt="Adirondack Cold Water" />
         <h1 class="cond">Welcome aboard.</h1>
-        <p class="standfirst">Everything a new Adirondack Cold Water account needs in one place: the welcome email, every brand asset with its rules, and who to reach for what.</p>
+        <p class="standfirst">Your Adirondack Cold Water asset kit: every logo, card, and banner with its rules, and who to reach for what.</p>
         <p class="cover-sub">For licensed New York dispensary partners</p>
-      </div>
-    </section>
-
-    <!-- ================= Onboarding email ================= -->
-    <section id="email">
-      <div class="rk-wrap">
-        <div class="rk-head">
-          <span class="eyebrow">Start Here</span>
-          <h2 class="cond">The welcome email.</h2>
-          <p class="intro">Every new account gets this same email, so nothing depends on who signed you. If you received it, this page is the link inside it. If you&rsquo;re on our team, copy it from here &mdash; never retype it &mdash; and fill in the two brackets before sending.</p>
-        </div>
-
-        <div class="letter-card">
-          <p class="letter-meta"><strong>Subject:</strong> Welcome to Adirondack Cold Water</p>
-          <!-- The <pre> below is the canonical email text. The Copy and
-               Mail buttons read it verbatim, so edit only here. Keep the
-               [brackets] — they mark what gets personalized per account.
-               Compliance: no prices, no potency numbers, no health or
-               effect claims, and never a tier tied to a cut. -->
-          <pre class="letter" id="letter">Hi [contact name],
-
-Welcome aboard &mdash; we&rsquo;re glad to have [dispensary name] carrying Adirondack Cold Water. We make small-batch solventless live rosin in Granville, New York: fresh-frozen flower, washed in ice water by hand, freeze dried, and pressed. No solvents at any step.
-
-A few things to have on hand from day one:
-
-MENU LISTING &mdash; List us as &ldquo;Adirondack Cold Water&rdquo; with the cut name, e.g. &ldquo;Adirondack Cold Water &mdash; Marcy.&rdquo; First Water jars are single-source; Base Camp jars are blends. Tier (Private Reserve, Tier 1, Tier 2) is graded per batch, so take it from the jar in hand, never from a saved menu template.
-
-LAB RESULTS &mdash; Every batch ships with its COA, and published certificates live at adirondackcoldwater.com/coa/ &mdash; searchable by the batch code printed on the jar.
-
-STAFF TRAINING &mdash; Our budtender guide is at adirondackcoldwater.com/training/. We&rsquo;ll walk your team through it in person, and it stands alone as a counter reference afterward.
-
-BRAND ASSETS &mdash; Logos, cut cards, and menu images are at adirondackcoldwater.com/retailers/. Please use them as supplied &mdash; no recropping, recoloring, or overlaid text.
-
-WHERE TO BUY &mdash; Once you&rsquo;re stocked, we&rsquo;ll add your shop to adirondackcoldwater.com/find/. Send over the menu link you&rsquo;d like it to point to.
-
-Your contact for orders, restocks, and training visits is Jessica Ben-Yishay, Territory Sales Manager &mdash; sales@adirondackcoldwater.com. Anything else reaches us at hello@adirondackcoldwater.com.
-
-Strong. Clean. Solventless.
-
-&mdash; The Adirondack Cold Water team
-Outcast Acres Farm LLC, Granville, NY
-Processor OCM-PROC-25-000317 &middot; Distributor OCM-DIST-24-000060
-For adults 21 and over.</pre>
-        </div>
-
-        <div class="letter-actions">
-          <button class="btn" id="copy-email" type="button">Copy Email Text</button>
-          <a class="btn ghost" id="mail-email" href="#email">Open in Mail App</a>
-          <span id="copy-status" role="status" aria-live="polite"></span>
-        </div>
-        <p class="fillin">Before sending, replace <strong>[contact name]</strong> and <strong>[dispensary name]</strong>.</p>
       </div>
     </section>
 
@@ -219,20 +174,20 @@ For adults 21 and over.</pre>
 
         <div class="callout">
           <span class="k">Usage rules</span>
-          <p>These files are final artwork. Please don&rsquo;t recolor, restyle, filter, stretch, rotate, or overlay text on any of them. Prefer the SVG logo anywhere it scales. And never pair pricing, potency numbers, or health claims with our marks &mdash; menus excepted for the data your license requires.</p>
+          <p>These files are final artwork. Please don&rsquo;t recolor, restyle, filter, stretch, rotate, or overlay text on any of them. Prefer the SVG logo anywhere it scales. And never pair pricing, potency numbers, or health claims with our marks. Menus are excepted for the data your license requires.</p>
         </div>
 
         <!-- ---- Logos ---- -->
         <div class="kit-group" id="logos">
           <h3 class="cond">Logos</h3>
-          <p class="note">All type is outlined in the SVGs. The white versions sit on navy or photography only &mdash; never on the kraft ground.</p>
+          <p class="note">All type is outlined in the SVGs. The white versions sit on navy or photography only, never on the kraft ground.</p>
           <ul class="file-list">
             <li>
-              <span><span class="file-name">Primary &mdash; stacked, navy</span><span class="file-spec">Transparent</span></span>
+              <span><span class="file-name">Primary &middot; stacked, navy</span><span class="file-spec">Transparent</span></span>
               <span class="file-get"><a href="../assets/brand/logos/ACW-Logo-Primary-Navy.svg" download>SVG</a><a href="../assets/brand/logos/ACW-Logo-Primary-Navy.png" download>PNG</a></span>
             </li>
             <li>
-              <span><span class="file-name">Primary &mdash; stacked, white</span><span class="file-spec">On navy / photo only</span></span>
+              <span><span class="file-name">Primary &middot; stacked, white</span><span class="file-spec">On navy / photo only</span></span>
               <span class="file-get"><a href="../assets/brand/logos/ACW-Logo-Primary-White.png" download>PNG</a></span>
             </li>
             <li>
@@ -240,11 +195,11 @@ For adults 21 and over.</pre>
               <span class="file-get"><a href="../assets/brand/logos/ACW-Logo-Horizontal-Navy.svg" download>SVG</a><a href="../assets/brand/logos/ACW-Logo-Horizontal-Navy.png" download>PNG</a></span>
             </li>
             <li>
-              <span><span class="file-name">Icon &mdash; drop mark</span><span class="file-spec">Small sizes</span></span>
+              <span><span class="file-name">Icon &middot; drop mark</span><span class="file-spec">Small sizes</span></span>
               <span class="file-get"><a href="../assets/brand/logos/ACW-Logo-Icon.svg" download>SVG</a><a href="../assets/brand/logos/ACW-Logo-Icon.png" download>PNG</a></span>
             </li>
             <li>
-              <span><span class="file-name">Icon &mdash; drop mark, white</span><span class="file-spec">On navy / photo only</span></span>
+              <span><span class="file-name">Icon &middot; drop mark, white</span><span class="file-spec">On navy / photo only</span></span>
               <span class="file-get"><a href="../assets/brand/logos/ACW-Logo-Icon-White.png" download>PNG</a></span>
             </li>
             <li>
@@ -285,21 +240,21 @@ For adults 21 and over.</pre>
         <!-- ---- Collection headers ---- -->
         <div class="kit-group" id="collections">
           <h3 class="cond">Collection headers</h3>
-          <p class="note">First Water is always navy, Base Camp always green &mdash; the color is how shoppers tell single-source from blend, so never swap them.</p>
+          <p class="note">First Water is always navy, Base Camp always green. The color is how shoppers tell single-source from blend, so never swap them.</p>
           <figure class="kit-wide kit-tile">
             <img src="../assets/brand/collections/ACW-Collection-FirstWater-1600x600.jpg" width="1600" height="600" loading="lazy" decoding="async" alt="First Water collection header, navy" />
-            <figcaption><span class="t-name">First Water &mdash; single source</span><a class="dl" href="../assets/brand/collections/ACW-Collection-FirstWater-1600x600.jpg" download>Download &middot; 1600 &times; 600</a></figcaption>
+            <figcaption><span class="t-name">First Water &middot; single source</span><a class="dl" href="../assets/brand/collections/ACW-Collection-FirstWater-1600x600.jpg" download>Download &middot; 1600 &times; 600</a></figcaption>
           </figure>
           <figure class="kit-wide kit-tile">
             <img src="../assets/brand/collections/ACW-Collection-BaseCamp-1600x600.jpg" width="1600" height="600" loading="lazy" decoding="async" alt="Base Camp collection header, green" />
-            <figcaption><span class="t-name bc">Base Camp &mdash; blends</span><a class="dl" href="../assets/brand/collections/ACW-Collection-BaseCamp-1600x600.jpg" download>Download &middot; 1600 &times; 600</a></figcaption>
+            <figcaption><span class="t-name bc">Base Camp &middot; blends</span><a class="dl" href="../assets/brand/collections/ACW-Collection-BaseCamp-1600x600.jpg" download>Download &middot; 1600 &times; 600</a></figcaption>
           </figure>
         </div>
 
         <!-- ---- Cut cards ---- -->
         <div class="kit-group" id="cuts">
           <h3 class="cond">Cut cards</h3>
-          <p class="note">One per cut, 1080 &times; 1350, ready for menus and feeds. Each card already carries the cut name, collection, and sensory notes &mdash; no text on top. Cards carry no tier, because tier is graded per batch.</p>
+          <p class="note">One per cut, 1080 &times; 1350, ready for menus and feeds. Each card already carries the cut name, collection, and sensory notes; no text on top. Cards carry no tier, because tier is graded per batch.</p>
           <div class="kit-grid">
             <div class="kit-tile"><figure>
               <img src="../assets/brand/cuts/ACW-Cut-Boreas-1080x1350.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Boreas cut card" />
@@ -344,8 +299,8 @@ For adults 21 and over.</pre>
         <div class="kit-group" id="products">
           <h3 class="cond">Product cards</h3>
           <div class="callout">
-            <span class="k">Tier warning &mdash; read first</span>
-            <p>Unlike the cut cards, these three carry a <strong>tier badge tied to a specific offering</strong>. Tier is graded per batch, so use a product card only while the batch on your shelf matches it exactly &mdash; and pull it when the batch turns over. When in doubt, use the cut card instead.</p>
+            <span class="k">Tier warning: read first</span>
+            <p>Unlike the cut cards, these three carry a <strong>tier badge tied to a specific offering</strong>. Tier is graded per batch, so use a product card only while the batch on your shelf matches it exactly, and pull it when the batch turns over. When in doubt, use the cut card instead.</p>
           </div>
           <div class="kit-grid">
             <div class="kit-tile"><figure>
@@ -383,7 +338,124 @@ For adults 21 and over.</pre>
           </div>
         </div>
 
-        <p class="fillin">Need everything as one folder, print-resolution files, or an asset that isn&rsquo;t here? Email <a href="mailto:sales@adirondackcoldwater.com">sales@adirondackcoldwater.com</a> and we&rsquo;ll send it over.</p>
+        <!-- ---- Wholesale policies ----
+             The PDFs under retailers/files/ are the canonical documents;
+             the callout is a plain-language summary of the payment terms
+             and must be kept in lockstep with the PDF when a version
+             changes. Filenames carry the version; link a new file,
+             don't overwrite an old version in place. -->
+        <div class="kit-group" id="policies">
+          <h3 class="cond">Wholesale policies</h3>
+          <p class="note">The two documents your buyer and AP team need. The PDFs are the canonical versions; the summary below is the short version of how to pay.</p>
+          <div class="callout">
+            <span class="k">How to pay: the short version</span>
+            <p><strong>Two ways to pay.</strong> Net 30 at list price, paid in full within 30 calendar days of delivery, or COD at 10 percent off the invoice total, paid in full within 2 business days of delivery. The COD discount is the only price adjustment we offer.</p>
+            <p><strong>The COD window is measured by when funds land,</strong> not when a payment is sent. If full payment hasn&rsquo;t landed by the end of the second business day after delivery, we replace the COD invoice with a new Net 30 invoice at list price, due 30 calendar days from the original delivery date, with anything you already paid credited against it.</p>
+            <p><strong>Pay by</strong> ACH or wire initiated directly through your licensed business&rsquo;s own bank, a business check drawn on your licensed business&rsquo;s own account (no post-dated or third-party checks), or cash at delivery. Put the invoice number in the memo, and note that a check or ACH that comes back unpaid doesn&rsquo;t count as payment.</p>
+            <p><strong>Payment has to come straight from your bank.</strong> Anything routed through a third party is returned, even when it arrives as an ACH: payment processors, bill-pay services, invoice payment links, payment apps, and the payment features built into accounting software, QuickBooks Payments, Bill Pay, and invoice links included. If your team tracks bills in accounting software, record the payment there and send it from your bank. A returned payment doesn&rsquo;t count as payment, and the invoice keeps its original due date.</p>
+            <p><strong>Our banking details never change by email alone.</strong> If you ever get a message saying our account has changed, call us at 518&#8209;217&#8209;8834 before sending anything.</p>
+          </div>
+          <ul class="file-list">
+            <li>
+              <span><span class="file-name">Wholesale Payment Terms</span><span class="file-spec">PDF &middot; v1.0 &middot; Effective Sept 15, 2026</span></span>
+              <span class="file-get"><a href="files/ACW-Wholesale-Payment-Terms-v1.0.pdf" download>Download</a></span>
+            </li>
+            <li>
+              <span><span class="file-name">Wholesale Returns &amp; Product Claims</span><span class="file-spec">PDF &middot; v1.2 &middot; Effective Sept 1, 2026</span></span>
+              <span class="file-get"><a href="files/ACW-Wholesale-Returns-Product-Claims-v1.2.pdf" download>Download</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="fillin">Need everything as one folder, print-resolution files, or an asset that isn&rsquo;t here? Email <a href="mailto:sales@outcastacresfarm.com">sales@outcastacresfarm.com</a> and we&rsquo;ll send it over.</p>
+      </div>
+    </section>
+
+    <!-- ================= Menu & website copy =================
+         Verbatim from the approved product-descriptions doc
+         (Outcast_Product_Descriptions, kept outside the repo).
+         Use as written: do not rewrite, trim, or fill gaps; a product
+         not in the doc is not listed here. No prices, no potency
+         numbers, no health/effect claims, no tier bound to a cut. -->
+    <section id="copy">
+      <div class="rk-wrap">
+        <div class="rk-head">
+          <span class="eyebrow">Menu &amp; Website Copy</span>
+          <h2 class="cond">Use as written.</h2>
+          <p class="intro">Approved descriptions for your menu and website. Tap Copy and paste them word for word. Updated September 10, 2026.</p>
+        </div>
+
+        <div class="callout">
+          <span class="k">Why word for word</span>
+          <p>These are written to stay compliant, so please don&rsquo;t edit or add to them. Tier is left out on purpose: it&rsquo;s graded per batch, so take it from the jar in hand.</p>
+        </div>
+
+        <div class="kit-group">
+          <h3 class="cond">Brand line</h3>
+          <div class="copy-list">
+            <div class="copy-item">
+              <div class="copy-head"><h4>Adirondack Cold Water</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Solventless live rosin. From the North Country.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-group">
+          <h3 class="cond">First Water</h3>
+          <div class="copy-list">
+            <div class="copy-item">
+              <div class="copy-head"><h4>Boreas</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Boreas from our First Water line. Ripe tropical fruit and a sweet edge on the nose, sweet fruit over fuel, a clean and lingering finish. Farm grown, single source. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4>Tupper</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Tupper from our First Water line. Bright and tart with a sweet lift on the nose, crisp, sweet sour candy, a clean and refreshing finish. Farm grown, single source. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4>Schroon</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Schroon from our First Water line. Deep, sweet dark fruit on the nose, candy over fuel, a rich and faintly tart finish. Farm grown, single source. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4>Skylight</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Skylight from our First Water line. Bright sweet fruit and soft floral on the nose, candied fruit with light cream, a smooth and clean finish. Farm grown, single source. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-group">
+          <h3 class="cond bc">Base Camp</h3>
+          <div class="copy-list">
+            <div class="copy-item">
+              <div class="copy-head"><h4 class="bc">Guide&rsquo;s Blend</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Guide's Blend from our Base Camp line. Bramble and ripe fruit with a savory edge on the nose, sweet cream over funk, a balanced and grounded finish. Farm grown, blend. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4 class="bc">Independence</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Independence from our Base Camp line. Sweet floral and spiced earth on the nose, honeyed citrus over pine, a smooth and drying finish. Partner farm material, single source. 1g jar. Solventless live rosin, washed and pressed in Granville, New York.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-group">
+          <h3 class="cond">CORE</h3>
+          <p class="note">2g all-in-one distillate vapes, from Outcast Acres Farm.</p>
+          <div class="copy-list">
+            <div class="copy-item">
+              <div class="copy-head"><h4>Super Lemon Haze</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Super Lemon Haze from CORE. Bright lemon zest and sweet citrus up front, with a peppery, earthy backbone. Sativa. 2g all-in-one vape. Cannabis distillate and cannabis-derived terpenes, made in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4>GMO</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">GMO from CORE. Savory, garlicky funk over a deep, earthy base. Indica. 2g all-in-one vape. Cannabis distillate and cannabis-derived terpenes, made in Granville, New York.</p>
+            </div>
+            <div class="copy-item">
+              <div class="copy-head"><h4>Blackberry Kush</h4><button class="copy-desc" type="button">Copy</button></div>
+              <p class="copy-text">Blackberry Kush from CORE. Sweet dark berry over earthy, hashy spice. Indica. 2g all-in-one vape. Cannabis distillate and cannabis-derived terpenes, made in Granville, New York.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="fillin">A cut you carry isn&rsquo;t listed? Its description hasn&rsquo;t been approved yet. Email <a href="mailto:sales@outcastacresfarm.com">sales@outcastacresfarm.com</a> rather than writing your own.</p>
       </div>
     </section>
 
@@ -397,7 +469,7 @@ For adults 21 and over.</pre>
         <dl class="who-list">
           <div>
             <dt>Orders, restocks &amp; training visits</dt>
-            <dd>Jessica Ben-Yishay, Territory Sales Manager &mdash; <a href="mailto:sales@adirondackcoldwater.com">sales@adirondackcoldwater.com</a></dd>
+            <dd>Jessica Ben-Yishay, Territory Sales Manager &middot; <a href="mailto:sales@outcastacresfarm.com">sales@outcastacresfarm.com</a></dd>
           </div>
           <div>
             <dt>Lab results &amp; COAs</dt>
@@ -405,7 +477,7 @@ For adults 21 and over.</pre>
           </div>
           <div>
             <dt>Budtender training</dt>
-            <dd>The full staff guide lives at <a href="../training/index.html">adirondackcoldwater.com/training/</a> &mdash; built to be talked through at the counter, section by section. Share it with your team by URL.</dd>
+            <dd>The full staff guide lives at <a href="../training/index.html">adirondackcoldwater.com/training/</a>, built to be talked through at the counter, section by section. Share it with your team by URL.</dd>
           </div>
           <div>
             <dt>Your Where to Buy listing</dt>
@@ -424,8 +496,8 @@ For adults 21 and over.</pre>
       <div class="wrap contact-inner">
         <span class="eyebrow">Adirondack Cold Water</span>
         <h2 class="cond">Glad to be on your shelf.</h2>
-        <p class="small">This page moves as the brand does &mdash; new cuts, new art, new COAs. Bookmark it rather than saving files ahead.</p>
-        <div class="contact-meta">Jessica Ben-Yishay, Territory Sales Manager &middot; <a href="mailto:sales@adirondackcoldwater.com">sales@adirondackcoldwater.com</a></div>
+        <p class="small">This page moves as the brand does: new cuts, new art, new COAs. Bookmark it rather than saving files ahead.</p>
+        <div class="contact-meta">Jessica Ben-Yishay, Territory Sales Manager &middot; <a href="mailto:sales@outcastacresfarm.com">sales@outcastacresfarm.com</a></div>
         <div class="contact-meta"><a href="mailto:hello@adirondackcoldwater.com">hello@adirondackcoldwater.com</a></div>
         <p class="rk-legal">Outcast Acres Farm LLC, Granville, NY 12832. Processor OCM&#8209;PROC&#8209;25&#8209;000317. Distributor OCM&#8209;DIST&#8209;24&#8209;000060. For adults 21 and over. Partner material for licensed retailers.</p>
       </div>
@@ -455,46 +527,37 @@ For adults 21 and over.</pre>
 
   <script src="../assets/site.js"></script>
   <script>
-    /* Retailers page only: copy the onboarding email (subject + body) and
-       open it in a mail app. Both read the <pre> so the letter is edited
-       in exactly one place. */
+    /* Retailers page only: per-item Copy buttons for the menu copy.
+       Each button copies the adjacent .copy-text paragraph verbatim. */
     (function () {
-      var letter = document.getElementById("letter");
-      var copyBtn = document.getElementById("copy-email");
-      var mailLink = document.getElementById("mail-email");
-      var status = document.getElementById("copy-status");
-      if (!letter) return;
-
-      var SUBJECT = "Welcome to Adirondack Cold Water";
-      function body() { return letter.textContent.trim(); }
-
-      copyBtn.addEventListener("click", function () {
-        var text = "Subject: " + SUBJECT + "\n\n" + body();
-        function done() {
-          status.textContent = "Copied";
-          setTimeout(function () { status.textContent = ""; }, 1600);
-        }
-        function fallback() {
-          // Clipboard API unavailable (e.g. non-HTTPS preview): select the
-          // letter so a manual Ctrl/Cmd-C still works.
-          var range = document.createRange();
-          range.selectNodeContents(letter);
-          var sel = window.getSelection();
-          sel.removeAllRanges();
-          sel.addRange(range);
-          status.textContent = "Press Ctrl/Cmd-C to copy";
-          setTimeout(function () { status.textContent = ""; }, 2600);
-        }
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(done, fallback);
-        } else {
-          fallback();
-        }
-      });
-
-      mailLink.addEventListener("click", function () {
-        mailLink.href = "mailto:?subject=" + encodeURIComponent(SUBJECT) +
-                        "&body=" + encodeURIComponent(body());
+      document.querySelectorAll(".copy-desc").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var item = btn.closest(".copy-item");
+          var text = item ? item.querySelector(".copy-text").textContent.trim() : "";
+          if (!text) return;
+          function done() {
+            btn.classList.add("done");
+            btn.textContent = "Copied";
+            setTimeout(function () {
+              btn.classList.remove("done");
+              btn.textContent = "Copy";
+            }, 1600);
+          }
+          function fallback() {
+            // Clipboard API unavailable (e.g. non-HTTPS preview): select
+            // the paragraph so a manual Ctrl/Cmd-C still works.
+            var range = document.createRange();
+            range.selectNodeContents(item.querySelector(".copy-text"));
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, fallback);
+          } else {
+            fallback();
+          }
+        });
       });
     })();
   </script>

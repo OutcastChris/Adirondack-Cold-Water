@@ -175,25 +175,43 @@ takeaway, and a cold reference. Rules:
 
 ## Retail partner kit (`retailers/`)
 
-`retailers/index.html` is a hand-authored onboarding page for licensed retail
-accounts: the standard welcome email, the media kit, and support contacts.
-Rules:
+`retailers/index.html` is a hand-authored page for licensed retail accounts:
+the media kit and support contacts. The standard welcome email lives on its
+own team-facing page, `retailers/email/index.html`, so the first thing a shop
+sees at `/retailers/` is their assets — never the email we sent them. Rules:
 
-- **Unlinked and unindexed**, same as `training/`: reachable by URL only, never
-  linked from consumer navigation or footers, and never remove its `noindex`.
-- **The onboarding email's canonical text is the `<pre id="letter">` block.**
-  The Copy and Mail buttons read it verbatim at click time, so edit the letter
-  only there. Keep the `[contact name]` / `[dispensary name]` brackets — they
-  mark the per-account fill-ins. The email must never contain prices, potency
-  numbers, health/effect claims, or a tier bound to a cut, and must say
-  Granville, NY / North Country — never that product is grown in the
-  Adirondacks.
+- **Both pages are unlinked and unindexed**, same as `training/`: reachable by
+  URL only, never linked from consumer navigation or footers, and never remove
+  their `noindex`. The email page is not linked from `/retailers/` either
+  (it links the other way); keep that direction.
+- **The onboarding email's canonical text is the `<pre id="letter">` block**
+  in `retailers/email/index.html`. The Copy and Mail buttons read it verbatim
+  at click time, so edit the letter only there. Keep the `[contact name]` /
+  `[dispensary name]` brackets — they mark the per-account fill-ins. The email
+  must never contain prices, potency numbers, health/effect claims, or a tier
+  bound to a cut, and must say Granville, NY / North Country — never that
+  product is grown in the Adirondacks.
 - **Media kit links point at the files in `assets/brand/` in place** — no
   copies, so new art dropped into the manifest folders only needs a new row or
   tile here. Card grids lazy-load (`loading="lazy"`); keep that, the page links
   ~10 MB of imagery.
 - Cut cards carry no tier. The three product cards do, so their section keeps
   the tier warning callout — use only while the shelf batch matches.
+- **The Menu & Website Copy section (`#copy`) is verbatim** from the approved
+  product-descriptions doc (`Outcast_Product_Descriptions_<date>.docx`, kept
+  outside the repo). Use as written: never rewrite, trim, or fill gaps, and a
+  product not in the doc is not listed. Per-item Copy buttons read the
+  adjacent `.copy-text` paragraph, so the paragraph is the canonical text.
+  It covers ACW rosin cuts and the CORE vape line; same compliance rules as
+  the email (no prices, no potency numbers, no health/effect claims, no tier).
+- **Wholesale policy PDFs live under `retailers/files/`** (versioned
+  filenames, e.g. `ACW-Wholesale-Payment-Terms-v1.0.pdf`) and are the
+  canonical documents; the on-page "How to pay" callout in `#policies` is a
+  plain-language summary that must be kept in lockstep with the PDF. On a new
+  version, add a new file and update the links/spec text — don't overwrite an
+  old version in place. The welcome email links both PDFs by full URL and
+  repeats the COD window and QuickBooks exclusion; update it in the same
+  change.
 - The page carries the same extra compliance line as `training/` (processor +
   distributor license, "partner material for licensed retailers").
 
