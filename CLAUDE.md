@@ -202,8 +202,13 @@ sees at `/retailers/` is their assets — never the email we sent them. Rules:
   outside the repo). Use as written: never rewrite, trim, or fill gaps, and a
   product not in the doc is not listed. Per-item Copy buttons read the
   adjacent `.copy-text` paragraph, so the paragraph is the canonical text.
-  It covers ACW rosin cuts and the CORE vape line; same compliance rules as
-  the email (no prices, no potency numbers, no health/effect claims, no tier).
+  It covers ACW rosin cuts, the Trapper's Blend 0.5g AIO rosin vape, and the
+  CORE vape line; same compliance rules as the email (no prices, no potency
+  numbers, no health/effect claims, no tier). Later approved product handoffs
+  (e.g. Trapper's Blend, Sept 21, 2026) count as extensions of the doc.
+  The ACW vape is always a "0.5g AIO" or "0.5g all-in-one solventless live
+  rosin vape", never a "cartridge", and carries no tier (grading is jars
+  only).
 - **Wholesale policy PDFs live under `retailers/files/`** (versioned
   filenames, e.g. `ACW-Wholesale-Payment-Terms-v1.0.pdf`) and are the
   canonical documents; the on-page "How to pay" callout in `#policies` is a
