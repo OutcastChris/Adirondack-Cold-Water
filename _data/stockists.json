@@ -226,6 +226,20 @@
       ]
     },
     {
+      "region": "Mohawk Valley",
+      "stockists": [
+        {
+          "published": true,
+          "name": "Ganja Palace Dispensary",
+          "town": "Johnstown",
+          "address": "343 N Comrie Ave, Johnstown, NY 12095, US",
+          "acw_since": "2026-09-10",
+          "last_solventless": "",
+          "menu_url": ""
+        }
+      ]
+    },
+    {
       "region": "Central New York",
       "stockists": [
         {
@@ -278,6 +292,15 @@
     {
       "region": "Southern Tier",
       "stockists": [
+        {
+          "published": true,
+          "name": "Greenery Spot",
+          "town": "Johnson City",
+          "address": "246 Main St, Johnson City, NY 13790, US",
+          "acw_since": "2026-09-10",
+          "last_solventless": "",
+          "menu_url": ""
+        },
         {
           "published": false,
           "name": "Flynnstoned Binghamton",
@@ -523,6 +546,24 @@
       "region": "Hudson Valley",
       "stockists": [
         {
+          "published": true,
+          "name": "CannaPlanet Liberty",
+          "town": "Liberty",
+          "address": "187 Mill St Suite 5&6, Liberty, NY 12754, US",
+          "acw_since": "2026-09-02",
+          "last_solventless": "",
+          "menu_url": ""
+        },
+        {
+          "published": true,
+          "name": "Leafology",
+          "town": "White Plains",
+          "address": "244 Main St, White Plains, NY 10601, US",
+          "acw_since": "2026-09-10",
+          "last_solventless": "",
+          "menu_url": ""
+        },
+        {
           "published": false,
           "name": "Farmers choice",
           "town": "Fishkill",
@@ -541,11 +582,11 @@
           "menu_url": ""
         },
         {
-          "published": false,
+          "published": true,
           "name": "Cannaplanet middletown",
           "town": "Middletown",
           "address": "400 north galleria drive",
-          "acw_since": "",
+          "acw_since": "2026-09-02",
           "last_solventless": "2026-07-16",
           "menu_url": ""
         },
@@ -568,11 +609,11 @@
           "menu_url": ""
         },
         {
-          "published": false,
-          "name": "High life dispesary",
+          "published": true,
+          "name": "High Life Dispensary",
           "town": "New Rochelle",
           "address": "19 huguenot st",
-          "acw_since": "",
+          "acw_since": "2026-09-10",
           "last_solventless": "2026-05-29",
           "menu_url": ""
         },
@@ -613,11 +654,11 @@
           "menu_url": ""
         },
         {
-          "published": false,
+          "published": true,
           "name": "Valley greens",
           "town": "Peekskill",
           "address": "939 Central Ave, Peekskill, NY 10566, US",
-          "acw_since": "",
+          "acw_since": "2026-09-10",
           "last_solventless": "2026-04-23",
           "menu_url": ""
         },
