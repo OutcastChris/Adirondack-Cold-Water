@@ -101,6 +101,24 @@
     /* Small badge flagging the batch-specific product cards as the exception */
     .h3-tag { font-family: var(--font-ui); font-size: 0.56rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brown); border: 1px solid var(--brown); border-radius: 2px; padding: 3px 7px; vertical-align: middle; margin-left: 8px; white-space: nowrap; }
 
+    /* ---------- Website cheat-sheet: the slot-by-slot map for a shop's
+       own site -- the one place the wrong asset keeps landing ---------- */
+    .web-guide { border: 1.5px solid var(--navy); border-radius: 4px; padding: clamp(18px, 3vw, 26px); margin: clamp(22px, 3.5vw, 32px) 0; }
+    .web-guide .k { display: block; font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy); margin-bottom: 12px; }
+    .web-guide ul { list-style: none; margin: 0; padding: 0; }
+    .web-guide li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 11px 0; border-bottom: 1px solid rgba(32,46,63,0.14); }
+    .web-guide li:first-child { border-top: 1px solid rgba(32,46,63,0.14); }
+    .web-guide .slot { color: var(--navy-70); font-size: 0.98rem; }
+    .web-guide .use { flex-shrink: 0; text-align: right; font-family: var(--font-display); font-weight: 700; font-size: 1.02rem; }
+    .web-guide .use a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--brown); padding-bottom: 1px; white-space: nowrap; }
+    .web-guide .use a:hover { color: var(--brown); }
+    .web-guide .dont { margin: 14px 0 0; font-size: 0.92rem; color: var(--navy-70); }
+    @media (max-width: 560px) {
+      .web-guide li { flex-direction: column; gap: 3px; }
+      .web-guide .use { text-align: left; }
+      .web-guide .use a { white-space: normal; }
+    }
+
     /* ---------- Support ---------- */
     .who-list { margin: 0; }
     .who-list > div { padding: 16px 0; border-bottom: 1px solid rgba(32,46,63,0.14); }
@@ -197,6 +215,18 @@
             <a href="#logos"><span class="s-t">Just the logo</span><span class="s-d">Every lockup, with usage rules</span></a>
           </div>
         </nav>
+
+        <div class="web-guide">
+          <span class="k">Building your own website? Use exactly these</span>
+          <ul>
+            <li><span class="slot">Top-of-page banner</span><span class="use"><a href="#banners">Website header &middot; wide</a></span></li>
+            <li><span class="slot">A product&rsquo;s picture on your shop page</span><span class="use"><a href="#cuts">Menu product picture</a></span></li>
+            <li><span class="slot">That product&rsquo;s description text</span><span class="use"><a href="#copy">Menu copy, word for word</a></span></li>
+            <li><span class="slot">Your logo in the header or footer</span><span class="use"><a href="#logos">Primary &middot; stacked, navy (SVG)</a></span></li>
+            <li><span class="slot">Preview image when your page is shared</span><span class="use"><a href="#banners">Link preview &middot; 1200&times;628</a></span></li>
+          </ul>
+          <p class="dont"><strong>Don&rsquo;t</strong> use the <a href="#social">social cards</a> (Available Now / New Drop) or the <a href="#products">tier-badge product cards</a> as your everyday website images &mdash; they go stale.</p>
+        </div>
 
         <div class="callout">
           <span class="k">Usage rules</span>
