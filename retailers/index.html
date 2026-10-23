@@ -89,6 +89,18 @@
     .kit-wide { margin: 18px 0 0; }
     .kit-wide img { width: 100%; height: auto; border: 1px solid rgba(32,46,63,0.14); border-radius: 3px; }
 
+    /* ---------- Start-here router: send a retailer to the right asset
+       by the task they're doing, so they stop grabbing the wrong file ---------- */
+    .rk-start { margin-top: clamp(22px, 3.5vw, 32px); }
+    .rk-start-k { display: block; font-family: var(--font-ui); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy-70); margin-bottom: 12px; }
+    .rk-start-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .rk-start-grid a { display: block; text-decoration: none; border: 1.5px solid rgba(32,46,63,0.25); border-radius: 4px; padding: 16px 18px; transition: border-color .18s ease, background .18s ease; }
+    .rk-start-grid a:hover, .rk-start-grid a:focus-visible { border-color: var(--navy); background: rgba(32,46,63,0.05); }
+    .rk-start-grid .s-t { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; color: var(--navy); }
+    .rk-start-grid .s-d { display: block; font-family: var(--font-ui); font-size: 0.74rem; letter-spacing: 0.02em; color: var(--navy-70); margin-top: 5px; line-height: 1.4; }
+    /* Small badge flagging the batch-specific product cards as the exception */
+    .h3-tag { font-family: var(--font-ui); font-size: 0.56rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brown); border: 1px solid var(--brown); border-radius: 2px; padding: 3px 7px; vertical-align: middle; margin-left: 8px; white-space: nowrap; }
+
     /* ---------- Support ---------- */
     .who-list { margin: 0; }
     .who-list > div { padding: 16px 0; border-bottom: 1px solid rgba(32,46,63,0.14); }
@@ -118,6 +130,7 @@
       .kit-grid { grid-template-columns: repeat(2, 1fr); }
       .file-list li { flex-direction: column; gap: 8px; }
       .file-spec { margin-left: 0; display: block; margin-top: 4px; }
+      .rk-start-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -145,8 +158,11 @@
       <span class="rk-label">Retail Partners</span>
     </div>
     <nav class="rk-index" aria-label="Partner kit sections">
-      <a href="#media">Media Kit</a>
+      <a href="#cuts">Menu Pictures</a>
       <a href="#copy">Menu Copy</a>
+      <a href="#banners">Banners</a>
+      <a href="#logos">Logos</a>
+      <a href="#social">Social</a>
       <a href="#support">Support</a>
     </nav>
   </header>
@@ -168,9 +184,19 @@
       <div class="rk-wrap">
         <div class="rk-head">
           <span class="eyebrow">Media Kit</span>
-          <h2 class="cond">Every asset, as supplied.</h2>
-          <p class="intro">Logos, banners, and card art for menus, screens, and social. Right-click (or long-press) any download link and save.</p>
+          <h2 class="cond">Grab the right file.</h2>
+          <p class="intro">Every asset, labeled by where it goes. Pick what you&rsquo;re making below, or scroll &mdash; each download link saves the full file (right-click or long-press to save).</p>
         </div>
+
+        <nav class="rk-start" aria-label="What are you making?">
+          <span class="rk-start-k">Start here &mdash; what are you making?</span>
+          <div class="rk-start-grid">
+            <a href="#cuts"><span class="s-t">A menu or website listing</span><span class="s-d">The product picture, plus the words to go with it</span></a>
+            <a href="#banners"><span class="s-t">A website banner or header</span><span class="s-d">Wide, mobile, and square sizes</span></a>
+            <a href="#social"><span class="s-t">A social post</span><span class="s-d">Feed and story cards</span></a>
+            <a href="#logos"><span class="s-t">Just the logo</span><span class="s-d">Every lockup, with usage rules</span></a>
+          </div>
+        </nav>
 
         <div class="callout">
           <span class="k">Usage rules</span>
@@ -180,7 +206,7 @@
         <!-- ---- Logos ---- -->
         <div class="kit-group" id="logos">
           <h3 class="cond">Logos</h3>
-          <p class="note">All type is outlined in the SVGs. The white versions sit on navy or photography only, never on the kraft ground.</p>
+          <p class="note"><strong>Not sure which? Use &ldquo;Primary &middot; stacked, navy&rdquo; on a light background.</strong> All type is outlined in the SVGs (use SVG wherever it scales). The <strong>white</strong> versions go on navy or a dark photo only &mdash; never on the kraft/tan ground. Don&rsquo;t stretch, recolor, or retype them.</p>
           <ul class="file-list">
             <li>
               <span><span class="file-name">Primary &middot; stacked, navy</span><span class="file-spec">Transparent</span></span>
@@ -211,27 +237,27 @@
 
         <!-- ---- Banners & tiles ---- -->
         <div class="kit-group" id="banners">
-          <h3 class="cond">Banners &amp; menu tiles</h3>
-          <p class="note">Sized for the common slots: menu headers, kiosk screens, link previews.</p>
+          <h3 class="cond">Banners &amp; website headers</h3>
+          <p class="note">For the top of your website or a menu header &mdash; <strong>not</strong> for a product listing. For a listing, use <a href="#cuts">Menu product pictures</a>. Grab the size that matches your slot.</p>
           <ul class="file-list">
             <li>
-              <span><span class="file-name">Web banner</span><span class="file-spec">1920 &times; 600 &middot; JPG</span></span>
+              <span><span class="file-name">Website header &middot; wide</span><span class="file-spec">1920 &times; 600 &middot; JPG &middot; desktop top-of-page</span></span>
               <span class="file-get"><a href="../assets/brand/banners/ACW-Web-Banner-1920x600.jpg" download>Download</a></span>
             </li>
             <li>
-              <span><span class="file-name">Mobile banner</span><span class="file-spec">1080 &times; 1920 &middot; JPG</span></span>
+              <span><span class="file-name">Website header &middot; mobile / tall</span><span class="file-spec">1080 &times; 1920 &middot; JPG &middot; phone screens</span></span>
               <span class="file-get"><a href="../assets/brand/banners/ACW-Web-Banner-Mobile-1080x1920.jpg" download>Download</a></span>
             </li>
             <li>
-              <span><span class="file-name">Link preview card</span><span class="file-spec">1200 &times; 628 &middot; JPG</span></span>
+              <span><span class="file-name">Link preview</span><span class="file-spec">1200 &times; 628 &middot; JPG &middot; when you share your page</span></span>
               <span class="file-get"><a href="../assets/brand/banners/ACW-Web-Banner-1200x628.jpg" download>Download</a></span>
             </li>
             <li>
-              <span><span class="file-name">Square brand panel</span><span class="file-spec">1080 &times; 1080 &middot; JPG</span></span>
+              <span><span class="file-name">Square brand panel</span><span class="file-spec">1080 &times; 1080 &middot; JPG &middot; general square slot</span></span>
               <span class="file-get"><a href="../assets/brand/banners/ACW-Square-1080x1080.jpg" download>Download</a></span>
             </li>
             <li>
-              <span><span class="file-name">Menu tile</span><span class="file-spec">600 &times; 600 &middot; JPG</span></span>
+              <span><span class="file-name">Small square tile</span><span class="file-spec">600 &times; 600 &middot; JPG &middot; brand thumbnail / avatar</span></span>
               <span class="file-get"><a href="../assets/brand/banners/ACW-MenuTile-600x600.jpg" download>Download</a></span>
             </li>
           </ul>
@@ -239,8 +265,8 @@
 
         <!-- ---- Collection headers ---- -->
         <div class="kit-group" id="collections">
-          <h3 class="cond">Collection headers</h3>
-          <p class="note">First Water is always navy, Base Camp always green. The color is how shoppers tell single-source from blend, so never swap them.</p>
+          <h3 class="cond">Collection banners</h3>
+          <p class="note">Wide header art for a First Water or Base Camp section on your site. First Water is always navy, Base Camp always green &mdash; the color is how shoppers tell single-source from blend, so never swap them.</p>
           <figure class="kit-wide kit-tile">
             <img src="../assets/brand/collections/ACW-Collection-FirstWater-1600x600.jpg" width="1600" height="600" loading="lazy" decoding="async" alt="First Water collection header, navy" />
             <figcaption><span class="t-name">First Water &middot; single source</span><a class="dl" href="../assets/brand/collections/ACW-Collection-FirstWater-1600x600.jpg" download>Download &middot; 1600 &times; 600</a></figcaption>
@@ -253,8 +279,8 @@
 
         <!-- ---- Cut cards ---- -->
         <div class="kit-group" id="cuts">
-          <h3 class="cond">Cut cards</h3>
-          <p class="note">One per cut, 1080 &times; 1350, ready for menus and feeds. Each card already carries the cut name, collection, and sensory notes; no text on top. Cards carry no tier, because tier is graded per batch.</p>
+          <h3 class="cond">Menu product pictures</h3>
+          <p class="note"><strong>This is the picture to put on your menu or website listing &mdash; one per cut.</strong> 1080 &times; 1350, ready to upload. Each already has the cut name, collection, and tasting notes on it, so don&rsquo;t add text on top. Pair it with the matching words under <a href="#copy">Menu copy</a>. These are safe to use for <strong>any</strong> batch &mdash; they carry no tier.</p>
           <div class="kit-grid">
             <div class="kit-tile"><figure>
               <img src="../assets/brand/cuts/ACW-Cut-Boreas-1080x1350.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Boreas cut card" />
@@ -305,10 +331,10 @@
 
         <!-- ---- Product cards ---- -->
         <div class="kit-group" id="products">
-          <h3 class="cond">Product cards</h3>
+          <h3 class="cond">Menu pictures with a tier badge <span class="h3-tag">batch-specific</span></h3>
           <div class="callout">
-            <span class="k">Tier warning: read first</span>
-            <p>Unlike the cut cards, these three carry a <strong>tier badge tied to a specific offering</strong>. Tier is graded per batch, so use a product card only while the batch on your shelf matches it exactly, and pull it when the batch turns over. When in doubt, use the cut card instead.</p>
+            <span class="k">Stop &mdash; read before using these</span>
+            <p>These three look like the menu pictures above, but each carries a <strong>tier badge tied to one specific batch</strong> (Private Reserve, Tier 2&hellip;). Tier is graded per batch, so use one <strong>only while the batch on your shelf matches it exactly</strong>, and pull it the moment the batch turns over. <strong>Not sure? Use the plain <a href="#cuts">Menu product pictures</a> above instead</strong> &mdash; they&rsquo;re always safe.</p>
           </div>
           <div class="kit-grid">
             <div class="kit-tile"><figure>
@@ -328,8 +354,8 @@
 
         <!-- ---- Social ---- -->
         <div class="kit-group" id="social">
-          <h3 class="cond">Social</h3>
-          <p class="note">For your shop&rsquo;s feed and stories when we&rsquo;re on the shelf. Tag <a href="https://instagram.com/adirondackcoldwater" rel="noopener">@adirondackcoldwater</a> and we&rsquo;ll reshare. No prices or potency numbers in the caption, please.</p>
+          <h3 class="cond">Social posts</h3>
+          <p class="note">For your shop&rsquo;s feed and stories when we&rsquo;re on the shelf &mdash; not for your website or menu. Tag <a href="https://instagram.com/adirondackcoldwater" rel="noopener">@adirondackcoldwater</a> and we&rsquo;ll reshare. No prices or potency numbers in the caption, please.</p>
           <div class="kit-grid">
             <div class="kit-tile"><figure>
               <img src="../assets/brand/social/ACW-Social-AvailableNow-1080x1350.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Available Now social card" />
