@@ -45,6 +45,8 @@
     .msrp-row .grade { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.15rem, 3vw, 1.4rem); color: var(--navy); }
     .msrp-row .grade .sub { display: block; font-family: var(--font-ui); font-weight: 600; font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy-55); margin-top: 4px; }
     .msrp-row .price { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.3rem, 3.4vw, 1.6rem); color: var(--navy); white-space: nowrap; }
+    /* Vape is not graded -- set it apart from the jar grade rows */
+    .msrp-row.vape { border-top: 1px solid rgba(32,46,63,0.16); margin-top: 10px; }
     .msrp-head-row { display: flex; justify-content: space-between; padding: 0 2px 10px; }
     .msrp-head-row span { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy-70); }
 
@@ -88,7 +90,7 @@
         <div class="msrp-head">
           <span class="eyebrow">For Licensed Retail Partners</span>
           <h1 class="cond">Suggested Retail</h1>
-          <p class="intro">Suggested retail by grade, per 1&nbsp;g jar. Grade is assigned per batch at grading, so a cut&rsquo;s grade can move from one batch to the next &mdash; price from the grade on the jar in hand.</p>
+          <p class="intro">Suggested retail for our 1&nbsp;g jars (by grade) and the 0.5&nbsp;g AIO vape. Grade is assigned per batch at grading, so a cut&rsquo;s grade can move from one batch to the next &mdash; price the jar from the grade in hand.</p>
         </div>
 
         <div class="msrp-table" role="table" aria-label="Suggested retail by grade">
@@ -112,13 +114,17 @@
             <span class="grade" role="cell">Blend<span class="sub">Base Camp &middot; no grade</span></span>
             <span class="price" role="cell">$61</span>
           </div>
+          <div class="msrp-row vape" role="row">
+            <span class="grade" role="cell">0.5&nbsp;g AIO Vape<span class="sub">Not graded</span></span>
+            <span class="price" role="cell">$54</span>
+          </div>
         </div>
 
         <div class="callout">
           <span class="k">How to read this</span>
           <p>These are <strong>suggested</strong> retail prices, not set prices. Final retail is always the dispensary&rsquo;s call.</p>
           <p>Prices are by <strong>grade, not by cut</strong>. Grade is graded per batch, so take it from the jar on your shelf &mdash; don&rsquo;t tie a price to a cut name.</p>
-          <p>Figures are per 1&nbsp;g jar. The 0.5&nbsp;g AIO vape carries no grade and isn&rsquo;t listed here.</p>
+          <p>Jar figures are per 1&nbsp;g jar. The 0.5&nbsp;g AIO vape isn&rsquo;t graded &mdash; one flat price.</p>
         </div>
 
         <p class="msrp-foot-note">Questions on pricing or a current batch&rsquo;s grade? Contact <a href="mailto:sales@outcastacresfarm.com">sales@outcastacresfarm.com</a>.</p>
