@@ -45,6 +45,7 @@ const header = (P) => `
         <a href="${P}index.html#story">Story</a>
         <a href="${P}index.html#process">Process</a>
         <a href="index.html">Cuts</a>
+        <a href="${P}msrp/index.html">Pricing</a>
         <a href="${P}find/index.html">Find Us</a>
         <a href="${P}coa/index.html">Lab Results</a>
         <a href="${P}index.html#contact">Contact</a>
@@ -62,6 +63,7 @@ const footer = (P) => `
         <a href="${P}index.html#story">Story</a>
         <a href="${P}index.html#process">Process</a>
         <a href="index.html">Cuts</a>
+        <a href="${P}msrp/index.html">Pricing</a>
         <a href="${P}find/index.html">Find Us</a>
         <a href="${P}coa/index.html">Lab Results</a>
         <a href="${P}wholesale/index.html">Wholesale</a>

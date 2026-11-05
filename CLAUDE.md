@@ -28,6 +28,8 @@ browser and it runs.
 │   └── index.html         # Retail partner kit (hand-authored; see below)
 ├── wholesale/
 │   └── index.html         # Wholesale inquiry form (hand-authored)
+├── msrp/
+│   └── index.html         # Pricing / suggested retail (hand-authored; see below)
 ├── _data/
 │   ├── stockists.json     # Stockist master (NOT served by Pages; see below)
 │   └── coas.json          # COA master (NOT served by Pages; same rules)
@@ -223,6 +225,25 @@ sees at `/retailers/` is their assets — never the email we sent them. Rules:
 - The page carries the same extra compliance line as `training/` (processor +
   distributor license, "partner material for licensed retailers").
 
+## Pricing (`msrp/`)
+
+`msrp/index.html` is the hand-authored **consumer-facing** suggested-retail
+page, linked from the main nav and footer as "Pricing" (unlike `training/` and
+`retailers/`, it is indexed and linked — it is public). Rules:
+
+- **Priced by grade, never by cut.** The table lists grades (Private Reserve,
+  Tier 1, Tier 2, Blend) with a suggested retail each, plus the 0.5 g AIO vape
+  as a separate **not graded** flat-price row. Grade is assigned per batch, so
+  never tie a price to a cut name — the same batch rule as the rest of the site.
+- **Always "suggested."** Copy must say the dispensary sets the final price.
+  No ordering, cart, or checkout; it is a reference, not a shop.
+- Jar prices are per 1 g jar; the vape (0.5 g AIO) is not graded and carries one
+  flat price. Keep the vape row set apart from the graded jar rows.
+- When prices change, edit the rows in `msrp/index.html` directly (hand-authored,
+  no generator). It is linked as "Pricing" in the nav + footer of `index.html`
+  and in all three generators (`generate-cuts/stockists/coas.mjs`); keep those
+  in lockstep if the nav changes.
+
 ## Conventions
 
 - **No framework, no build.** Plain HTML/CSS/JS. Don't introduce npm, bundlers,
@@ -244,8 +265,13 @@ This is a regulated adult-use cannabis brand. When editing copy:
 - Keep the **footer legal line** exactly: "For adults 21 and over. Keep out of
   reach of children. Licensed by the New York State Office of Cannabis
   Management, OCM-PROC-25-000317."
-- **Do not** add e-commerce, online ordering, prices, or the ability to buy.
-  This is an informational brand site only.
+- **Do not** add e-commerce, online ordering, a cart, checkout, or the ability
+  to buy. This is an informational brand site, not a shop.
+- **Suggested retail (MSRP) pricing is allowed**, and lives on the
+  consumer-facing `/msrp/` page (see below). Prices are **by grade, never bound
+  to a cut** (grade is assigned per batch), and are always framed as *suggested*
+  — the dispensary sets the final price. Keep prices on `/msrp/`; do not scatter
+  them across other pages, and never pair a price with a buy flow.
 - **Do not** add health, medical, or therapeutic claims.
 - Product/menu content is illustrative; treat strain names and availability as
   placeholders unless given real data.

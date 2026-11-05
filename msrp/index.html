@@ -3,33 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suggested Retail | Adirondack Cold Water</title>
-  <meta name="description" content="Suggested retail pricing by grade for licensed New York dispensaries carrying Adirondack Cold Water solventless live rosin." />
+  <title>Pricing | Suggested Retail | Adirondack Cold Water</title>
+  <meta name="description" content="Suggested retail pricing for Adirondack Cold Water solventless live rosin. Price follows grade, assigned per batch. Each New York dispensary sets its own final price." />
   <meta name="theme-color" content="#202e3f" />
-  <!-- Partner material for licensed retail accounts; deliberately unlinked from
-       the main navigation and kept out of search. Do not remove the noindex. -->
-  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://adirondackcoldwater.com/msrp/" />
   <link rel="icon" href="../assets/brand/logos/ACW-Favicon.svg" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/logos/ACW-Favicon-32x32.png" />
   <link rel="apple-touch-icon" href="../assets/brand/logos/ACW-Favicon-512x512.png" />
-  <meta property="og:title" content="Suggested Retail | Adirondack Cold Water" />
-  <meta property="og:description" content="Suggested retail pricing by grade for licensed New York retail partners." />
+  <meta property="og:title" content="Pricing | Adirondack Cold Water" />
+  <meta property="og:description" content="Suggested retail for Adirondack Cold Water solventless live rosin. Price follows grade; each dispensary sets its own final price." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://adirondackcoldwater.com/msrp/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://adirondackcoldwater.com/assets/brand/banners/ACW-Web-Banner-1200x628.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://adirondackcoldwater.com/assets/brand/banners/ACW-Web-Banner-1200x628.jpg" />
   <link rel="stylesheet" href="../assets/site.css" />
   <style>
     /* ============================================================
-       Suggested retail (MSRP) for licensed retail partners.
-       Internal, unlinked, noindex -- same pattern as training/ and
-       retailers/. Prices are by GRADE, never bound to a cut, because
-       grade is assigned per batch. No ordering, no cart; reference only.
+       Suggested retail (MSRP). Prices are by GRADE, never bound to a
+       cut, because grade is assigned per batch. No ordering, no cart;
+       informational reference only.
        ============================================================ */
-
-    /* ---------- Minimal internal header (shared look with retailers/) ---------- */
-    .rk-bar { display: flex; align-items: center; gap: 14px; padding: 11px 0; }
-    .rk-bar .brand img { height: 32px; display: block; }
-    .rk-bar .rk-label { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy-70); border-left: 1px solid rgba(32,46,63,0.25); padding-left: 14px; }
 
     /* ---------- Layout ---------- */
     .msrp-wrap { width: min(680px, 92vw); margin-inline: auto; }
@@ -37,7 +31,7 @@
     .msrp-head { text-align: center; padding-top: clamp(30px, 5vw, 56px); }
     .msrp-head .eyebrow { display: block; margin-bottom: 10px; }
     .msrp-head h1 { font-size: clamp(2rem, 5.4vw, 3rem); letter-spacing: 0.01em; }
-    .msrp-head .intro { color: var(--navy-70); font-size: clamp(1.02rem, 2.6vw, 1.18rem); max-width: 54ch; margin: 16px auto 0; }
+    .msrp-head .intro { color: var(--navy-70); font-size: clamp(1.02rem, 2.6vw, 1.18rem); max-width: 56ch; margin: 16px auto 0; }
 
     /* ---------- Price table ---------- */
     .msrp-table { margin: clamp(30px, 5vw, 48px) 0 0; border-top: 2px solid var(--navy); }
@@ -56,7 +50,6 @@
     .callout p { margin: 0 0 11px; }
     .callout p:last-child { margin-bottom: 0; }
     .msrp-foot-note { color: var(--navy-70); font-size: 0.92rem; margin: 22px 0 0; }
-    .rk-legal { margin-top: 26px; font-family: var(--font-ui); font-size: 0.74rem; letter-spacing: 0.04em; line-height: 1.8; color: var(--kraft-45); }
   </style>
 </head>
 <body class="locked">
@@ -76,21 +69,31 @@
   </div>
 
   <header>
-    <div class="wrap rk-bar">
+    <div class="wrap nav">
       <a class="brand" href="../index.html" aria-label="Adirondack Cold Water home">
-        <img src="../assets/brand/logos/ACW-Logo-Icon.svg" alt="Adirondack Cold Water" />
+        <img class="horiz" src="../assets/brand/logos/ACW-Logo-Horizontal-Navy.svg" alt="Adirondack Cold Water" />
+        <img class="icon" src="../assets/brand/logos/ACW-Logo-Icon.svg" alt="Adirondack Cold Water" />
       </a>
-      <span class="rk-label">Retail Partners</span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="links" id="nav-links">
+        <a href="../index.html#story">Story</a>
+        <a href="../index.html#process">Process</a>
+        <a href="../cuts/index.html">Cuts</a>
+        <a href="index.html">Pricing</a>
+        <a href="../find/index.html">Find Us</a>
+        <a href="../coa/index.html">Lab Results</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section>
       <div class="msrp-wrap">
         <div class="msrp-head">
-          <span class="eyebrow">For Licensed Retail Partners</span>
+          <span class="eyebrow">Pricing</span>
           <h1 class="cond">Suggested Retail</h1>
-          <p class="intro">Suggested retail for our 1&nbsp;g jars (by grade) and the 0.5&nbsp;g AIO vape. Grade is assigned per batch at grading, so a cut&rsquo;s grade can move from one batch to the next &mdash; price the jar from the grade in hand.</p>
+          <p class="intro">What to expect at the shelf. Price follows grade, and grade is set per batch &mdash; so the same cut can land at a different grade, and a different price, from one batch to the next. Each dispensary sets its own final price.</p>
         </div>
 
         <div class="msrp-table" role="table" aria-label="Suggested retail by grade">
@@ -111,7 +114,7 @@
             <span class="price" role="cell">$61</span>
           </div>
           <div class="msrp-row" role="row">
-            <span class="grade" role="cell">Blend<span class="sub">Base Camp &middot; no grade</span></span>
+            <span class="grade" role="cell">Blend</span>
             <span class="price" role="cell">$61</span>
           </div>
           <div class="msrp-row vape" role="row">
@@ -122,23 +125,25 @@
 
         <div class="callout">
           <span class="k">How to read this</span>
-          <p>These are <strong>suggested</strong> retail prices, not set prices. Final retail is always the dispensary&rsquo;s call.</p>
-          <p>Prices are by <strong>grade, not by cut</strong>. Grade is graded per batch, so take it from the jar on your shelf &mdash; don&rsquo;t tie a price to a cut name.</p>
-          <p>Jar figures are per 1&nbsp;g jar. The 0.5&nbsp;g AIO vape isn&rsquo;t graded &mdash; one flat price.</p>
+          <p>These are <strong>suggested</strong> prices. Every dispensary sets its own, so what you pay may differ.</p>
+          <p>Price follows <strong>grade, not the cut name</strong>. Grade is assigned to each batch, so a cut isn&rsquo;t locked to one price.</p>
+          <p>Jar prices are per 1&nbsp;g jar. The 0.5&nbsp;g AIO vape isn&rsquo;t graded &mdash; one flat price.</p>
         </div>
 
-        <p class="msrp-foot-note">Questions on pricing or a current batch&rsquo;s grade? Contact <a href="mailto:sales@outcastacresfarm.com">sales@outcastacresfarm.com</a>.</p>
+        <p class="msrp-foot-note">Questions? Reach us at <a href="mailto:hello@adirondackcoldwater.com">hello@adirondackcoldwater.com</a>.</p>
       </div>
     </section>
 
     <section class="band">
       <div class="wrap contact-inner">
-        <span class="eyebrow">Adirondack Cold Water</span>
-        <h2 class="cond">Strong. Clean. Solventless.</h2>
+        <span class="eyebrow">Where to Buy</span>
+        <h2 class="cond">Ask for us by name.</h2>
         <hr class="rule" />
-        <p>Suggested retail moves with grade and the market. This page is the current reference &mdash; bookmark it rather than saving a copy.</p>
-        <div class="contact-meta">Jessica Ben-Yishay, Territory Sales Manager &middot; <a href="mailto:sales@outcastacresfarm.com">sales@outcastacresfarm.com</a></div>
-        <p class="rk-legal">Outcast Acres Farm LLC, Granville, NY 12832. Processor OCM&#8209;PROC&#8209;25&#8209;000317. Distributor OCM&#8209;DIST&#8209;24&#8209;000060. For adults 21 and over. Partner material for licensed retailers.</p>
+        <p>Prices and availability rotate by drop. See which New York dispensaries carry Adirondack Cold Water.</p>
+        <div class="hero-cta" style="justify-content:center;">
+          <a class="btn" href="../find/index.html">Find a Shop</a>
+        </div>
+        <div class="contact-meta"><a href="mailto:hello@adirondackcoldwater.com">hello@adirondackcoldwater.com</a></div>
       </div>
     </section>
   </main>
@@ -152,9 +157,12 @@
         <a href="../index.html#story">Story</a>
         <a href="../index.html#process">Process</a>
         <a href="../cuts/index.html">Cuts</a>
+        <a href="index.html">Pricing</a>
         <a href="../find/index.html">Find Us</a>
         <a href="../coa/index.html">Lab Results</a>
+        <a href="../wholesale/index.html">Wholesale</a>
         <a href="../index.html#contact">Contact</a>
+        <a href="https://instagram.com/adirondackcoldwater" rel="noopener">Instagram</a>
       </nav>
     </div>
     <div class="wrap legal">
